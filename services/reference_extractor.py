@@ -13,20 +13,17 @@ if not os.path.exists('logs'):
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
-# Create file handler which logs even debug messages
 fh = logging.FileHandler('logs/app.log')
 fh.setLevel(logging.DEBUG)
 
-# Create console handler with a higher log level
+
 ch = logging.StreamHandler()
 ch.setLevel(logging.ERROR)
 
-# Create formatter and add it to the handlers
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 fh.setFormatter(formatter)
 ch.setFormatter(formatter)
 
-# Add the handlers to the logger
 logger.addHandler(fh)
 logger.addHandler(ch)
 
@@ -78,19 +75,22 @@ class ReferenceExtractor:
             page = doc[page_num]
             all_text += page.get_text()
         
-        logger.debug(f"Extracted text from PDF: {all_text[:500]}...")  # Log first 500 characters
+        logger.debug(f"Extracted text from PDF: {all_text[:500]}...")  # Log first 500 character
         
         # Extract references and bibliography text
-        references = ReferenceExtractor.extract_references_from_text(all_text)
+        # references = ReferenceExtractor.extract_references_from_text(all_text)
         bibliography_text = ReferenceExtractor.extract_bibliography(all_text)
         logger.debug(f"Extracted bibliography: {bibliography_text[:500]}...")  # Log first 500 characters
         
         # Extract reference citations
         citations = ReferenceExtractor.extract_reference_citations(bibliography_text)
         
-        return references, citations
+        return citations
 
     
 ## test
-references, citations = ReferenceExtractor.document_loader('C:\\Users\\91978\\Desktop\\Ref_reader_backend\\encoder decoder.pdf')
+# references, citations , bib = ReferenceExtractor.document_loader('C:\\Users\\91978\\Desktop\\Ref_Reader_backend\\encoder_decoder.pdf')
 
+# print(references)
+# print(citations) 
+# print(bib)
