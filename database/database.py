@@ -70,29 +70,26 @@ def save_pdf(session_id: str, pdf_name: str, citations: str):
                 VALUES (%s, %s, %s)
             """, (session_id, pdf_name, citations))
 
-def load_session_history(session_id: str):
-    messages = []
-    with get_db_cursor() as cur:
-        cur.execute("""
-            SELECT role, content
-            FROM messages
-            WHERE session_id = %s
-            ORDER BY id
-        """, (session_id,))
-        for role, content in cur.fetchall():
-            messages.append({"role": "user" if role == "Human" else "assistant", "content": content})
-    return messages
 
-
-def get_pdf_citations(pdf_name):
+def get_pdf_citations(session_id):
     with get_db_cursor() as cursor:
-        cursor.execute("SELECT session_id, citations FROM pdfs WHERE pdf_name = %s", (pdf_name,))
+        cursor.execute("SELECT citations FROM pdfs WHERE session_id = %s", (session_id,))
         result = cursor.fetchone()
         if result:
-            return {"session_id": result[0], "citations": result[1]}
+            return { "citations": result[0]}
         return None
 
+def get_session_id(pdf_name):
+    with get_db_cursor() as cursor:
+        cursor.execute("SELECT session_id FROM pdfs Where pdf_name = %s", (pdf_name,))
+        result = cursor.fetchone()
+        if result:
+            return result[0]
+        return None
+    
 
+# a=get_session_id("encoder_decoder.pdf")
+# print(a)
 # if __name__ == "__main__":
 #     try:
 #         create_tables()
