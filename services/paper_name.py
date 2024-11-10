@@ -20,7 +20,7 @@ class PaperName:
             ("user", """identify the paper name that user is refering in the query from the citations.
                       Query: {query},
             Citations: {citations}
-                      Return the details in this format: {{"paper_name": "paper name", "authors": "author name", "arxiv_id(if exist else blank)": "arxiv id"}}
+                      Return the details in this format: {{"paper_name": "paper name/title", "authors": "authors name", "arxiv_id": "arxiv id"}}
                       Note: Make sure to return a valid JSON string.""")
         ])
         self.chain = self.prompt | self.llm | StrOutputParser()

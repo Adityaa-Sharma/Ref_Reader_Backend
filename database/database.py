@@ -54,6 +54,17 @@ def create_tables():
                 citations TEXT NOT NULL
             )
         """)
+        ## creat table for paper , in this it will the , paper id (incremental),session id , paper name , authors , arxiv id(can be null)
+        cur.execute("""
+            CREATE TABLE IF NOT EXISTS papers (
+                id SERIAL PRIMARY KEY,
+                session_id UUID REFERENCES sessions(session_id),
+                paper_name VARCHAR NOT NULL,
+                authors VARCHAR NOT NULL,
+                arxiv_id VARCHAR
+            )
+        """)
+                    
 
 
 def save_pdf(session_id: str, pdf_name: str, citations: str):
@@ -87,13 +98,38 @@ def get_session_id(pdf_name):
             return result[0]
         return None
     
+def save_paper(session_id: str, paper_name: str, authors: str, arxiv_id: str):
+    with get_db_cursor(commit=True) as cur:
+        cur.execute("""
+            INSERT INTO papers (session_id, paper_name, authors, arxiv_id)
+            VALUES (%s, %s, %s, %s)
+        """, (session_id, paper_name, authors, arxiv_id))
+        
+## get check if the paper arxiv id is present in the papers table or not
+def get_paper(arxiv_id):
+    if(arxiv_id==""):
+        return None
+    with get_db_cursor() as cursor:
+        cursor.execute("SELECT * FROM papers WHERE arxiv_id = %s", (arxiv_id,))
+        result = cursor.fetchone()
+        if result:
+            return {
+                "session_id": result[1],
+                "paper_name": result[2],
+                "authors": result[3],
+                "arxiv_id": result[4]
+            }
+        return None
+ 
+    
+    
 
 # a=get_session_id("encoder_decoder.pdf")
 # print(a)
-# if __name__ == "__main__":
-#     try:
-#         create_tables()
-#         print("Tables created successfully.")
+if __name__ == "__main__":
+    try:
+        create_tables()
+        print("Tables created successfully.")
 
-#     except Exception as e:
-#         print(f"An error occurred: {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")

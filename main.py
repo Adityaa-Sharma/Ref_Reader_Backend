@@ -3,10 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from services.reference_extractor import ReferenceExtractor
 from services.paper_name import PaperName
+from services.Ingestion import VectorIngestor
 from pydantic import BaseModel
 
 import tempfile
-from database.database import save_pdf, get_db_cursor,get_pdf_citations, get_session_id
+from database.database import save_pdf, get_db_cursor,get_pdf_citations, get_session_id,get_paper,save_paper
 import uuid
 import json
 import os
@@ -55,12 +56,59 @@ async def chat(session_id: str, query: str):
     pdf_entry = get_pdf_citations(session_id)
     if not pdf_entry:
         raise HTTPException(status_code=404, detail="Session ID not found")
-    paper_content = await PaperName(query, str(pdf_entry["citations"])).get_paper_name()
-    if paper_content.arxiv_id:
-        
-        
-    return JSONResponse(content=paper_content)
     
+    paper_content = await PaperName(query, str(pdf_entry["citations"])).get_paper_name()
+    arxiv_id = paper_content['arxiv_id'].split(':')[1] if paper_content['arxiv_id'] != "" else ""
+    if paper_content['arxiv_id']:
+            arxiv_id = paper_content['arxiv_id'].split(':')[1]
+            
+            # Check if paper already exists
+            if get_paper(arxiv_id) is None:
+                # Save new paper
+                save_paper(
+                    session_id=session_id,
+                    paper_name=paper_content['paper_name'],
+                    authors=paper_content['authors'],
+                    arxiv_id=arxiv_id
+                )
+                
+                # Initialize and process with vector ingestor
+                ingestor = VectorIngestor(
+                    session_id=session_id,
+                    paper_name=paper_content['paper_name'],
+                    arxiv_id=arxiv_id
+                )
+                
+                ingest_result = await ingestor.arxiv_handling(arxiv_id)
+                
+                message = {
+                    "status": "success",
+                    "message": "Paper processed successfully",
+                    "paper_details": {
+                        "paper_name": paper_content['paper_name'],
+                        "arxiv_id": arxiv_id
+                    },
+                    "ingest_result": ingest_result
+                }
+            else:
+                message = {
+                    "status": "info",
+                    "message": "Paper already exists in database",
+                    "paper_details": {
+                        "arxiv_id": arxiv_id,
+                        "paper_name": paper_content['paper_name']
+                    }
+                }
+    else:
+        message = {
+            "status": "warning",
+            "message": "No valid arXiv ID found in paper content",
+            "paper_content": paper_content
+        }
+    
+    return JSONResponse(content=message, status_code=200)
+        
+   
     
     
     
