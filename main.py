@@ -5,6 +5,7 @@ from services.reference_extractor import ReferenceExtractor
 from services.paper_name import PaperName
 from services.Ingestion import VectorIngestor
 from pydantic import BaseModel
+from services.Agents import NonArxiv
 
 import tempfile
 from database.database import save_pdf, get_db_cursor,get_pdf_citations, get_session_id,get_paper,save_paper
@@ -100,14 +101,12 @@ async def chat(session_id: str, query: str):
                     }
                 }
     else:
-        message = {
-            "status": "warning",
-            "message": "No valid arXiv ID found in paper content",
-            "paper_content": paper_content
-        }
-    
-    return JSONResponse(content=message, status_code=200)
+        paper_name = paper_content['paper_name']
+        NonArxivHandler = NonArxiv(query,paper_name)
         
+
+    
+
    
     
     
