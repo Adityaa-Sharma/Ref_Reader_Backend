@@ -92,6 +92,7 @@ async def chat(session_id: str, query: str):
                     "ingest_result": ingest_result
                 }
             else:
+                ## only retriever will come here
                 message = {
                     "status": "info",
                     "message": "Paper already exists in database",
