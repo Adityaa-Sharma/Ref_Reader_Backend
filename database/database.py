@@ -64,6 +64,15 @@ def create_tables():
                 arxiv_id VARCHAR
             )
         """)
+        cur.execute('''
+        CREATE TABLE IF NOT EXISTS chat_history (
+            id SERIAL PRIMARY KEY,
+            session_id TEXT NOT NULL,
+            query TEXT NOT NULL,
+            response JSONB NOT NULL,
+            timestamp TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
                     
 
 
@@ -122,10 +131,25 @@ def get_paper(arxiv_id):
         return None
  
     
+## insert the chat history in the chat_history table
+def save_chat_history(session_id, query, response):
+    with get_db_cursor(commit=True) as cur:
+        cur.execute("""
+            INSERT INTO chat_history (session_id, query, response)
+            VALUES (%s, %s, %s)
+        """, (session_id, query, response))
+
+# getting last 10 messages
+def get_chat_history(session_id):
+    with get_db_cursor() as cursor:
+        cursor.execute("SELECT query, response, timestamp FROM chat_history WHERE session_id = %s ORDER BY timestamp DESC LIMIT 10", (session_id,))
+        result = cursor.fetchall()
+        return result
+    
     
 
 # a=get_session_id("encoder_decoder.pdf")
-# print(a)
+# print(a)re
 if __name__ == "__main__":
     try:
         create_tables()
