@@ -3,6 +3,7 @@ from psycopg2 import sql
 import contextlib
 from contextlib import contextmanager
 import uuid
+import json
 
 # Database connection parameters
 db_params = {
@@ -144,7 +145,14 @@ def get_chat_history(session_id):
     with get_db_cursor() as cursor:
         cursor.execute("SELECT query, response, timestamp FROM chat_history WHERE session_id = %s ORDER BY timestamp DESC LIMIT 10", (session_id,))
         result = cursor.fetchall()
-        return result
+        history = []
+        for row in cursor.fetchall():
+            history.append({
+            "query": row[0],
+            "response": json.loads(row[1]),
+            "timestamp": row[2].isoformat()
+        })
+        return history
     
     
 
