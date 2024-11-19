@@ -7,6 +7,7 @@ from services.Ingestion import VectorIngestor
 from pydantic import BaseModel
 from services.Agents import NonArxiv
 from services.QueryHandler import QueryHandler
+from services.Retrieval import Retrieval
 import tempfile
 from database.database import save_pdf, get_db_cursor,get_pdf_citations, get_session_id,get_paper,save_paper, get_chat_history,save_chat_history
 import uuid
@@ -82,25 +83,23 @@ async def chat(session_id: str, query: str):
                 
                 ingest_result = await ingestor.arxiv_handling(arxiv_id)
                 
-                message = {
-                    "status": "success",
-                    "message": "Paper processed successfully",
-                    "paper_details": {
-                        "paper_name": paper_content['paper_name'],
-                        "arxiv_id": arxiv_id
-                    },
-                    "ingest_result": ingest_result
-                }
+                ## retriever will come here
+                query_handler = QueryHandler(query, paper_content['paper_name'], get_chat_history(session_id))
+                rephrased_query = await query_handler.query_rephraser()
+                Retriever=Retrieval(rephrased_query,session_id,get_chat_history(session_id))
+                response = await Retriever.chat_response()
+                ## save query and response in chat history
+                save_chat_history(session_id, rephrased_query, response)
+    
+     
             else:
                 ## only retriever will come here
-                message = {
-                    "status": "info",
-                    "message": "Paper already exists in database",
-                    "paper_details": {
-                        "arxiv_id": arxiv_id,
-                        "paper_name": paper_content['paper_name']
-                    }
-                }
+                query_handler = QueryHandler(query, paper_content['paper_name'], get_chat_history(session_id))
+                rephrased_query = await query_handler.query_rephraser()
+                Retriever=Retrieval(rephrased_query,session_id,get_chat_history(session_id))
+                response = await Retriever.chat_response()
+                save_chat_history(session_id, rephrased_query, response)
+
     else:
         paper_name = paper_content['paper_name']
         NonArxivHandler = NonArxiv(query,paper_name)
