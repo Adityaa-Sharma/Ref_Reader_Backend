@@ -5,25 +5,71 @@ from services.reference_extractor import ReferenceExtractor
 from services.paper_name import PaperName
 from services.Ingestion import VectorIngestor
 from pydantic import BaseModel
-from services.Agents import NonArxiv
+from services.Non_arxiv import NonArxiv
 from services.QueryHandler import QueryHandler
 from services.Retrieval import Retrieval
 import tempfile
-from database.database import save_pdf, get_db_cursor,get_pdf_citations, get_session_id,get_paper,save_paper, get_chat_history,save_chat_history
+from database.database import save_pdf,get_pdf_citations, get_session_id,get_paper,save_paper, get_chat_history,save_chat_history
 import uuid
 import json
 import os
+import logging
+from logging.handlers import RotatingFileHandler
+import asyncio
+from concurrent.futures import ThreadPoolExecutor
 
+logs_dir = 'logs'
+os.makedirs(logs_dir, exist_ok=True)
+
+# Logging configuration function
+def setup_logging():
+    # Log file path
+    log_file_path = os.path.join(logs_dir, 'app.log')
+
+    # Create a custom logger
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)  # Capture all log levels
+
+    # Create a file handler
+    file_handler = RotatingFileHandler(
+        log_file_path, 
+        maxBytes=10*1024*1024,  # 10 MB
+        backupCount=5  # Keep 5 backup files
+    )
+    file_handler.setLevel(logging.DEBUG)  # Set to capture DEBUG and above
+    file_handler.setLevel(logging.INFO)  # File only shows INFO and above
+
+    # Create a formatter
+    formatter = logging.Formatter(
+        fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
+    file_handler.setFormatter(formatter)
+
+    # Add the handler to the logger
+    logger.addHandler(file_handler)
+
+    # Optional: Add console handler for immediate feedback during development
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)  # Console only shows INFO and above
+    console_handler.setFormatter(formatter)
+    logger.addHandler(console_handler)
+
+    return logger
+
+# Setup logging
+logger = setup_logging()
 
 app = FastAPI()
 
-# Add CORS middleware
+# Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # Allows all origins
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+    expose_headers=["*"]
 )
 
 @app.post("/extract_references/")
@@ -56,60 +102,71 @@ class Chat(BaseModel):
 @app.get("/chat/")
 async def chat(session_id: str, query: str):
     pdf_entry = get_pdf_citations(session_id)
+    
     if not pdf_entry:
         raise HTTPException(status_code=404, detail="Session ID not found")
     
-    paper_content = await PaperName(query, str(pdf_entry["citations"])).get_paper_name()
-    arxiv_id = paper_content['arxiv_id'].split(':')[1] if paper_content['arxiv_id'] != "" else ""
-    if paper_content['arxiv_id']:
-            arxiv_id = paper_content['arxiv_id'].split(':')[1]
-            
-            # Check if paper already exists
-            if get_paper(arxiv_id) is None:
-                # Save new paper
-                save_paper(
-                    session_id=session_id,
-                    paper_name=paper_content['paper_name'],
-                    authors=paper_content['authors'],
-                    arxiv_id=arxiv_id
-                )
-                
-                # Initialize and process with vector ingestor
-                ingestor = VectorIngestor(
-                    session_id=session_id,
-                    paper_name=paper_content['paper_name'],
-                    arxiv_id=arxiv_id
-                )
-                
-                ingest_result = await ingestor.arxiv_handling(arxiv_id)
-                
-                ## retriever will come here
-                query_handler = QueryHandler(query, paper_content['paper_name'], get_chat_history(session_id))
-                rephrased_query = await query_handler.query_rephraser()
-                Retriever=Retrieval(rephrased_query,session_id,get_chat_history(session_id))
-                response = await Retriever.chat_response()
-                ## save query and response in chat history
-                save_chat_history(session_id, rephrased_query, response)
+    paper_content = await PaperName(query, str(pdf_entry["citations"]), await get_chat_history(session_id)).get_paper_name()
     
-     
-            else:
-                ## only retriever will come here
-                query_handler = QueryHandler(query, paper_content['paper_name'], get_chat_history(session_id))
-                rephrased_query = await query_handler.query_rephraser()
-                Retriever=Retrieval(rephrased_query,session_id,get_chat_history(session_id))
-                response = await Retriever.chat_response()
-                save_chat_history(session_id, rephrased_query, response)
+    print("arxiv_id", paper_content.get('arxiv_id'))
+
+    # Check if arxiv_id exists and is valid
+    if paper_content.get('arxiv_id') and ':' in paper_content['arxiv_id']:
+        arxiv_id = paper_content['arxiv_id'].split(':')[1]
+            
+        # Check if paper already exists
+        if get_paper(arxiv_id) is None:
+            # Save new paper
+            save_paper(
+                session_id=session_id,
+                paper_name=paper_content['paper_name'],
+                authors=paper_content['authors'],
+                arxiv_id=arxiv_id
+            )
+            
+            # Initialize and process with vector ingestor
+            ingestor = VectorIngestor(
+                session_id=session_id,
+                paper_name=paper_content['paper_name'],
+                arxiv_id=arxiv_id
+            )
+            
+            ingest_result = await ingestor.arxiv_handling(arxiv_id)
+            
+            # Handle query
+            query_handler = QueryHandler(query, paper_content['paper_name'], await get_chat_history(session_id), pdf_entry["citations"])
+            rephrased_query = await query_handler.query_rephraser()
+            print("rephrased_query", rephrased_query)
+            Retriever = Retrieval(rephrased_query, session_id, await get_chat_history(session_id))
+            response = await Retriever.chat_response()
+            await save_chat_history(session_id, rephrased_query, response)
+            return JSONResponse(content={"response": response})
+    
+        else:
+            # Handle existing paper with retriever
+            query_handler = QueryHandler(query, paper_content['paper_name'], await get_chat_history(session_id), pdf_entry["citations"])
+            rephrased_query = await query_handler.query_rephraser()
+            print("rephrased_query", rephrased_query)
+            Retriever = Retrieval(rephrased_query, session_id, await get_chat_history(session_id))
+            response = await Retriever.chat_response()
+            await save_chat_history(session_id, rephrased_query, response)
 
     else:
+        # Non-arxiv block
         paper_name = paper_content['paper_name']
-        NonArxivHandler = NonArxiv(query,paper_name)
-        
+        query_handler = QueryHandler(query, paper_name, await get_chat_history(session_id), pdf_entry["citations"])
+        rephrased_query = await query_handler.query_rephraser()
+        NonArxivHandler = NonArxiv(rephrased_query, paper_name)
+        print("rephrased_query", rephrased_query)
+        loop = asyncio.get_running_loop()
+        with ThreadPoolExecutor() as pool:
+            response = await loop.run_in_executor(
+                pool, NonArxivHandler.get_paper_details
+                )
+        await save_chat_history(session_id, rephrased_query, response.get("research_analysis"))
 
-    
+    return JSONResponse(content={"response": response.get("research_analysis")})
 
-   
-    
-    
     
 
 

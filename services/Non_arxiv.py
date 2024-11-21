@@ -1,4 +1,5 @@
-from Agents import analyze_research_paper
+from services.Agents import analyze_research_paper
+import json
 
 class NonArxiv:
     def __init__(self, query: str, citations: str):

@@ -10,16 +10,18 @@ env_path = find_dotenv()
 load_dotenv(env_path, override=True)
 
 class PaperName:
-    def __init__(self, query: str, citations: str):
+    def __init__(self, query: str, citations: str, chat_history: str):
         self.llm = ChatOpenAI(temperature=0)
         self.query = query
         self.citations = citations
+        self.chat_history = chat_history
 
         self.prompt = ChatPromptTemplate.from_messages([
-            ("system", "You are an excellent researcher who can identify paper names from queries and citations."),
-            ("user", """identify the paper name that user is refering in the query from the citations.
+            ("system", "You are an excellent researcher who can identify paper names from queries and citations adn preious cht history."),
+            ("user", """identify the paper name that user is refering in the query from the citations and also consider chat_history is needed.
                       Query: {query},
-            Citations: {citations}
+            Citations: {citations},
+            Chat History: {chat_history}
                       Return the details in this format: {{"paper_name": "paper name/title", "authors": "authors name", "arxiv_id": "arxiv id"}}
                       Note: Make sure to return a valid JSON string.""")
         ])
@@ -30,7 +32,8 @@ class PaperName:
         try:
             result = await self.chain.ainvoke({
                 "query": self.query,
-                "citations": self.citations
+                "citations": self.citations,
+                "chat_history": self.chat_history
             })  
             # Parse the string result into a dictionary
             result_dict = json.loads(result)

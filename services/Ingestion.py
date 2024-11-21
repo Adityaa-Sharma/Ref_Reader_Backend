@@ -73,12 +73,17 @@ class VectorIngestor:
 
     def generate_embeddings(self, text: str) -> List[float]:
         """Generate embeddings synchronously."""
+        text=f"{self.paper_name}\n{text}"
         return self.embeddings.embed_query(text)
 
     def generate_points(self, chunks: List[str], batch_size: int = 100) -> Generator[List[PointStruct], None, None]:
         """Generate points synchronously."""
         points = []
         for chunk in chunks:
+            ## attach the paper name to the chunk with a line break
+            # chunk = f"{{\"paper_name\": self.paper_name}} {chunk}"
+            # chunk = f"{self.paper_name}\n{chunk}"
+            
             embedding = self.generate_embeddings(chunk)
             point_id = str(uuid.uuid4())
 

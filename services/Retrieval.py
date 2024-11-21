@@ -1,20 +1,17 @@
 import os
+import asyncio
 from dotenv import load_dotenv
 from qdrant_client import QdrantClient
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from typing import List, Dict, Any
+from typing import List, Union, Any
 
 class Retrieval:
-    def __init__(self, query: str, session_id: str, chat_history: str = ""):
-        """
-        Initialize Retrieval class with query, session ID, and optional chat history.
-        
-        :param query: User's current query
-        :param session_id: Unique identifier for the current session/collection
-        :param chat_history: Previous conversation context (optional)
-        """
+    def __init__(self, query: Union[str, Any], session_id: str, chat_history: str = ""):
         load_dotenv()  
+        
+        # Ensure query is a string
+        self.query = str(query) if query is not None else ""
         
         # Qdrant client configuration
         self.client = QdrantClient(
@@ -31,31 +28,42 @@ class Retrieval:
         # Language model configuration
         self.llm = ChatOpenAI(
             temperature=0, 
-            model='gpt-3.5-turbo',
+            model='gpt-4o-mini',
             api_key=os.getenv('OPENAI_API_KEY')
         )
         
         # Instance variables
-        self.query = query
         self.session_id = session_id
         self.chat_history = chat_history
 
-    async def retrieve(self) -> List[Dict[str, Any]]:
+    async def retrieve(self) -> List[str]:
         """
-        Retrieve relevant documents from Qdrant collection.
+        Asynchronously retrieve relevant documents from Qdrant collection.
         
-        :return: List of retrieved document chunks
+        :return: List of retrieved document texts
         """
         try:
-            # Encode query and search in Qdrant
-            query_vector = self.embeddings.embed_query(self.query)
+            # Use run_in_executor to run synchronous embedding in a thread
+            loop = asyncio.get_event_loop()
+            query_vector = await loop.run_in_executor(
+                None, 
+                self.embeddings.embed_query, 
+                self.query
+            )
+            
+            # Search in Qdrant
             response = self.client.search(
                 collection_name=self.session_id,
                 query_vector=query_vector,
-                limit=5  # Top 5 most relevant chunks
+                limit=3  # Top 3 most relevant chunks
             )
-            return response
+                
+            # Extract texts from response
+            return [doc.payload.get("text", "") for doc in response]
         except Exception as e:
+            # Log the full exception for debugging
+            import traceback
+            traceback.print_exc()
             raise RuntimeError(f"Error retrieving documents: {str(e)}")
 
     async def chat_response(self) -> str:
@@ -66,18 +74,19 @@ class Retrieval:
         """
         # Retrieve relevant document chunks
         retrieved_chunks = await self.retrieve()
+        chunks_text = "\n".join(retrieved_chunks)  # Combine chunks into a single string
         
         # Prepare prompt template
         prompt = ChatPromptTemplate.from_messages([
             ("system", "You are an excellent researcher who can generate precise and informative responses based on the query, retrieved context, and chat history."),
-            ("user", "Query: {query}\nRetrieved Chunks: {chunks}\nChat History: {history}\n\nGenerate a comprehensive and contextually relevant response."),
+            ("user", "Query: {query}\nRetrieved Chunks: {chunks}\nChat History: {history}\n\nGenerate a comprehensive and contextually relevant response.Only give relevant information and be conscise and try to give respose in bullets."),
         ])
         
         # Create chain and invoke
         chain = prompt | self.llm
         response = await chain.ainvoke({
             "query": self.query,
-            "chunks": retrieved_chunks,
+            "chunks": chunks_text,
             "history": self.chat_history
         })
         

@@ -3,6 +3,8 @@ from psycopg2 import sql
 import contextlib
 from contextlib import contextmanager
 import uuid
+import asyncio
+from typing import Union, Any
 import json
 
 # Database connection parameters
@@ -133,15 +135,53 @@ def get_paper(arxiv_id):
  
     
 ## insert the chat history in the chat_history table
-def save_chat_history(session_id, query, response):
-    with get_db_cursor(commit=True) as cur:
-        cur.execute("""
-            INSERT INTO chat_history (session_id, query, response)
-            VALUES (%s, %s, %s)
-        """, (session_id, query, response))
+import json
+from typing import Union, Any
+import asyncio
 
+async def save_chat_history(session_id: str, query: Union[str, Any], response: Union[str, Any]):
+    """
+    Asynchronously save chat history to the database.
+    
+    :param session_id: The session identifier
+    :param query: The user's query (can be a coroutine or string)
+    :param response: The AI's response (can be a coroutine or string)
+    """
+    # Ensure query and response are strings
+    if asyncio.iscoroutine(query):
+        query = await query
+    
+    if asyncio.iscoroutine(response):
+        response = await response
+    
+    # Convert to string and handle None
+    query = str(query) if query is not None else ""
+    
+    # Convert response to JSON format
+    try:
+        # If response is already a dict/list, it will be properly serialized
+        # If it's a string, wrap it in a dict
+        if isinstance(response, str):
+            response_json = {"text": response}
+        else:
+            response_json = response if response is not None else {}
+        
+        with get_db_cursor(commit=True) as cur:
+            cur.execute("""
+                INSERT INTO chat_history (session_id, query, response)
+                VALUES (%s, %s, %s)
+            """, (session_id, query, json.dumps(response_json)))
+            
+    except Exception as e:
+        print(f"Error saving chat history: {e}")
+        print(f"Debug info - session_id: {session_id}")
+        print(f"Debug info - query: {query}")
+        print(f"Debug info - response: {response}")
+        print(f"Debug info - response_json: {response_json}")
+        raise
 # getting last 10 messages
-def get_chat_history(session_id):
+
+async def get_chat_history(session_id):
     with get_db_cursor() as cursor:
         cursor.execute("SELECT query, response, timestamp FROM chat_history WHERE session_id = %s ORDER BY timestamp DESC LIMIT 10", (session_id,))
         result = cursor.fetchall()

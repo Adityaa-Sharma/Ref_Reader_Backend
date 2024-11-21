@@ -2,6 +2,7 @@ from crewai import Agent, Task, Crew
 from langchain_community.tools import DuckDuckGoSearchRun
 from langchain_community.utilities import WikipediaAPIWrapper
 from langchain_community.tools.wikipedia.tool import WikipediaQueryRun
+import json
 
 search_tool = DuckDuckGoSearchRun()
 wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
@@ -38,7 +39,7 @@ critic = Agent(
 )
 
 def analyze_research_paper(paper_query):
-    # Tasks for the research analysis crew
+    # [Previous task definitions remain the same]
     research_task = Task(
         description=f"""Research and gather detailed information about the paper: {paper_query}.
         Focus on:
@@ -84,14 +85,24 @@ def analyze_research_paper(paper_query):
     crew = Crew(
         agents=[researcher, summarizer, critic],
         tasks=[research_task, summary_task, critique_task],
-        verbose=True  # Changed from 2 to True
+        verbose=True
     )
 
     result = crew.kickoff()
-    return result
-
+    
+    # Convert the CrewOutput to a serializable format
+    try:
+        serializable_result = {
+            "research_analysis": str(result),  # Convert the entire output to string
+            "summary": "",  # You might need to adjust these based on your needs
+            "critique": ""
+        }
+        return json.dumps(serializable_result)
+    except Exception as e:
+        print(f"Error processing results: {e}")
+        return json.dumps({"error": f"Failed to process results: {str(e)}"})
 # Example usage
-if __name__ == "__main__":
-    paper_query = "Attention Is All You Need - Transformer paper"
-    results = analyze_research_paper(paper_query)
-    print(results)
+# if __name__ == "__main__":
+#     paper_query = "Attention Is All You Need - Transformer paper"
+#     results = analyze_research_paper(paper_query)
+#     print(results)    
