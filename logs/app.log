@@ -1445,3 +1445,898 @@ LiteLLM completion() model= gpt-4o-mini; provider = openai
 2024-11-21 01:26:16 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
 2024-11-21 01:26:16 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/3c37aa85-2aa5-49a3-9c9b-2164a7c52be6/points/search "HTTP/1.1 200 OK"
 2024-11-21 01:26:22 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:43:01 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:43:03 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:43:06 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-21 09:43:06 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/3c37aa85-2aa5-49a3-9c9b-2164a7c52be6/points/search "HTTP/1.1 200 OK"
+2024-11-21 09:43:11 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:45:30 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:45:32 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:45:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-21 09:45:34 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/3c37aa85-2aa5-49a3-9c9b-2164a7c52be6/points/search "HTTP/1.1 200 OK"
+2024-11-21 09:45:40 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:46:52 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:46:54 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:46:56 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-21 09:46:56 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/3c37aa85-2aa5-49a3-9c9b-2164a7c52be6/points/search "HTTP/1.1 200 OK"
+2024-11-21 09:47:00 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:12 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:13 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:13 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:48:16 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:16 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:48:16 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+and+methodology 200 19669
+2024-11-21 09:48:17 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+and+methodology&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-305778970014409045334336661785165844379&bing_market=wt-WT&ex=-1 200 12386
+2024-11-21 09:48:18 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:48:19 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:19 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:48:20 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+paper+PDF+findings+methodology+conclusion 200 19788
+2024-11-21 09:48:21 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+and+music+signal+analysis+in+Python+paper+PDF+findings+methodology+conclusion&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-218183935992430808556157785332994934522&bing_market=wt-WT&ex=-1 200 21614
+2024-11-21 09:48:21 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:48:23 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:23 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:48:23 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+pdf+full+text 200 19351
+2024-11-21 09:48:25 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+and+music+signal+analysis+in+Python+pdf+full+text&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-278208817355607701392958824692667363376&bing_market=wt-WT&ex=-1 200 21411
+2024-11-21 09:48:25 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:48:26 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:26 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:48:34 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:48:36 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:36 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:48:36 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+findings+methodology+reference 200 19623
+2024-11-21 09:48:37 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+and+music+signal+analysis+in+Python+findings+methodology+reference&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-91322917469711960673877439175166781262&bing_market=wt-WT&ex=-1 200 10703
+2024-11-21 09:48:37 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:48:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:39 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:48:40 - primp - INFO - response: https://duckduckgo.com/?q=librosa+paper+analysis+citations 200 18704
+2024-11-21 09:48:41 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+paper+analysis+citations&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-8084339966689056465954576438738071028&bing_market=wt-WT&ex=-1 200 26807
+2024-11-21 09:48:41 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:48:44 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:44 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:48:45 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org 200 19738
+2024-11-21 09:48:45 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-59430517537844099709844784985329622008&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:48:46 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org 200 19754
+2024-11-21 09:48:46 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-59430517537844099709844784985329622008&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:48:47 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org 200 19754
+2024-11-21 09:48:47 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-59430517537844099709844784985329622008&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:48:48 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org 200 19754
+2024-11-21 09:48:49 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-59430517537844099709844784985329622008&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:48:49 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org 200 19737
+2024-11-21 09:48:50 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-59430517537844099709844784985329622008&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:48:51 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org 200 19754
+2024-11-21 09:48:52 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+paper+findings+methodology+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-59430517537844099709844784985329622008&bing_market=wt-WT&ex=-1 200 9360
+2024-11-21 09:48:52 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:48:54 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:54 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:48:55 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+Python+full+text+pdf 200 19335
+2024-11-21 09:48:57 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+in+Python+full+text+pdf&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-217609147052449063300410698138461012105&bing_market=wt-WT&ex=-1 200 21117
+2024-11-21 09:48:57 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:48:59 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:48:59 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:48:59 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+pdf+site%3Aresearchgate.net 200 19417
+2024-11-21 09:49:00 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+pdf+site%3Aresearchgate.net&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-630866593791462590238808496171628999&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:49:01 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+pdf+site%3Aresearchgate.net 200 19417
+2024-11-21 09:49:02 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+pdf+site%3Aresearchgate.net&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-630866593791462590238808496171628999&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:49:03 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+pdf+site%3Aresearchgate.net 200 19417
+2024-11-21 09:49:04 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+pdf+site%3Aresearchgate.net&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-630866593791462590238808496171628999&bing_market=wt-WT&ex=-1 200 10627
+2024-11-21 09:49:04 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:49:06 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:49:06 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:49:07 - primp - INFO - response: https://duckduckgo.com/?q=librosa+paper+findings+citations+PDF+available 200 18972
+2024-11-21 09:49:08 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+paper+findings+citations+PDF+available&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-16764190887174023150377775857072985266&bing_market=wt-WT&ex=-1 200 27049
+2024-11-21 09:49:08 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:49:13 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:49:13 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:49:13 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:49:14 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:49:14 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:49:15 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+summary 200 19469
+2024-11-21 09:49:17 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-31412202898681743006077973846059709485&bing_market=wt-WT&ex=-1 200 21050
+2024-11-21 09:49:17 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:49:22 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:49:22 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:49:22 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:49:23 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:49:23 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:49:24 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+methodology+and+findings 200 19791
+2024-11-21 09:49:26 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+methodology+and+findings&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-109994329875658032055685073470667910762&bing_market=wt-WT&ex=-1 200 10519
+2024-11-21 09:49:26 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:49:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:49:34 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:49:34 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:49:42 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:49:42 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:54:51 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:54:52 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:54:52 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:54:54 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:54:54 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:54:54 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology 202 14988
+2024-11-21 09:54:55 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology 200 19607
+2024-11-21 09:54:56 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-212751429878897292779992524300454743848&bing_market=wt-WT&ex=-1 200 21385
+2024-11-21 09:54:56 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:54:57 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:54:57 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:54:58 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+PDF 200 19301
+2024-11-21 09:54:59 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-313068195812131122561280216344222353467&bing_market=wt-WT&ex=-1 200 10921
+2024-11-21 09:54:59 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:00 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:01 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:04 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:07 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:07 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:07 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper+PDF+site%3Aarxiv.org 200 19812
+2024-11-21 09:55:08 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper+PDF+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-15324347699509352341850067545085702700&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:55:08 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper+PDF+site%3Aarxiv.org 200 19813
+2024-11-21 09:55:08 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper+PDF+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-15324347699509352341850067545085702700&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:55:08 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper+PDF+site%3Aarxiv.org 200 19812
+2024-11-21 09:55:09 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper+PDF+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-15324347699509352341850067545085702700&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:55:09 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper+PDF+site%3Aarxiv.org 200 19812
+2024-11-21 09:55:09 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper+PDF+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-15324347699509352341850067545085702700&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:55:09 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper+PDF+site%3Aarxiv.org 200 19812
+2024-11-21 09:55:10 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper+PDF+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-15324347699509352341850067545085702700&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:55:10 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper+PDF+site%3Aarxiv.org 202 15176
+2024-11-21 09:55:10 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:12 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:12 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:12 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+audio+and+music+signal+analysis+in+Python+paper+findings+and+methodologies 200 19725
+2024-11-21 09:55:13 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+audio+and+music+signal+analysis+in+Python+paper+findings+and+methodologies&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-166365630028428703941616263069151477201&bing_market=wt-WT&ex=-1 200 10386
+2024-11-21 09:55:13 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:15 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:15 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:16 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+analysis+research+paper+citation+McFee+2015 202 14629
+2024-11-21 09:55:16 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+analysis+research+paper+citation+McFee+2015 200 19136
+2024-11-21 09:55:17 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+analysis+research+paper+citation+McFee+2015&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-260340042895896431134117279226740631955&bing_market=wt-WT&ex=-1 200 23414
+2024-11-21 09:55:17 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:23 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:23 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:23 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:24 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:25 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:25 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+et+al.+2015 200 19441
+2024-11-21 09:55:26 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+et+al.+2015&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-186042689950687949259914238827405243163&bing_market=wt-WT&ex=-1 200 20981
+2024-11-21 09:55:26 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:31 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:31 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:31 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:32 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:32 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:32 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+site%3Aresearchgate.net 200 19538
+2024-11-21 09:55:32 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+site%3Aresearchgate.net&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-193693602502324587476575665389102406170&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:55:33 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+site%3Aresearchgate.net 200 19553
+2024-11-21 09:55:33 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+site%3Aresearchgate.net&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-193693602502324587476575665389102406170&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:55:33 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+site%3Aresearchgate.net 200 19554
+2024-11-21 09:55:33 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+site%3Aresearchgate.net&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-193693602502324587476575665389102406170&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:55:34 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+site%3Aresearchgate.net 200 19554
+2024-11-21 09:55:34 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+site%3Aresearchgate.net&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-193693602502324587476575665389102406170&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:55:34 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+site%3Aresearchgate.net 200 19554
+2024-11-21 09:55:34 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+site%3Aresearchgate.net&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-193693602502324587476575665389102406170&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 09:55:35 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+site%3Aresearchgate.net 202 14976
+2024-11-21 09:55:35 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:36 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:36 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:36 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+2015+critique 200 19431
+2024-11-21 09:55:37 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+2015+critique&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-83879225761639173196654341646675063608&bing_market=wt-WT&ex=-1 200 33889
+2024-11-21 09:55:37 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:39 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:39 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+paper+analysis+review 200 19431
+2024-11-21 09:55:40 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+and+music+signal+analysis+in+Python+paper+analysis+review&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-308759349915384852889196049320948815460&bing_market=wt-WT&ex=-1 200 10975
+2024-11-21 09:55:40 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:41 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:41 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:42 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+analysis+paper+review+limitations+methodology+conclusions 200 19404
+2024-11-21 09:55:43 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+analysis+paper+review+limitations+methodology+conclusions&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-182716243380598188459122434749595891773&bing_market=wt-WT&ex=-1 200 10641
+2024-11-21 09:55:43 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:44 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:44 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:55:44 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+analysis+McFee+2015+paper+critique+methodology+conclusions+limitations 200 19661
+2024-11-21 09:55:45 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+analysis+McFee+2015+paper+critique+methodology+conclusions+limitations&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-232500149078851874114237678445539294194&bing_market=wt-WT&ex=-1 200 9951
+2024-11-21 09:55:46 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:55:49 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:55:49 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:58:30 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:58:32 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:58:32 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:58:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:58:34 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:58:34 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings 200 19377
+2024-11-21 09:58:35 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-274290368454132454229541325416769634140&bing_market=wt-WT&ex=-1 200 21082
+2024-11-21 09:58:35 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:58:36 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:58:36 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:58:37 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+python+paper+pdf+or+full+text 200 19375
+2024-11-21 09:58:38 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+python+paper+pdf+or+full+text&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-273327784603154472273059816761583047899&bing_market=wt-WT&ex=-1 200 21289
+2024-11-21 09:58:38 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:58:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:58:39 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:58:39 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+Python+research+paper+summary 200 19342
+2024-11-21 09:58:41 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+Python+research+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-14068537033127384581998235686984931384&bing_market=wt-WT&ex=-1 200 20955
+2024-11-21 09:58:41 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:58:42 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:58:42 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:58:48 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:58:50 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:58:50 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:58:50 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+in+Python+research+findings+PDF 200 19369
+2024-11-21 09:58:52 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+in+Python+research+findings+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-176638028293850271854292326759258268677&bing_market=wt-WT&ex=-1 200 10680
+2024-11-21 09:58:52 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:58:59 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:58:59 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:58:59 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:59:01 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:59:01 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:59:01 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+2015 200 19330
+2024-11-21 09:59:03 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+2015&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-202924700350441161202247198376481723178&bing_market=wt-WT&ex=-1 200 10343
+2024-11-21 09:59:03 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:59:05 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:59:05 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:59:05 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+Python+summary+findings+contributions 200 19425
+2024-11-21 09:59:06 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+Python+summary+findings+contributions&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-213099056037721054304891032238109510857&bing_market=wt-WT&ex=-1 200 10253
+2024-11-21 09:59:06 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:59:08 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:59:08 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:59:08 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+python+key+findings+contributions+paper 200 19681
+2024-11-21 09:59:09 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+in+python+key+findings+contributions+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-196875591629088515467345592695364433242&bing_market=wt-WT&ex=-1 200 10587
+2024-11-21 09:59:09 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:59:11 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:59:11 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:59:11 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+music+signal+analysis+Python+research+paper+summary+findings+contributions 200 19740
+2024-11-21 09:59:12 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+music+signal+analysis+Python+research+paper+summary+findings+contributions&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-307817289288888993797136793510254741800&bing_market=wt-WT&ex=-1 200 10256
+2024-11-21 09:59:12 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:59:14 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:59:14 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:59:14 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+music+signal+analysis+in+Python+2015+paper+summary+objectives+contributions+findings 200 19955
+2024-11-21 09:59:15 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+music+signal+analysis+in+Python+2015+paper+summary+objectives+contributions+findings&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-226457335690177595527579794013612853886&bing_market=wt-WT&ex=-1 200 11989
+2024-11-21 09:59:15 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:59:17 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:59:17 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:59:17 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Python+music+audio+analysis+research+paper+summary+2015+McFee 200 19393
+2024-11-21 09:59:18 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Python+music+audio+analysis+research+paper+summary+2015+McFee&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-198551503172901961094550817389883169660&bing_market=wt-WT&ex=-1 200 11056
+2024-11-21 09:59:18 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:59:20 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:59:20 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:59:21 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+music+signal+analysis+in+Python+McFee+2015+summary+findings+contributions+objectives 200 19967
+2024-11-21 09:59:22 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+music+signal+analysis+in+Python+McFee+2015+summary+findings+contributions+objectives&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-50498249759132675057582734883511955943&bing_market=wt-WT&ex=-1 200 10738
+2024-11-21 09:59:22 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:59:27 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:59:27 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:59:28 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:59:28 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:59:28 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 09:59:29 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology+conclusions+limitations 200 20014
+2024-11-21 09:59:30 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology+conclusions+limitations&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-3166199193963632794138255356098697217&bing_market=wt-WT&ex=-1 200 23057
+2024-11-21 09:59:30 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 09:59:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 09:59:34 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:03:07 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:03:08 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:03:08 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:03:10 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:03:10 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:03:11 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper 200 19170
+2024-11-21 10:03:12 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-141785189909382742484567275034805589298&bing_market=wt-WT&ex=-1 200 32844
+2024-11-21 10:03:12 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:03:14 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:03:14 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:03:14 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+2015+paper+details 200 19505
+2024-11-21 10:03:15 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+2015+paper+details&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-53716913110277207623507515492207739819&bing_market=wt-WT&ex=-1 200 10387
+2024-11-21 10:03:15 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:03:17 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:03:17 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:03:17 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+2015+full+text+or+details 202 15076
+2024-11-21 10:03:18 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+2015+full+text+or+details 200 19703
+2024-11-21 10:03:19 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+2015+full+text+or+details&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-21286267979494230217549688342174425919&bing_market=wt-WT&ex=-1 200 11195
+2024-11-21 10:03:19 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:03:20 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:03:20 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:03:21 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+analysis+research+questions+methodology+findings+McFee+2015 202 14863
+2024-11-21 10:03:21 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+analysis+research+questions+methodology+findings+McFee+2015 200 19426
+2024-11-21 10:03:23 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+analysis+research+questions+methodology+findings+McFee+2015&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-217196893101458295471745572968983483203&bing_market=wt-WT&ex=-1 200 21197
+2024-11-21 10:03:23 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:03:27 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:03:27 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:03:27 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:03:28 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:03:28 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:03:29 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+findings 200 19190
+2024-11-21 10:03:30 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+findings&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-124785358207227088994979817911204122028&bing_market=wt-WT&ex=-1 200 33418
+2024-11-21 10:03:30 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:03:35 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:03:35 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:03:35 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:03:36 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:03:36 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:03:36 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology+conclusions+limitations 200 20032
+2024-11-21 10:03:37 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology+conclusions+limitations&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-3166199193963632794138255356098697217&bing_market=wt-WT&ex=-1 200 12393
+2024-11-21 10:03:38 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:03:42 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:03:42 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:04:32 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:04:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:04:34 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:04:36 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:04:36 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:04:36 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+findings+research+paper 200 19483
+2024-11-21 10:04:37 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+findings+research+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-318333002307072364194363710567031445124&bing_market=wt-WT&ex=-1 200 10346
+2024-11-21 10:04:37 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:04:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:04:39 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:04:39 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+paper+PDF 200 19052
+2024-11-21 10:04:40 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+paper+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-91257551308994715450332527962020373253&bing_market=wt-WT&ex=-1 200 10837
+2024-11-21 10:04:40 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:04:43 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:04:43 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:04:43 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+python+research+paper+pdf 200 19407
+2024-11-21 10:04:45 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+in+python+research+paper+pdf&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-35937830911632992526262900805440340751&bing_market=wt-WT&ex=-1 200 20542
+2024-11-21 10:04:45 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:04:47 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:04:47 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:04:52 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:04:55 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:04:55 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:04:55 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+paper+Raffel+2015+PDF 200 19298
+2024-11-21 10:04:56 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+paper+Raffel+2015+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-119804124335474783640545818281495299187&bing_market=wt-WT&ex=-1 200 10578
+2024-11-21 10:04:56 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:04:58 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:04:58 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:04:59 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+pdf+download 200 19092
+2024-11-21 10:05:00 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+pdf+download&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-161188669858803060944283980113446687692&bing_market=wt-WT&ex=-1 200 11097
+2024-11-21 10:05:00 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:05:02 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:05:02 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:05:02 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+site%3Aresearchgate.net 200 19189
+2024-11-21 10:05:02 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+site%3Aresearchgate.net&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-10026205411114581173902482010836540196&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:05:03 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+site%3Aresearchgate.net 200 19203
+2024-11-21 10:05:04 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+site%3Aresearchgate.net&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-10026205411114581173902482010836540196&bing_market=wt-WT&ex=-1 200 21849
+2024-11-21 10:05:04 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:05:10 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:05:10 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:05:10 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:05:12 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:05:12 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:05:12 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+summary 200 19467
+2024-11-21 10:05:17 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-31412202898681743006077973846059709485&bing_market=wt-WT&ex=-1 200 10780
+2024-11-21 10:05:17 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:05:22 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:05:22 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:05:22 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:05:24 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:05:24 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:05:24 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+research+paper+review 200 19431
+2024-11-21 10:05:25 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+and+music+signal+analysis+in+Python+research+paper+review&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-238124176429718484785713869773436923731&bing_market=wt-WT&ex=-1 200 10975
+2024-11-21 10:05:25 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:05:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:05:35 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:06:37 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:06:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:06:39 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:06:41 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:06:41 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:06:41 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology+data+collection 200 19927
+2024-11-21 10:06:42 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology+data+collection&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-275770141035646704845381387218234416095&bing_market=wt-WT&ex=-1 200 24782
+2024-11-21 10:06:42 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:06:44 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:06:44 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:06:44 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+in+Python+paper+methodology+findings 200 19429
+2024-11-21 10:06:45 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+in+Python+paper+methodology+findings&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-280417970685540026612398321340740089557&bing_market=wt-WT&ex=-1 200 10108
+2024-11-21 10:06:45 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:06:46 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:06:46 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:06:47 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper 200 19329
+2024-11-21 10:06:48 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+in+Python+research+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-40018311781067267074569047044517634530&bing_market=wt-WT&ex=-1 200 21107
+2024-11-21 10:06:48 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:06:49 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:06:49 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:06:54 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:06:56 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:06:56 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:06:57 - primp - INFO - response: https://duckduckgo.com/?q=librosa+paper+findings+and+methodology+2015 200 18856
+2024-11-21 10:06:57 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+paper+findings+and+methodology+2015&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-149517037364095482110164259600227867546&bing_market=wt-WT&ex=-1 200 9582
+2024-11-21 10:06:57 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:07:00 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:07:00 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:07:00 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+analysis+Python+research+paper+review 200 19050
+2024-11-21 10:07:01 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+analysis+Python+research+paper+review&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-267889383870682919279908583644486144873&bing_market=wt-WT&ex=-1 200 21883
+2024-11-21 10:07:01 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:07:03 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:07:03 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:07:04 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+in+Python+paper+PDF 202 14623
+2024-11-21 10:07:04 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+in+Python+paper+PDF 200 19126
+2024-11-21 10:07:05 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+in+Python+paper+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-309228941146753909220817001325681670436&bing_market=wt-WT&ex=-1 200 22035
+2024-11-21 10:07:05 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:07:09 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:07:09 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:07:09 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:07:11 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:07:11 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:07:11 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+summary 200 19485
+2024-11-21 10:07:12 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-31412202898681743006077973846059709485&bing_market=wt-WT&ex=-1 200 10256
+2024-11-21 10:07:12 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:07:17 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:07:17 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:07:17 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:07:18 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:07:18 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:07:18 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper 200 19154
+2024-11-21 10:07:19 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-141785189909382742484567275034805589298&bing_market=wt-WT&ex=-1 200 24317
+2024-11-21 10:07:19 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:07:27 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:07:27 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:08:42 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:08:44 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:08:44 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:08:46 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:08:46 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:08:46 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology 200 19607
+2024-11-21 10:08:47 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-212751429878897292779992524300454743848&bing_market=wt-WT&ex=-1 200 21092
+2024-11-21 10:08:47 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:08:51 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:08:51 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:08:51 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+research+paper+full+text 200 19359
+2024-11-21 10:08:52 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+research+paper+full+text&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-187016945453033080316152381867279675641&bing_market=wt-WT&ex=-1 200 20177
+2024-11-21 10:08:52 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:08:56 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:08:56 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:09:02 - primp - INFO - response: https://duckduckgo.com/?q=librosa+documentation+audio+music+signal+analysis 200 19012
+2024-11-21 10:09:09 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+documentation+audio+music+signal+analysis&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-273017630898630712610365866402904737495&bing_market=wt-WT&ex=-1 200 11687
+2024-11-21 10:09:09 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:09:12 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:09:12 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:09:17 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:09:19 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:09:19 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:09:20 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+PDF+full+text 200 19363
+2024-11-21 10:09:21 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+PDF+full+text&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-135686328663550027958331770156810182806&bing_market=wt-WT&ex=-1 200 10497
+2024-11-21 10:09:21 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:09:24 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:09:24 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:09:24 - primp - INFO - response: https://duckduckgo.com/?q=librosa+SciPy+2015+proceedings+PDF 200 18730
+2024-11-21 10:09:25 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+SciPy+2015+proceedings+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-96304351822720659531785459435461293401&bing_market=wt-WT&ex=-1 200 10675
+2024-11-21 10:09:25 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:09:28 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:09:28 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:09:28 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+site%3Ascipy.org 200 19118
+2024-11-21 10:09:28 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+site%3Ascipy.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-243233620835942103398517010954369207892&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:09:29 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+site%3Ascipy.org 200 19118
+2024-11-21 10:09:29 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+site%3Ascipy.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-243233620835942103398517010954369207892&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:09:29 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+site%3Ascipy.org 200 19103
+2024-11-21 10:09:29 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+site%3Ascipy.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-243233620835942103398517010954369207892&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:09:30 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+site%3Ascipy.org 200 19102
+2024-11-21 10:09:31 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+site%3Ascipy.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-243233620835942103398517010954369207892&bing_market=wt-WT&ex=-1 200 8448
+2024-11-21 10:09:31 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:09:43 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:09:43 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:09:43 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:09:45 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:09:45 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:09:46 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+2015+PDF 200 19209
+2024-11-21 10:09:47 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+and+music+signal+analysis+in+Python+2015+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-250313439810002164120846843010227929994&bing_market=wt-WT&ex=-1 200 12040
+2024-11-21 10:09:47 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:10:00 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:10:01 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:10:01 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:10:02 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:10:02 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:10:03 - primp - INFO - response: https://duckduckgo.com/?q=LibROSA+paper+Brian+McFee+critical+analysis+review 200 19054
+2024-11-21 10:10:05 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=LibROSA+paper+Brian+McFee+critical+analysis+review&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-258884985509667933980444508304127087712&bing_market=wt-WT&ex=-1 200 16847
+2024-11-21 10:10:05 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:10:17 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:10:17 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:11:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:11:41 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:11:41 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:11:44 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:11:44 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:11:44 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology 200 19607
+2024-11-21 10:11:45 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+findings+methodology&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-212751429878897292779992524300454743848&bing_market=wt-WT&ex=-1 200 21079
+2024-11-21 10:11:45 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:11:48 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:11:48 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:11:49 - primp - INFO - response: https://duckduckgo.com/?q=librosa+documentation 200 18460
+2024-11-21 10:11:50 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+documentation&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-92610223842276550516568115035180618744&bing_market=wt-WT&ex=-1 200 22289
+2024-11-21 10:11:50 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:11:51 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:11:51 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:11:52 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+academic+paper+analysis 200 19495
+2024-11-21 10:11:54 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+academic+paper+analysis&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-31160853033112839597192654892944928431&bing_market=wt-WT&ex=-1 200 10849
+2024-11-21 10:11:54 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:11:55 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:11:55 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:12:01 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:12:04 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:12:04 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:12:04 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+analysis+Python+paper+detailed+findings+methodology 200 19316
+2024-11-21 10:12:05 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+analysis+Python+paper+detailed+findings+methodology&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-292192057747582623904267445126529445081&bing_market=wt-WT&ex=-1 200 12269
+2024-11-21 10:12:05 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:12:08 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:12:08 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:12:10 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:12:17 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:12:17 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:12:17 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:12:18 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:12:18 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:12:19 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+summary 200 19483
+2024-11-21 10:12:20 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-31412202898681743006077973846059709485&bing_market=wt-WT&ex=-1 200 21344
+2024-11-21 10:12:20 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:12:21 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:12:21 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:12:21 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+Python+tutorial+paper 200 19333
+2024-11-21 10:12:22 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+in+Python+tutorial+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-228271345180197119014416257100248228531&bing_market=wt-WT&ex=-1 200 21325
+2024-11-21 10:12:22 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:12:29 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:12:29 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:12:29 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:12:31 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:12:31 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:12:31 - primp - INFO - response: https://duckduckgo.com/?q=critical+analysis+research+paper+Librosa+audio+signal+processing 200 19304
+2024-11-21 10:12:32 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=critical+analysis+research+paper+Librosa+audio+signal+processing&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-173197169716898468827596150749628707480&bing_market=wt-WT&ex=-1 200 39063
+2024-11-21 10:12:32 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:12:42 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:12:42 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:14:52 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:14:53 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:14:53 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:14:55 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:14:55 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:14:56 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+findings+paper 200 19357
+2024-11-21 10:14:57 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+findings+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-79090793477835481606938614788912874575&bing_market=wt-WT&ex=-1 200 32205
+2024-11-21 10:14:57 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:14:58 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:14:58 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:14:59 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+analysis+research+paper+methodology+findings 200 19126
+2024-11-21 10:15:00 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+analysis+research+paper+methodology+findings&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-4389766754185920295141676663081122414&bing_market=wt-WT&ex=-1 200 11961
+2024-11-21 10:15:00 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:15:01 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:15:01 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:15:04 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:15:08 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:15:08 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:15:08 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+PDF 200 19317
+2024-11-21 10:15:09 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-313068195812131122561280216344222353467&bing_market=wt-WT&ex=-1 200 20589
+2024-11-21 10:15:09 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:15:12 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:15:12 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:15:12 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+analysis+research+paper+full+text 200 19087
+2024-11-21 10:15:14 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+analysis+research+paper+full+text&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-246048348273600609358040870004852447167&bing_market=wt-WT&ex=-1 200 11906
+2024-11-21 10:15:14 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:15:16 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:15:16 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:15:16 - primp - INFO - response: https://duckduckgo.com/?q=librosa+music+analysis+PDF+file 200 18714
+2024-11-21 10:15:17 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+music+analysis+PDF+file&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-188351348830540877104572028870440808443&bing_market=wt-WT&ex=-1 200 12164
+2024-11-21 10:15:17 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:15:19 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:15:19 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:15:19 - primp - INFO - response: https://duckduckgo.com/?q=librosa+paper+findings+methodology+full+text 200 18952
+2024-11-21 10:15:20 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+paper+findings+methodology+full+text&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-136909751200667552978127009040868208273&bing_market=wt-WT&ex=-1 200 11450
+2024-11-21 10:15:20 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:15:31 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:15:31 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:15:31 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:15:33 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:15:33 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:15:33 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+summary 200 19350
+2024-11-21 10:15:34 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-220321343301528119932881646544205494387&bing_market=wt-WT&ex=-1 200 10777
+2024-11-21 10:15:34 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:15:43 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:15:43 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:15:43 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:15:44 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:15:44 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:15:45 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+review+methodology+conclusions+limitations 200 20205
+2024-11-21 10:15:46 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+research+paper+review+methodology+conclusions+limitations&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-230684110759145500819882964985485954510&bing_market=wt-WT&ex=-1 200 10497
+2024-11-21 10:15:46 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:15:55 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:15:55 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:20:37 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:20:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:20:39 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:20:41 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:20:41 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:20:42 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+findings+methodology 200 19449
+2024-11-21 10:20:43 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+findings+methodology&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-324244843994772495348646191752779725279&bing_market=wt-WT&ex=-1 200 10544
+2024-11-21 10:20:43 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:20:45 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:20:45 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:20:46 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+music+signal+analysis+in+Python+academic+paper+details 200 19377
+2024-11-21 10:20:47 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+music+signal+analysis+in+Python+academic+paper+details&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-12255910290717500052516504107409737693&bing_market=wt-WT&ex=-1 200 22741
+2024-11-21 10:20:47 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:20:49 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:20:49 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:20:50 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+in+python+complete+paper+PDF 200 19411
+2024-11-21 10:20:51 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+in+python+complete+paper+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-206411275373880242349505413663735108031&bing_market=wt-WT&ex=-1 200 10582
+2024-11-21 10:20:51 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:20:53 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:20:53 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:20:59 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:21:02 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:21:02 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:21:03 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+site%3Aarxiv.org 200 19416
+2024-11-21 10:21:03 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+and+music+signal+analysis+in+Python+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-268780225230628485610244468029444264604&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:21:03 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+site%3Aarxiv.org 200 19432
+2024-11-21 10:21:04 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+and+music+signal+analysis+in+Python+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-268780225230628485610244468029444264604&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:21:04 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+site%3Aarxiv.org 200 19416
+2024-11-21 10:21:04 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+and+music+signal+analysis+in+Python+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-268780225230628485610244468029444264604&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:21:05 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+site%3Aarxiv.org 200 19416
+2024-11-21 10:21:05 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+and+music+signal+analysis+in+Python+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-268780225230628485610244468029444264604&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:21:05 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+site%3Aarxiv.org 202 14856
+2024-11-21 10:21:06 - primp - INFO - response: https://duckduckgo.com/?q=librosa+Audio+and+music+signal+analysis+in+Python+site%3Aarxiv.org 200 19416
+2024-11-21 10:21:07 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+Audio+and+music+signal+analysis+in+Python+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-268780225230628485610244468029444264604&bing_market=wt-WT&ex=-1 200 21958
+2024-11-21 10:21:07 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:21:09 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:21:09 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:21:09 - primp - INFO - response: https://duckduckgo.com/?q=%22librosa%3A+Audio+and+music+signal+analysis+in+Python%22+pdf 200 19242
+2024-11-21 10:21:10 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=%22librosa%3A+Audio+and+music+signal+analysis+in+Python%22+pdf&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-101205342851512442554678444578997651671&bing_market=wt-WT&ex=-1 200 5611
+2024-11-21 10:21:10 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:21:13 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:21:13 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:21:13 - primp - INFO - response: https://duckduckgo.com/?q=14th+python+in+science+conference+proceedings+2015+pdf 200 19100
+2024-11-21 10:21:14 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=14th+python+in+science+conference+proceedings+2015+pdf&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-112610121271170065403469009515474551600&bing_market=wt-WT&ex=-1 200 9291
+2024-11-21 10:21:14 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:21:17 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:21:17 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:21:17 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+full+text 200 19317
+2024-11-21 10:21:19 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+full+text&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-282986964617349810151622830590684780429&bing_market=wt-WT&ex=-1 200 21136
+2024-11-21 10:21:19 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:21:22 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:21:22 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:21:22 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+and+music+signal+analysis+pdf+download 200 19093
+2024-11-21 10:21:23 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+and+music+signal+analysis+pdf+download&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-161188669858803060944283980113446687692&bing_market=wt-WT&ex=-1 200 10974
+2024-11-21 10:21:23 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:21:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:21:34 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:21:34 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:21:36 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:21:36 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:21:36 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+2015+summary 200 19441
+2024-11-21 10:21:37 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+2015+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-278391117392273814259716786197184320936&bing_market=wt-WT&ex=-1 200 10633
+2024-11-21 10:21:37 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:21:45 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:21:45 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:21:45 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:21:47 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:21:47 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:21:47 - primp - INFO - response: https://duckduckgo.com/?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+et+al.+2015+paper+analysis 200 19718
+2024-11-21 10:21:48 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa%3A+Audio+and+music+signal+analysis+in+Python+McFee+et+al.+2015+paper+analysis&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-27662695927770382076793232065688465038&bing_market=wt-WT&ex=-1 200 10408
+2024-11-21 10:21:48 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:21:50 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:21:50 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:21:50 - primp - INFO - response: https://duckduckgo.com/?q=librosa+audio+analysis+Python+McFee+et+al.+2015+detailed+review 200 19337
+2024-11-21 10:21:51 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=librosa+audio+analysis+Python+McFee+et+al.+2015+detailed+review&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-170286206318018428160977070939795366695&bing_market=wt-WT&ex=-1 200 10612
+2024-11-21 10:21:51 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:21:59 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:21:59 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:22:38 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:22:40 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:22:40 - opentelemetry.trace - WARNING - Overriding of current TracerProvider is not allowed
+2024-11-21 10:22:40 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:22:42 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:22:42 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:22:42 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+methodology+findings 200 20287
+2024-11-21 10:22:44 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+methodology+findings&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-11982815964497592339157684412053557348&bing_market=wt-WT&ex=-1 200 10443
+2024-11-21 10:22:44 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:22:53 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:22:53 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:22:53 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:22:55 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:22:55 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:22:55 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org 200 20370
+2024-11-21 10:22:55 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-42936026495874616653646426092215076120&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:22:56 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org 200 20370
+2024-11-21 10:22:56 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-42936026495874616653646426092215076120&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:22:56 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org 200 20369
+2024-11-21 10:22:57 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-42936026495874616653646426092215076120&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:22:57 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org 200 20370
+2024-11-21 10:22:57 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-42936026495874616653646426092215076120&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:22:58 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org 200 20370
+2024-11-21 10:22:58 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-42936026495874616653646426092215076120&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:22:58 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org 200 20354
+2024-11-21 10:22:58 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+site%3Aarxiv.org&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-42936026495874616653646426092215076120&bing_market=wt-WT&ex=-1 301 0
+2024-11-21 10:22:58 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:23:01 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:23:01 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:23:01 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks 200 19942
+2024-11-21 10:23:02 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-228498306520785719873487519103055681211&bing_market=wt-WT&ex=-1 200 23554
+2024-11-21 10:23:02 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:23:08 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:23:08 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:23:08 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:23:16 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:23:16 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:23:16 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:23:18 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:23:18 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:23:18 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+Wu+et+al.+2018+full+text+review 200 20593
+2024-11-21 10:23:19 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+Wu+et+al.+2018+full+text+review&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-44671976460769658137962126302676528298&bing_market=wt-WT&ex=-1 200 9711
+2024-11-21 10:23:19 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:23:21 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:23:21 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:23:21 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+Wu+et+al.+2018+methodology+critique+and+analysis 200 20879
+2024-11-21 10:23:22 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+Wu+et+al.+2018+methodology+critique+and+analysis&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-56567007379499911994210600229136612197&bing_market=wt-WT&ex=-1 200 9761
+2024-11-21 10:23:22 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:23:24 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:23:24 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:23:24 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+Wu+et+al.+2018+methodology+results+limitations 200 20846
+2024-11-21 10:23:26 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+generative+adversarial+networks+Wu+et+al.+2018+methodology+results+limitations&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-188442735888107327662832821663428611046&bing_market=wt-WT&ex=-1 200 10098
+2024-11-21 10:23:26 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:23:27 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:23:27 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:23:27 - primp - INFO - response: https://duckduckgo.com/?q=style+transfer+cycle-consistent+boundary+equilibrium+GANs+Wu+et+al.+2018+analysis+critique+review 200 19973
+2024-11-21 10:23:28 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=style+transfer+cycle-consistent+boundary+equilibrium+GANs+Wu+et+al.+2018+analysis+critique+review&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-246124936051114481835919246122363277988&bing_market=wt-WT&ex=-1 200 9998
+2024-11-21 10:23:28 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:23:30 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:23:30 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:23:30 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+Wu+et+al.+2018+critique+methodology+and+results 200 19435
+2024-11-21 10:23:31 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+Wu+et+al.+2018+critique+methodology+and+results&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-155204686085015880019602063900136217990&bing_market=wt-WT&ex=-1 200 11012
+2024-11-21 10:23:31 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:23:33 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:23:33 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:23:33 - primp - INFO - response: https://duckduckgo.com/?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+GANs+detailed+analysis+review 200 19933
+2024-11-21 10:23:34 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Singing+style+transfer+using+cycle-consistent+boundary+equilibrium+GANs+detailed+analysis+review&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-311686817801891433098428186838911434665&bing_market=wt-WT&ex=-1 200 10088
+2024-11-21 10:23:34 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2024-11-21 10:23:37 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:23:37 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2024-11-21 10:24:46 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:24:48 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 10:24:50 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-21 10:24:50 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/3c37aa85-2aa5-49a3-9c9b-2164a7c52be6/points/search "HTTP/1.1 200 OK"
+2024-11-21 10:24:56 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 11:09:01 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 11:09:06 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 11:09:09 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-21 11:09:09 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/3c37aa85-2aa5-49a3-9c9b-2164a7c52be6/points/search "HTTP/1.1 200 OK"
+2024-11-21 11:09:16 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 11:10:14 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 11:10:16 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 11:10:18 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-21 11:10:19 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/3c37aa85-2aa5-49a3-9c9b-2164a7c52be6/points/search "HTTP/1.1 200 OK"
+2024-11-21 11:10:24 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 13:12:25 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 13:12:28 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-21 13:12:33 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2024-11-21 13:12:33 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/3c37aa85-2aa5-49a3-9c9b-2164a7c52be6/points/search "HTTP/1.1 200 OK"

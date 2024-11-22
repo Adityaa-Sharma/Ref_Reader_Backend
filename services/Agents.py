@@ -94,8 +94,6 @@ def analyze_research_paper(paper_query):
     try:
         serializable_result = {
             "research_analysis": str(result),  # Convert the entire output to string
-            "summary": "",  # You might need to adjust these based on your needs
-            "critique": ""
         }
         return json.dumps(serializable_result)
     except Exception as e:
@@ -105,4 +103,4 @@ def analyze_research_paper(paper_query):
 # if __name__ == "__main__":
 #     paper_query = "Attention Is All You Need - Transformer paper"
 #     results = analyze_research_paper(paper_query)
-#     print(results)    
+#     print(results)

@@ -106,7 +106,9 @@ async def chat(session_id: str, query: str):
     if not pdf_entry:
         raise HTTPException(status_code=404, detail="Session ID not found")
     
-    paper_content = await PaperName(query, str(pdf_entry["citations"]), await get_chat_history(session_id)).get_paper_name()
+    chat_history = await get_chat_history(session_id)
+    
+    paper_content = await PaperName(query, str(pdf_entry["citations"]), chat_history).get_paper_name()
     
     print("arxiv_id", paper_content.get('arxiv_id'))
 
@@ -134,27 +136,28 @@ async def chat(session_id: str, query: str):
             ingest_result = await ingestor.arxiv_handling(arxiv_id)
             
             # Handle query
-            query_handler = QueryHandler(query, paper_content['paper_name'], await get_chat_history(session_id), pdf_entry["citations"])
+            query_handler = QueryHandler(query, paper_content['paper_name'], chat_history, pdf_entry["citations"])
             rephrased_query = await query_handler.query_rephraser()
             print("rephrased_query", rephrased_query)
-            Retriever = Retrieval(rephrased_query, session_id, await get_chat_history(session_id))
+            Retriever = Retrieval(rephrased_query, session_id, chat_history)
             response = await Retriever.chat_response()
             await save_chat_history(session_id, rephrased_query, response)
             return JSONResponse(content={"response": response})
     
         else:
             # Handle existing paper with retriever
-            query_handler = QueryHandler(query, paper_content['paper_name'], await get_chat_history(session_id), pdf_entry["citations"])
+            query_handler = QueryHandler(query, paper_content['paper_name'], chat_history, pdf_entry["citations"])
             rephrased_query = await query_handler.query_rephraser()
             print("rephrased_query", rephrased_query)
-            Retriever = Retrieval(rephrased_query, session_id, await get_chat_history(session_id))
+            Retriever = Retrieval(rephrased_query, session_id, chat_history)
             response = await Retriever.chat_response()
             await save_chat_history(session_id, rephrased_query, response)
+            return JSONResponse(content={"response": response})
 
     else:
         # Non-arxiv block
         paper_name = paper_content['paper_name']
-        query_handler = QueryHandler(query, paper_name, await get_chat_history(session_id), pdf_entry["citations"])
+        query_handler = QueryHandler(query, paper_name, chat_history, pdf_entry["citations"])
         rephrased_query = await query_handler.query_rephraser()
         NonArxivHandler = NonArxiv(rephrased_query, paper_name)
         print("rephrased_query", rephrased_query)
@@ -163,7 +166,9 @@ async def chat(session_id: str, query: str):
             response = await loop.run_in_executor(
                 pool, NonArxivHandler.get_paper_details
                 )
-        await save_chat_history(session_id, rephrased_query, response.get("research_analysis"))
+        response = json.loads(response)
+        await save_chat_history(session_id, rephrased_query, response)
+
 
     return JSONResponse(content={"response": response.get("research_analysis")})
 
