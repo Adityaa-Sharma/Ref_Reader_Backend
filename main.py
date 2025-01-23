@@ -17,6 +17,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
+from mangum import Mangum   
 
 logs_dir = 'logs'
 os.makedirs(logs_dir, exist_ok=True)
@@ -175,8 +176,7 @@ async def chat(session_id: str, query: str):
     
 
 
- 
- 
+handler = Mangum(app)
  
  
 
