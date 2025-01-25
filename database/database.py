@@ -53,6 +53,7 @@ def create_tables():
             CREATE TABLE IF NOT EXISTS pdfs (
                 id SERIAL PRIMARY KEY,
                 session_id UUID REFERENCES sessions(session_id),
+                arxiv_id VARCHAR,
                 pdf_name VARCHAR NOT NULL,
                 citations TEXT NOT NULL
             )
@@ -79,20 +80,24 @@ def create_tables():
                     
 
 
-def save_pdf(session_id: str, pdf_name: str, citations: str):
+def save_pdf(session_id: str, pdf_name: str, citations: str, arxiv_id: str = None):
     with get_db_cursor(commit=True) as cur:
+        # Create session if not exists
         cur.execute("SELECT session_id FROM sessions WHERE session_id = %s", (session_id,))
         if not cur.fetchone():
             cur.execute("INSERT INTO sessions (session_id) VALUES (%s)", (session_id,))
         
-        cur.execute("SELECT id FROM pdfs WHERE session_id = %s AND pdf_name = %s", (session_id, pdf_name))
+        # Check if PDF already exists
+        cur.execute("SELECT id FROM pdfs WHERE session_id = %s AND pdf_name = %s", 
+                   (session_id, pdf_name))
         if not cur.fetchone():
-            # Insert PDF entry
+            # Insert PDF entry with arxiv_id
             cur.execute("""
-                INSERT INTO pdfs (session_id, pdf_name, citations)
-                VALUES (%s, %s, %s)
-            """, (session_id, pdf_name, citations))
-
+                INSERT INTO pdfs (session_id, pdf_name, citations, arxiv_id)
+                VALUES (%s, %s, %s, %s)
+            """, (session_id, pdf_name, citations, arxiv_id))
+            
+            
 
 def get_pdf_citations(session_id):
     with get_db_cursor() as cursor:

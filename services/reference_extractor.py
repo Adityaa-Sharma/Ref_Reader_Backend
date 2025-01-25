@@ -68,25 +68,40 @@ class ReferenceExtractor:
 
     @staticmethod
     def document_loader(file_path):
-        # Load PDF and extract all text
-        doc = fitz.open(file_path)
-        all_text = ""
-        for page_num in range(doc.page_count):
-            page = doc[page_num]
-            all_text += page.get_text()
-        
-        logger.debug(f"Extracted text from PDF: {all_text[:500]}...")  # Log first 500 character
-        
-        # Extract references and bibliography text
-        # references = ReferenceExtractor.extract_references_from_text(all_text)
-        bibliography_text = ReferenceExtractor.extract_bibliography(all_text)
-        logger.debug(f"Extracted bibliography: {bibliography_text[:500]}...")  # Log first 500 characters
-        
-        # Extract reference citations
-        citations = ReferenceExtractor.extract_reference_citations(bibliography_text)
-        
-        return citations
-
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"PDF file not found: {file_path}")
+            
+        try:
+            doc = fitz.open(file_path)
+            if not doc:
+                raise ValueError("Failed to open PDF document")
+                
+            try:
+                all_text = ""
+                for page_num in range(doc.page_count):
+                    page = doc[page_num]
+                    all_text += page.get_text()
+                
+                if not all_text.strip():
+                    raise ValueError("No text content found in PDF")
+                    
+                logger.debug(f"Extracted text from PDF: {all_text[:500]}...")
+                
+                bibliography_text = ReferenceExtractor.extract_bibliography(all_text)
+                logger.debug(f"Extracted bibliography: {bibliography_text[:500]}...")
+                
+                citations = ReferenceExtractor.extract_reference_citations(bibliography_text)
+                
+                return citations
+            finally:
+                doc.close()
+                
+        except fitz.FileDataError as e:
+            logger.error(f"Invalid or corrupted PDF file: {str(e)}")
+            raise ValueError("Invalid or corrupted PDF file")
+        except Exception as e:
+            logger.error(f"Error processing PDF: {str(e)}")
+            raise
     
 ## test
 # references, citations , bib = ReferenceExtractor.document_loader('C:\\Users\\91978\\Desktop\\Ref_Reader_backend\\encoder_decoder.pdf')

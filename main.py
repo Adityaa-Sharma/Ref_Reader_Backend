@@ -18,6 +18,9 @@ from logging.handlers import RotatingFileHandler
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
 from mangum import Mangum   
+import requests
+from fastapi import Form, Body, Request
+from typing import Optional
 
 logs_dir = 'logs'
 os.makedirs(logs_dir, exist_ok=True)
@@ -72,30 +75,129 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
     expose_headers=["*"]
 )
+class FileInput(BaseModel):
+    paper_title: str = None
+    arxiv_id: str = None
 
-@app.post("/extract_references/")
-async def extract_references(file: UploadFile = File(...)):
-    with tempfile.NamedTemporaryFile(delete=False) as temp_file:
-        content = await file.read()
-        temp_file.write(content)
-        temp_file_path = temp_file.name        
+class ArxivInput(BaseModel):
+    arxiv_id: str
+
+@app.post("/extract_references/arxiv")
+async def extract_references_arxiv(arxiv_input: ArxivInput):
+    temp_file = None
     try:
-        pdf_name = file.filename
-        pdf_entry = get_session_id(pdf_name)
-        if pdf_entry:   
-            return JSONResponse(content={"session_id": pdf_entry})
+        arxiv_id = arxiv_input.arxiv_id
+        pdf_name = f"{arxiv_id}.pdf"
         
-        citations = ReferenceExtractor.document_loader(temp_file_path)
+        # Check if already processed
+        pdf_entry = get_session_id(pdf_name)
+        if (pdf_entry):
+            return JSONResponse(content={
+                "session_id": pdf_entry,
+                "saved_id": {"arxiv_id": arxiv_id}
+            })
+
+        # Create temporary file
+        temp_file = tempfile.NamedTemporaryFile(delete=False)
+        temp_file_path = temp_file.name
+        temp_file.close()
+
+        # Download PDF
+        response = requests.get(f"https://arxiv.org/pdf/{arxiv_id}.pdf")
+        if response.status_code != 200:
+            raise HTTPException(status_code=400, detail="Failed to download arxiv PDF")
+        
+        # Save PDF content
+        with open(temp_file_path, 'wb') as f:
+            f.write(response.content)
+
+        # Process PDF
+        citations = await asyncio.to_thread(ReferenceExtractor.document_loader, temp_file_path)
+        if not citations:
+            raise HTTPException(status_code=400, detail="No citations found in PDF")
+
+        # Save to database
         session_id = str(uuid.uuid4())
-        save_pdf(session_id, pdf_name, json.dumps(citations))
-        return JSONResponse(content={"session_id": session_id})
+        save_pdf(
+            session_id=session_id,
+            pdf_name=pdf_name,
+            citations=json.dumps(citations),
+            arxiv_id=arxiv_id
+        )
+
+        return JSONResponse(content={
+            "session_id": session_id,
+            "saved_id": {"arxiv_id": arxiv_id}
+        })
 
     except Exception as e:
-       
-        return JSONResponse(content={"error": str(e)}, status_code=500)
+        logger.error(f"Error in extract_references_arxiv: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
     finally:
-        os.unlink(temp_file_path)
+        if 'temp_file_path' in locals() and os.path.exists(temp_file_path):
+            try:
+                os.close(os.open(temp_file_path, os.O_RDONLY))
+                os.unlink(temp_file_path)
+            except Exception as e:
+                logger.error(f"Error deleting temporary file: {str(e)}")
+
+@app.post("/extract_references/upload")
+async def extract_references_upload(
+    file: UploadFile = File(...),
+    paper_title: str = Form(...)
+):
+    temp_file = None
+    try:
+        if not file.filename.lower().endswith('.pdf'):
+            raise HTTPException(status_code=400, detail="File must be a PDF")
         
+        # Check if already processed
+        pdf_entry = get_session_id(paper_title)
+        if pdf_entry:
+            return JSONResponse(content={
+                "session_id": pdf_entry,
+                "saved_id": {"title": paper_title}
+            })
+
+        # Create temporary file
+        temp_file = tempfile.NamedTemporaryFile(delete=False)
+        temp_file_path = temp_file.name
+        temp_file.close()
+
+        # Save uploaded content
+        content = await file.read()
+        with open(temp_file_path, 'wb') as f:
+            f.write(content)
+
+        # Process PDF
+        citations = await asyncio.to_thread(ReferenceExtractor.document_loader, temp_file_path)
+        if not citations:
+            raise HTTPException(status_code=400, detail="No citations found in PDF")
+
+        # Save to database
+        session_id = str(uuid.uuid4())
+        save_pdf(
+            session_id=session_id,
+            pdf_name=paper_title,
+            citations=json.dumps(citations)
+        )
+
+        return JSONResponse(content={
+            "session_id": session_id,
+            "saved_id": {"title": paper_title}
+        })
+
+    except Exception as e:
+        logger.error(f"Error in extract_references_upload: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+    finally:
+        if 'temp_file_path' in locals() and os.path.exists(temp_file_path):
+            try:
+                os.close(os.open(temp_file_path, os.O_RDONLY))
+                os.unlink(temp_file_path)
+            except Exception as e:
+                logger.error(f"Error deleting temporary file: {str(e)}")
+
 class Chat(BaseModel):
     session_id: str
     query: str    
@@ -176,13 +278,14 @@ async def chat(session_id: str, query: str):
     
 
 
+
 handler = Mangum(app)
- 
- 
 
 
 
-        
+
+
+
 
 
 
