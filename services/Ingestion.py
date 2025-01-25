@@ -4,10 +4,12 @@ from qdrant_client import QdrantClient
 from qdrant_client.http.models import PointStruct
 from fastapi import HTTPException
 from langchain_openai import OpenAIEmbeddings
+from langchain_openai import AzureOpenAIEmbeddings
 import requests
 import PyPDF2
 import io
 from typing import Dict, List, Any, Generator
+import os
 
 class VectorIngestor:
     def __init__(self, session_id: str, paper_name: str, arxiv_id: str):
@@ -15,8 +17,11 @@ class VectorIngestor:
         try:
             self.session_id = session_id
             self.client = QdrantClient(host='localhost', port=6333)
-            self.embeddings = OpenAIEmbeddings(
-                model="text-embedding-3-small"  # Changed from model_name to model
+            self.embeddings = AzureOpenAIEmbeddings(
+                azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+                api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+                deployment=os.getenv("embedding_deployment"),
+                model=os.getenv("AZURE_EMBEDDING_MODEL"),
             )
             self.paper_name = paper_name
             self.arxiv_id = arxiv_id
