@@ -198,9 +198,9 @@ async def extract_references_upload(
             except Exception as e:
                 logger.error(f"Error deleting temporary file: {str(e)}")
 
-class Chat(BaseModel):
-    session_id: str
-    query: str    
+# class Chat(BaseModel):
+#     session_id: str
+#     query: str    
 
 @app.get("/chat/")
 async def chat(session_id: str, query: str):
