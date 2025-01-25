@@ -11,7 +11,14 @@ load_dotenv(env_path, override=True)
 
 class PaperName:
     def __init__(self, query: str, citations: str, chat_history: str):
-        self.llm = AzureChatOpenAI(temperature=0)
+        self.llm = AzureChatOpenAI(
+            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+            api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+            deployment=os.getenv("llm_deployment"),
+            model=os.getenv("AZURE_LLM_MODEL"),
+            api_version="2024-03-01-preview"
+            
+        )
         self.query = query
         self.citations = citations
         self.chat_history = chat_history

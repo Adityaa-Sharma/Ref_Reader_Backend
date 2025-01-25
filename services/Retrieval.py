@@ -29,6 +29,7 @@ class Retrieval:
                 api_key=os.getenv("AZURE_OPENAI_API_KEY"),
                 deployment=os.getenv("embedding_deployment"),
                 model=os.getenv("AZURE_EMBEDDING_MODEL"),
+                api_version="2024-03-01-preview"
             )
         # Language model configuration
         self.llm = AzureChatOpenAI(

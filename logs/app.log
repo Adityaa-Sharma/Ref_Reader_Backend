@@ -942,3 +942,12 @@ arXiv:1912.11747, 2019.
 2025-01-26 04:31:34 - root - ERROR - Error in extract_references_arxiv: Object of type UUID is not JSON serializable
 2025-01-26 04:32:05 - root - ERROR - Error in extract_references_arxiv: Object of type UUID is not JSON serializable
 2025-01-26 04:33:09 - root - ERROR - Error in extract_references_arxiv: Object of type UUID is not JSON serializable
+2025-01-26 04:44:22 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'temperature': 0, 'model_kwargs': {}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 04:50:46 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'temperature': 0, 'model_kwargs': {}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 04:53:33 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'temperature': 0, 'model_kwargs': {}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error

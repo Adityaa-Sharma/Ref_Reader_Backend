@@ -200,78 +200,84 @@ class Chat(BaseModel):
     response: dict
     query: str    
 
-@app.post("/chat/")
-async def chat(response: dict, query: str):
-    session_id = response['session_id']
-    arxiv_id_main = response['arxiv_id']
-    pdf_entry = get_pdf_citations(arxiv_id_main)
-    
-    if not pdf_entry:
-        raise HTTPException(status_code=404, detail="Session ID not found")
-    
-    chat_history = await get_chat_history(session_id)
-    
-    paper_content = await PaperName(query, str(pdf_entry["citations"]), chat_history).get_paper_name()
-    
-    print("arxiv_id", paper_content.get('arxiv_id'))
-
-    # Check if arxiv_id exists and is valid
-    if paper_content.get('arxiv_id') and ':' in paper_content['arxiv_id']:
-        arxiv_id = paper_content['arxiv_id'].split(':')[1]
-            
-        # Check if paper already exists
-        if AlreadyProcessed(arxiv_id_main,arxiv_id)==False:
-            # Save new paper
-            SaveInProcessedPapers(arxiv_id_main,arxiv_id)
-            
-            # Initialize and process with vector ingestor
-            ingestor = VectorIngestor(
-                paper_name=paper_content['paper_name'],
-                arxiv_id=arxiv_id
+@app.get("/chat/")
+async def chat(
+    response: str,  # Will receive JSON string
+    query: str
+):
+    try:
+        # Parse the response JSON string
+        response_dict = json.loads(response)
+        session_id = response_dict.get('session_id')
+        arxiv_id_main = response_dict.get('arxiv_id')
+        
+        if not session_id or not arxiv_id_main:
+            raise HTTPException(
+                status_code=400, 
+                detail="Invalid response format. Must include session_id and arxiv_id"
             )
+
+        pdf_entry = get_pdf_citations(arxiv_id_main)
+        
+        if not pdf_entry:
+            raise HTTPException(status_code=404, detail="Paper not found")
+        
+        chat_history = await get_chat_history(session_id)
+        
+        paper_content = await PaperName(query, str(pdf_entry["citations"]), chat_history).get_paper_name()
+        
+        logger.debug(f"Paper content arxiv_id: {paper_content.get('arxiv_id')}")
+
+        # Check if arxiv_id exists and is valid
+        if paper_content.get('arxiv_id') and ':' in paper_content['arxiv_id']:
+            arxiv_id = paper_content['arxiv_id'].split(':')[1]
             
-            ingest_result = await ingestor.arxiv_handling(arxiv_id)
+            # Check if paper already exists
+            if not AlreadyProcessed(arxiv_id_main, arxiv_id):
+                # Process new paper
+                SaveInProcessedPapers(arxiv_id_main, arxiv_id)
+                
+                ingestor = VectorIngestor(
+                    paper_name=paper_content['paper_name'],
+                    arxiv_id=arxiv_id
+                )
+                
+                await ingestor.arxiv_handling(arxiv_id)
             
-            # Handle query
+            # Handle query for both new and existing papers
             query_handler = QueryHandler(query, paper_content['paper_name'], chat_history, pdf_entry["citations"])
             rephrased_query = await query_handler.query_rephraser()
-            print("rephrased_query", rephrased_query)
+            logger.debug(f"Rephrased query: {rephrased_query}")
+            
             Retriever = Retrieval(rephrased_query, arxiv_id, chat_history)
             response = await Retriever.chat_response()
             await save_chat_history(session_id, rephrased_query, response)
+            
             return JSONResponse(content={"response": response})
-    
+
         else:
-            # Handle existing paper with retriever
-            query_handler = QueryHandler(query, paper_content['paper_name'], chat_history, pdf_entry["citations"])
+            # Non-arxiv block
+            paper_name = paper_content['paper_name']
+            query_handler = QueryHandler(query, paper_name, chat_history, pdf_entry["citations"])
             rephrased_query = await query_handler.query_rephraser()
+            NonArxivHandler = NonArxiv(rephrased_query, paper_name)
             print("rephrased_query", rephrased_query)
-            Retriever = Retrieval(rephrased_query, session_id, chat_history)
-            response = await Retriever.chat_response()
+            loop = asyncio.get_running_loop()
+            with ThreadPoolExecutor() as pool:
+                response = await loop.run_in_executor(
+                    pool, NonArxivHandler.get_paper_details
+                    )
+            response = json.loads(response)
             await save_chat_history(session_id, rephrased_query, response)
-            return JSONResponse(content={"response": response})
-
-    else:
-        # Non-arxiv block
-        paper_name = paper_content['paper_name']
-        query_handler = QueryHandler(query, paper_name, chat_history, pdf_entry["citations"])
-        rephrased_query = await query_handler.query_rephraser()
-        NonArxivHandler = NonArxiv(rephrased_query, paper_name)
-        print("rephrased_query", rephrased_query)
-        loop = asyncio.get_running_loop()
-        with ThreadPoolExecutor() as pool:
-            response = await loop.run_in_executor(
-                pool, NonArxivHandler.get_paper_details
-                )
-        response = json.loads(response)
-        await save_chat_history(session_id, rephrased_query, response)
 
 
-    return JSONResponse(content={"response": response.get("research_analysis")})
+            return JSONResponse(content={"response": response.get("research_analysis")})
 
-    
-
-
+    except json.JSONDecodeError:
+        raise HTTPException(status_code=400, detail="Invalid response JSON format")
+    except Exception as e:
+        logger.error(f"Error in chat endpoint: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 handler = Mangum(app)
 

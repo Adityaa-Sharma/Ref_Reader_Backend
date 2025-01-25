@@ -1,6 +1,6 @@
 import json
 from dotenv import load_dotenv,find_dotenv,set_key
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI,AzureChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 import os
@@ -9,7 +9,14 @@ load_dotenv()
 
 class QueryHandler:
     def __init__(self, query: str, paper_name: str, chat_history: str, citations: str):
-        self.llm = ChatOpenAI(temperature=0)
+        self.llm = AzureChatOpenAI(
+            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+            api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+            deployment=os.getenv("llm_deployment"),
+            model=os.getenv("AZURE_LLM_MODEL"),
+            api_version="2024-03-01-preview"
+            
+            )
         self.query = query
         self.paper_name = paper_name
         self.chat_history = chat_history
