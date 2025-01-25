@@ -838,3 +838,107 @@ sentations, 2019.
 and lyrics-free singing voice generation,”
 arXiv preprint
 arXiv:1912.11747, 2019.
+2025-01-26 04:10:34,864 - services.reference_extractor - DEBUG - Extracted bibliography: 
+[1] E. Grinstein, N. QK Duong, A. Ozerov, and P. P´erez, “Au-
+dio style transfer,” in Proc. IEEE International Conference on
+Acoustics, Speech and Signal Processing, 2018, pp. 586–590.
+[2] A. Haque, M. Guo, and P. Verma,
+“Conditional end-to-end
+audio transforms,” arXiv preprint arXiv:1804.00047, 2018.
+[3] N. Mor, L. Wolf, A. Polyak, and Y. Taigman, “A universal
+music translation network,” arXiv preprint arXiv:1805.07848,
+2018.
+[4] C.-W. Wu, J.-Y. Liu, Y.-H. Yang, and J.-S. R. Jang, “Singing
+sty...
+2025-01-26 04:10:34,866 - services.reference_extractor - DEBUG - Processing citation 1: E. Grinstein, N. QK Duong, A. Ozerov, and P. P´erez, “Au-
+dio style transfer,” in Proc. IEEE International Conference on
+Acoustics, Speech and Signal Processing, 2018, pp. 586–590.
+2025-01-26 04:10:34,867 - services.reference_extractor - DEBUG - Processing citation 2: A. Haque, M. Guo, and P. Verma,
+“Conditional end-to-end
+audio transforms,” arXiv preprint arXiv:1804.00047, 2018.
+2025-01-26 04:10:34,867 - services.reference_extractor - DEBUG - Processing citation 3: N. Mor, L. Wolf, A. Polyak, and Y. Taigman, “A universal
+music translation network,” arXiv preprint arXiv:1805.07848,
+2018.
+2025-01-26 04:10:34,867 - services.reference_extractor - DEBUG - Processing citation 4: C.-W. Wu, J.-Y. Liu, Y.-H. Yang, and J.-S. R. Jang, “Singing
+style transfer using cycle-consistent boundary equilibrium gen-
+erative adversarial networks,” in Proc. Joint Workshop on Ma-
+chine Learning for Music, 2018.
+2025-01-26 04:10:34,868 - services.reference_extractor - DEBUG - Processing citation 5: J.-Y. Zhu, T. Park, P. Isola, and A. A. Efros,
+“Unpaired
+image-to-image translation using cycle-consistent adversarial
+networks,” arXiv preprint, 2017.
+2025-01-26 04:10:34,868 - services.reference_extractor - DEBUG - Processing citation 6: K. Vijayan, H. Li, and T. Toda,
+“Speech-to-singing voice
+conversion: The challenges and strategies for improving vo-
+cal conversion processes,” IEEE Signal Processing Magazine,
+vol. 36, no. 1, pp. 95–102, 2018.
+2025-01-26 04:10:34,869 - services.reference_extractor - DEBUG - Processing citation 7: T. Saitou, M. Goto, M. Unoki, and M. Akagi,
+“Speech-
+to-singing synthesis: Converting speaking voices to singing
+voices by controlling acoustic features unique to singing
+voices,” in Proc. IEEE Workshop on Applications of Signal
+Processing to Audio and Acoustics, 2007.
+2025-01-26 04:10:34,869 - services.reference_extractor - DEBUG - Processing citation 8: L. Cen, M. Dong, and P. Chan, “Template-based personalized
+singing voice synthesis,” in Proc. IEEE International Confer-
+ence on Acoustics, Speech and Signal Processing, 2012, pp.
+4509–4512.
+2025-01-26 04:10:34,873 - services.reference_extractor - DEBUG - Processing citation 10: B. Sharma and H. Li,
+“A combination of model-based and
+feature-based strategy for speech-to-singing alignment,” Proc.
+Interspeech, pp. 624–628, 2019.
+2025-01-26 04:10:34,881 - services.reference_extractor - DEBUG - Processing citation 13: L. Su, “Vocal melody extraction using patch-based CNN,” in
+Proc. IEEE International Conference on Acoustics, Speech and
+Signal Processing, 2018, pp. 371–375.
+2025-01-26 04:10:34,881 - services.reference_extractor - DEBUG - Processing citation 14: B. McFee, C. Raffel, D. Liang, D. PW. Ellis, M. McVicar,
+E. Battenberg, and O. Nieto, “librosa: Audio and music signal
+analysis in python,” in Proc. Python in Science Conference,
+2015, pp. 18–25.
+2025-01-26 04:10:34,882 - services.reference_extractor - DEBUG - Processing citation 15: J. L. Goldstein, “Auditory nonlinearity,” The Journal of the
+Acoustical Society of America, vol. 41, no. 3, pp. 676–699,
+1967.
+2025-01-26 04:10:34,882 - services.reference_extractor - DEBUG - Processing citation 16: O. Ronneberger, P. Fischer, and T. Brox, “U-net: Convolu-
+tional networks for biomedical image segmentation,” in Proc.
+International Conference on Medical image computing and
+computer-assisted intervention. Springer, 2015, pp. 234–241.
+2025-01-26 04:10:34,882 - services.reference_extractor - DEBUG - Processing citation 17: J.-Y. Liu and Y.-H. Yang, “Event localization in music auto-
+tagging,” in Proc. ACM Multimedia, 2016, pp. 1048–1057.
+2025-01-26 04:10:34,891 - services.reference_extractor - DEBUG - Processing citation 20: J. Chung, C. Gulcehre, K. Cho, and Y. Bengio,
+“Empiri-
+cal evaluation of gated recurrent neural networks on sequence
+modeling,” in Proc. NIPS Workshop on Deep Learning, 2014.
+2025-01-26 04:10:34,891 - services.reference_extractor - DEBUG - Processing citation 21: D. Ulyanov, A. Vedaldi, and V. Lempitsky, “Instance normal-
+ization: The missing ingredient for fast stylization,”
+arXiv
+preprint arXiv:1607.08022, 2016.
+2025-01-26 04:10:34,895 - services.reference_extractor - DEBUG - Processing citation 23: Y. Wang, RJ Skerry-Ryan, D. Stanton, Y. Wu, RJ Weiss,
+N. Jaitly, Z. Yang, Y. Xiao, Z. Chen, S. Bengio, et al.,
+“Tacotron:
+Towards end-to-end speech synthesis,”
+arXiv
+preprint arXiv:1703.10135, 2017.
+2025-01-26 04:10:34,896 - services.reference_extractor - DEBUG - Processing citation 24: D. P. Kingma and J. Ba, “Adam: A method for stochastic opti-
+mization,” arXiv preprint arXiv:1412.6980, 2014.
+2025-01-26 04:10:34,896 - services.reference_extractor - DEBUG - Processing citation 25: A. Paszke, S. Gross, S. Chintala, G. Chanan, E. Yang, Z. De-
+Vito, Z. Lin, A. Desmaison, L. Antiga, and A. Lerer, “Auto-
+matic differentiation in pytorch,” 2017.
+2025-01-26 04:10:34,896 - services.reference_extractor - DEBUG - Processing citation 26: C. Raffel, B. McFee, E.J. Humphrey, J. Salamon, O. Nieto,
+D. Liang, D PW Ellis, and C.C Raffel, “mir eval: A transpar-
+ent implementation of common mir metrics,” in Proc. Inter-
+national Society for Music Information Retrieval Conference,
+2014.
+2025-01-26 04:10:34,896 - services.reference_extractor - DEBUG - Processing citation 27: M. Mauch and S. Dixon, “pYIN: A fundamental frequency
+estimator using probabilistic threshold distributions,” in Proc.
+IEEE International Conference on Acoustics, Speech and Sig-
+nal Processing, 2014, pp. 659–663.
+2025-01-26 04:10:34,897 - services.reference_extractor - DEBUG - Processing citation 28: J. Engel, K. K. Agrawal, S. Chen, I. Gulrajani, C. Donahue,
+and A. Roberts, “GANSynth: Adversarial neural audio syn-
+thesis,” in Proc. International Conference on Learning Repre-
+sentations, 2019.
+2025-01-26 04:10:34,898 - services.reference_extractor - DEBUG - Processing citation 29: J.-Y. Liu, Y.-H. Chen, Y.-C. Yeh, and Y.-H. Yang,
+“Score
+and lyrics-free singing voice generation,”
+arXiv preprint
+arXiv:1912.11747, 2019.
+2025-01-26 04:31:34 - root - ERROR - Error in extract_references_arxiv: Object of type UUID is not JSON serializable
+2025-01-26 04:32:05 - root - ERROR - Error in extract_references_arxiv: Object of type UUID is not JSON serializable
+2025-01-26 04:33:09 - root - ERROR - Error in extract_references_arxiv: Object of type UUID is not JSON serializable

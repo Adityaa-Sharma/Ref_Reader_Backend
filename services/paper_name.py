@@ -1,6 +1,6 @@
 import json
 from dotenv import load_dotenv,find_dotenv,set_key
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, AzureChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 import os
@@ -11,7 +11,7 @@ load_dotenv(env_path, override=True)
 
 class PaperName:
     def __init__(self, query: str, citations: str, chat_history: str):
-        self.llm = ChatOpenAI(temperature=0)
+        self.llm = AzureChatOpenAI(temperature=0)
         self.query = query
         self.citations = citations
         self.chat_history = chat_history

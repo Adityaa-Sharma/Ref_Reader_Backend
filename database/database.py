@@ -48,26 +48,17 @@ def create_tables():
         
 
         
-        # Create pdfs table with UUID foreign key
-        cur.execute("""
-            CREATE TABLE IF NOT EXISTS pdfs (
-                id SERIAL PRIMARY KEY,
-                session_id UUID REFERENCES sessions(session_id),
-                arxiv_id VARCHAR,
-                pdf_name VARCHAR NOT NULL,
-                citations TEXT NOT NULL
-            )
-        """)
+        
         ## creat table for paper , in this it will the , paper id (incremental),session id , paper name , authors , arxiv id(can be null)
-        cur.execute("""
-            CREATE TABLE IF NOT EXISTS papers (
-                id SERIAL PRIMARY KEY,
-                session_id UUID REFERENCES sessions(session_id),
-                paper_name VARCHAR NOT NULL,
-                authors VARCHAR NOT NULL,
-                arxiv_id VARCHAR
-            )
-        """)
+        # cur.execute("""
+        #     CREATE TABLE IF NOT EXISTS papers (
+        #         id SERIAL PRIMARY KEY,
+        #         session_id UUID REFERENCES sessions(session_id),
+        #         paper_name VARCHAR NOT NULL,
+        #         authors VARCHAR NOT NULL,
+        #         arxiv_id VARCHAR
+        #     )
+        # """)
         cur.execute('''
         CREATE TABLE IF NOT EXISTS chat_history (
             id SERIAL PRIMARY KEY,
@@ -77,7 +68,20 @@ def create_tables():
             timestamp TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
         )
     ''')
-                    
+        # create atable to store the arxiv id of the papers that are being inputed
+        cur.execute('''CREATE TABLE IF NOT EXISTS Main_Paper (
+            id SERIAL PRIMARY KEY,
+            arxiv_id VARCHAR NOT NULL,
+            citations TEXT NOT NULL
+        )''') 
+        
+        # create a table having the name ProcessedPapers, in which it has column main_paper_arxiv_id, and other columns is already_processed which is the list of the arxiv ids
+    
+        cur.execute('''CREATE TABLE IF NOT EXISTS ProcessedPapers (
+            id SERIAL PRIMARY KEY,
+            main_paper_arxiv_id VARCHAR NOT NULL UNIQUE,
+            already_processed VARCHAR[] DEFAULT ARRAY[]::VARCHAR[]
+        )''')
 
 
 def save_pdf(session_id: str, pdf_name: str, citations: str, arxiv_id: str = None):
@@ -99,9 +103,9 @@ def save_pdf(session_id: str, pdf_name: str, citations: str, arxiv_id: str = Non
             
             
 
-def get_pdf_citations(session_id):
+def get_pdf_citations(arxiv_id):
     with get_db_cursor() as cursor:
-        cursor.execute("SELECT citations FROM pdfs WHERE session_id = %s", (session_id,))
+        cursor.execute("SELECT citations FROM main_paper WHERE arxiv_id = %s", (arxiv_id,))
         result = cursor.fetchone()
         if result:
             return { "citations": result[0]}
@@ -137,6 +141,52 @@ def get_paper(arxiv_id):
                 "arxiv_id": result[4]
             }
         return None
+    
+# check if the arxiv id is present in the main paper table or not
+def check_if_MainPaper_already_processed(arxiv_id):
+    with get_db_cursor() as cursor:
+        cursor.execute("SELECT * FROM main_Paper WHERE arxiv_id = %s", (arxiv_id,))
+        result = cursor.fetchone()
+        if result:
+            return True
+        return False
+
+# saving hte main paper
+def save_MainPaper(arxiv_id: str, citations: str):
+    with get_db_cursor(commit=True) as cursor:
+        cursor.execute("""
+            INSERT INTO Main_Paper (arxiv_id, citations)
+            VALUES (%s, %s)
+        """, (arxiv_id, citations))
+# want to check if the arxiv is present in th list of already processed paper corresponding to the main paper
+def AlreadyProcessed(main_arxiv_id: str, arxiv_id: str) -> bool:
+    with get_db_cursor() as cursor:
+        cursor.execute("""
+            SELECT EXISTS(
+                SELECT 1 FROM ProcessedPapers 
+                WHERE main_paper_arxiv_id = %s 
+                AND %s = ANY(already_processed)
+            )
+        """, (main_arxiv_id, arxiv_id))
+        return cursor.fetchone()[0]
+    
+def SaveInProcessedPapers(main_arxiv_id: str, arxiv_id: str):
+    with get_db_cursor(commit=True) as cursor:
+        try:
+            cursor.execute("""
+                INSERT INTO ProcessedPapers (main_paper_arxiv_id, already_processed)
+                VALUES (%s, ARRAY[%s])
+                ON CONFLICT (main_paper_arxiv_id) DO
+                UPDATE SET already_processed = array_append(ProcessedPapers.already_processed, %s)
+                WHERE ProcessedPapers.main_paper_arxiv_id = %s
+            """, (main_arxiv_id, arxiv_id, arxiv_id, main_arxiv_id))
+        except Exception as e:
+            print(f"Error saving processed paper: {str(e)}")
+            raise
+    
+
+
+
  
     
 ## insert the chat history in the chat_history table
@@ -203,10 +253,11 @@ async def get_chat_history(session_id):
 
 # a=get_session_id("encoder_decoder.pdf")
 # print(a)re
-if __name__ == "__main__":
-    try:
-        create_tables()
-        print("Tables created successfully.")
+# if __name__ == "__main__":
+#     try:
+#         create_tables()
+#         print("Tables created successfully.")
 
-    except Exception as e:
-        print(f"An error occurred: {e}")
+#     except Exception as e:
+#         print(f"An error occurred: {e}")
+

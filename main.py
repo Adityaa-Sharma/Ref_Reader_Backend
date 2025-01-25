@@ -9,7 +9,7 @@ from services.Non_arxiv import NonArxiv
 from services.QueryHandler import QueryHandler
 from services.Retrieval import Retrieval
 import tempfile
-from database.database import save_pdf,get_pdf_citations, get_session_id,get_paper,save_paper, get_chat_history,save_chat_history
+from database.database import save_pdf,get_pdf_citations, get_session_id,get_paper,save_paper, get_chat_history,save_chat_history,check_if_MainPaper_already_processed,save_MainPaper,AlreadyProcessed,SaveInProcessedPapers
 import uuid
 import json
 import os
@@ -40,8 +40,8 @@ def setup_logging():
         maxBytes=10*1024*1024,  # 10 MB
         backupCount=5  # Keep 5 backup files
     )
-    file_handler.setLevel(logging.DEBUG)  # Set to capture DEBUG and above
-    file_handler.setLevel(logging.INFO)  # File only shows INFO and above
+    file_handler.setLevel(logging.DEBUG)  
+    file_handler.setLevel(logging.INFO)  
 
     # Create a formatter
     formatter = logging.Formatter(
@@ -87,15 +87,16 @@ async def extract_references_arxiv(arxiv_input: ArxivInput):
     temp_file = None
     try:
         arxiv_id = arxiv_input.arxiv_id
-        pdf_name = f"{arxiv_id}.pdf"
+        # pdf_name = f"{arxiv_id}.pdf"
         
         # Check if already processed
-        pdf_entry = get_session_id(pdf_name)
+        pdf_entry = check_if_MainPaper_already_processed(arxiv_id)
         if (pdf_entry):
+            session_id=str(uuid.uuid4())
             return JSONResponse(content={
-                "session_id": pdf_entry,
-                "saved_id": {"arxiv_id": arxiv_id}
-            })
+                "session_id": session_id,
+                "arxiv_id": arxiv_id}
+            )
 
         # Create temporary file
         temp_file = tempfile.NamedTemporaryFile(delete=False)
@@ -118,16 +119,13 @@ async def extract_references_arxiv(arxiv_input: ArxivInput):
 
         # Save to database
         session_id = str(uuid.uuid4())
-        save_pdf(
-            session_id=session_id,
-            pdf_name=pdf_name,
-            citations=json.dumps(citations),
-            arxiv_id=arxiv_id
+        save_MainPaper(
+            arxiv_id=arxiv_id,
+            citations=json.dumps(citations)
         )
-
         return JSONResponse(content={
             "session_id": session_id,
-            "saved_id": {"arxiv_id": arxiv_id}
+            "arxiv_id": arxiv_id
         })
 
     except Exception as e:
@@ -199,12 +197,14 @@ async def extract_references_upload(
                 logger.error(f"Error deleting temporary file: {str(e)}")
 
 class Chat(BaseModel):
-    session_id: str
+    response: dict
     query: str    
 
-@app.get("/chat/")
-async def chat(session_id: str, query: str):
-    pdf_entry = get_pdf_citations(session_id)
+@app.post("/chat/")
+async def chat(response: dict, query: str):
+    session_id = response['session_id']
+    arxiv_id_main = response['arxiv_id']
+    pdf_entry = get_pdf_citations(arxiv_id_main)
     
     if not pdf_entry:
         raise HTTPException(status_code=404, detail="Session ID not found")
@@ -220,18 +220,12 @@ async def chat(session_id: str, query: str):
         arxiv_id = paper_content['arxiv_id'].split(':')[1]
             
         # Check if paper already exists
-        if get_paper(arxiv_id) is None:
+        if AlreadyProcessed(arxiv_id_main,arxiv_id)==False:
             # Save new paper
-            save_paper(
-                session_id=session_id,
-                paper_name=paper_content['paper_name'],
-                authors=paper_content['authors'],
-                arxiv_id=arxiv_id
-            )
+            SaveInProcessedPapers(arxiv_id_main,arxiv_id)
             
             # Initialize and process with vector ingestor
             ingestor = VectorIngestor(
-                session_id=session_id,
                 paper_name=paper_content['paper_name'],
                 arxiv_id=arxiv_id
             )
@@ -242,7 +236,7 @@ async def chat(session_id: str, query: str):
             query_handler = QueryHandler(query, paper_content['paper_name'], chat_history, pdf_entry["citations"])
             rephrased_query = await query_handler.query_rephraser()
             print("rephrased_query", rephrased_query)
-            Retriever = Retrieval(rephrased_query, session_id, chat_history)
+            Retriever = Retrieval(rephrased_query, arxiv_id, chat_history)
             response = await Retriever.chat_response()
             await save_chat_history(session_id, rephrased_query, response)
             return JSONResponse(content={"response": response})

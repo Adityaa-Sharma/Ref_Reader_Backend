@@ -12,10 +12,10 @@ from typing import Dict, List, Any, Generator
 import os
 
 class VectorIngestor:
-    def __init__(self, session_id: str, paper_name: str, arxiv_id: str):
+    def __init__(self, paper_name: str, arxiv_id: str):
         """Initialize the Qdrant client and OpenAI embeddings for vector ingestion."""
         try:
-            self.session_id = session_id
+         
             self.client = QdrantClient(host='localhost', port=6333)
             self.embeddings = AzureOpenAIEmbeddings(
                 azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
@@ -34,17 +34,17 @@ class VectorIngestor:
         """Synchronous version of create collection."""
         try:
             try:
-                collection_info = self.client.get_collection(self.session_id)
+                collection_info = self.client.get_collection(self.arxiv_id)
                 if collection_info:
-                    print(f"Collection '{self.session_id}' already exists.")
+                    print(f"Collection '{self.arxiv_id}' already exists.")
                     return
             except Exception as e:
                 if "Not found" in str(e):
                     self.client.recreate_collection(
-                        collection_name=self.session_id,
+                        collection_name=self.arxiv_id,
                         vectors_config={"size": 1536, "distance": "Cosine"},
                     )
-                    print(f"Collection '{self.session_id}' created successfully.")
+                    print(f"Collection '{self.arxiv_id}' created successfully.")
                 else:
                     raise e
         except Exception as e:
@@ -118,7 +118,7 @@ class VectorIngestor:
             chunks = [' '.join(words[i:i + 500]) for i in range(0, len(words), 500)]
             
             for batch in self.generate_points(chunks, batch_size):
-                self.client.upsert(collection_name=self.session_id, points=batch)
+                self.client.upsert(collection_name=self.arxiv_id, points=batch)
 
             return {
                 "status": "success",
