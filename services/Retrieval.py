@@ -2,12 +2,12 @@ import os
 import asyncio
 from dotenv import load_dotenv
 from qdrant_client import QdrantClient
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI,AzureOpenAIEmbeddings,AzureChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from typing import List, Union, Any
 
 class Retrieval:
-    def __init__(self, query: Union[str, Any], session_id: str, chat_history: str = ""):
+    def __init__(self, query: Union[str, Any], arxiv_id :str, chat_history: str = ""):
         load_dotenv()  
         
         # Ensure query is a string
@@ -20,20 +20,30 @@ class Retrieval:
         )
         
         # OpenAI embeddings configuration
-        self.embeddings = OpenAIEmbeddings(
-            model="text-embedding-3-small",
-            api_key=os.getenv('OPENAI_API_KEY')
-        )
-        
+        # self.embeddings = OpenAIEmbeddings(
+        #     model="text-embedding-3-small",
+        #     api_key=os.getenv('OPENAI_API_KEY')
+        # )
+        self.embeddings = AzureOpenAIEmbeddings(
+                azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+                api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+                deployment=os.getenv("embedding_deployment"),
+                model=os.getenv("AZURE_EMBEDDING_MODEL"),
+                api_version="2024-03-01-preview"
+            )
         # Language model configuration
-        self.llm = ChatOpenAI(
-            temperature=0, 
-            model='gpt-4o-mini',
-            api_key=os.getenv('OPENAI_API_KEY')
+        self.llm = AzureChatOpenAI(
+            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+            api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+            deployment=os.getenv("llm_deployment"),
+            model=os.getenv("AZURE_LLM_MODEL"),
+            api_version="2024-08-01-preview"
+            
         )
+        self.arxiv_id = arxiv_id
         
         # Instance variables
-        self.session_id = session_id
+        # self.session_id = session_id
         self.chat_history = chat_history
 
     async def retrieve(self) -> List[str]:
@@ -53,7 +63,7 @@ class Retrieval:
             
             # Search in Qdrant
             response = self.client.search(
-                collection_name=self.session_id,
+                collection_name=self.arxiv_id,
                 query_vector=query_vector,
                 limit=3  # Top 3 most relevant chunks
             )
