@@ -36,7 +36,8 @@ class Retrieval:
             azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
             api_key=os.getenv("AZURE_OPENAI_API_KEY"),
             deployment=os.getenv("llm_deployment"),
-            model=os.getenv("AZURE_LLM_MODEL")
+            model=os.getenv("AZURE_LLM_MODEL"),
+            api_version="2024-08-01-preview"
             
         )
         self.arxiv_id = arxiv_id

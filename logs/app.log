@@ -951,3 +951,160 @@ arXiv:1912.11747, 2019.
 2025-01-26 04:53:33 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
   Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'temperature': 0, 'model_kwargs': {}}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 04:55:00 - root - ERROR - Error in chat endpoint: Error getting paper name: AsyncCompletions.create() got an unexpected keyword argument 'deployment'
+2025-01-26 04:59:44 - root - ERROR - Error in chat endpoint: Error getting paper name: AsyncCompletions.create() got an unexpected keyword argument 'deployment'
+2025-01-26 05:04:44 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:04:44 - root - ERROR - Error in chat endpoint: Error parsing JSON response: Expecting value: line 1 column 1 (char 0)
+2025-01-26 05:13:00 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:13:01 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections/1802.08435 "HTTP/1.1 404 Not Found"
+2025-01-26 05:13:01 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/1802.08435 "HTTP/1.1 200 OK"
+2025-01-26 05:13:02 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/1802.08435 "HTTP/1.1 200 OK"
+2025-01-26 05:13:05 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:05 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:05 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:06 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:06 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:08 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:08 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:08 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:09 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:09 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:09 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:10 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:10 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:10 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-26 05:13:11 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/1802.08435/points?wait=true "HTTP/1.1 200 OK"
+2025-01-26 05:13:11 - root - ERROR - Error in chat endpoint: name 'logger' is not defined
+2025-01-26 05:22:23 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:22:23 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:22:24 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:22:24 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:22:25 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:22:25 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:24:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:24:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:24:07 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:24:07 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:24:08 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:24:08 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:25:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:25:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:25:55 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:25:55 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:25:57 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:25:57 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:27:01 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:27:01 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:27:02 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:27:02 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:27:04 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:27:04 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:28:18 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:28:18 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:28:20 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:28:20 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:28:20 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:28:20 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:30:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:30:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:30:56 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:30:56 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:30:57 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:30:57 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:34:22 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:34:22 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:34:23 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:34:23 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:34:26 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:34:26 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:36:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:36:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:36:28 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:36:28 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:36:29 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:36:29 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:38:37 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:38:37 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:38:38 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:38:38 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:38:39 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:38:39 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:40:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:40:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:40:29 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:40:29 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:40:30 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:40:30 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:42:12 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:42:12 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:42:13 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:42:13 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:42:13 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:42:13 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:42:50 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:42:50 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:42:51 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:42:51 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:42:52 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:42:52 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:44:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:44:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-01-26 05:44:41 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:44:41 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-26 05:44:42 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-26 05:44:42 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
+  Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/value_error
