@@ -17,7 +17,7 @@ class PaperName:
         self.llm = AzureChatOpenAI(
             azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
             api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-            deployment_name=os.getenv("AZURE_LLM_MODEL"),
+            deployment_name=os.getenv("LLM_MODEL_NAME"),
             # model=os.getenv("AZURE_LLM_MODEL"),
             api_version="2024-08-01-preview",
             model_kwargs={

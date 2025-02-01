@@ -201,21 +201,22 @@ async def chat(
             # Check if paper already exists
             if not AlreadyProcessed(arxiv_id_main, arxiv_id):
                 # Process new paper
-                SaveInProcessedPapers(arxiv_id_main, arxiv_id)
+                
                 
                 ingestor = VectorIngestor(
                     paper_name=paper_content['paper_name'],
+                    main_arxiv_id=arxiv_id_main,
                     arxiv_id=arxiv_id
                 )
-                
                 await ingestor.arxiv_handling(arxiv_id)
+                SaveInProcessedPapers(arxiv_id_main, arxiv_id)
             
             # Handle query for both new and existing papers
             query_handler = QueryHandler(query, paper_content['paper_name'], chat_history, pdf_entry["citations"])
             rephrased_query = await query_handler.query_rephraser()
             logger.debug(f"Rephrased query: {rephrased_query}")
             
-            Retriever = Retrieval(rephrased_query, arxiv_id, chat_history)
+            Retriever = Retrieval(rephrased_query, arxiv_id,arxiv_id_main, chat_history)
             response = await Retriever.chat_response()
             await save_chat_history(session_id, rephrased_query, response)
             

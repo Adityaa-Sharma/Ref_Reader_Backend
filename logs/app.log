@@ -1108,3 +1108,517 @@ arXiv:1912.11747, 2019.
 2025-01-26 05:44:42 - root - ERROR - Error in chat endpoint: 1 validation error for AzureChatOpenAI
   Value error, Must provide either the `api_version` argument or the `OPENAI_API_VERSION` environment variable [type=value_error, input_value={'azure_endpoint': 'https...': {'deployment': None}}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.9/v/value_error
+2025-01-30 15:38:24 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 404 Resource Not Found"
+2025-01-30 15:38:24 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 404 Resource Not Found"
+2025-01-30 15:38:24 - services.paper_name - ERROR - Error in get_paper_name: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}
+2025-01-30 15:38:24 - services.paper_name - ERROR - Error in get_paper_name: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}
+2025-01-30 15:38:24 - root - ERROR - Error in chat endpoint: Error getting paper name: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}
+2025-01-30 15:38:24 - root - ERROR - Error in chat endpoint: Error getting paper name: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}
+2025-01-30 15:40:05 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:40:05 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:40:06 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-30 15:40:06 - root - ERROR - Chain invocation error: 'QueryHandler' object has no attribute 'chain'
+2025-01-30 15:40:06 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 15:40:06 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 15:44:12 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:44:14 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:44:15 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 15:49:52 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:49:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:49:54 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 15:51:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:51:59 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:52:00 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 15:56:16 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:56:18 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:56:18 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 15:58:22 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:58:24 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 15:58:24 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 16:00:05 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:00:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:00:07 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 16:03:40 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:03:42 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:03:42 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 16:06:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:06:30 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:06:30 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-01-30 16:06:32 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 16:06:32 - openai._base_client - INFO - Retrying request to /chat/completions in 0.406051 seconds
+2025-01-30 16:06:32 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 16:06:32 - openai._base_client - INFO - Retrying request to /chat/completions in 0.892383 seconds
+2025-01-30 16:06:33 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 16:06:33 - root - ERROR - LiteLLM call failed: litellm.RateLimitError: RateLimitError: OpenAIException - Error code: 429 - {'error': {'message': 'Your account is not active, please check your billing details on our website.', 'type': 'billing_not_active', 'param': None, 'code': 'billing_not_active'}}
+2025-01-30 16:06:33 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-01-30 16:06:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 16:06:34 - openai._base_client - INFO - Retrying request to /chat/completions in 0.377285 seconds
+2025-01-30 16:06:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 16:06:34 - openai._base_client - INFO - Retrying request to /chat/completions in 0.829866 seconds
+2025-01-30 16:06:36 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 16:06:36 - root - ERROR - LiteLLM call failed: litellm.RateLimitError: RateLimitError: OpenAIException - Error code: 429 - {'error': {'message': 'Your account is not active, please check your billing details on our website.', 'type': 'billing_not_active', 'param': None, 'code': 'billing_not_active'}}
+2025-01-30 16:06:36 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-01-30 16:06:36 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 16:06:36 - openai._base_client - INFO - Retrying request to /chat/completions in 0.482485 seconds
+2025-01-30 16:06:37 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 16:06:37 - openai._base_client - INFO - Retrying request to /chat/completions in 0.964724 seconds
+2025-01-30 16:06:38 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-01-30 16:06:38 - root - ERROR - LiteLLM call failed: litellm.RateLimitError: RateLimitError: OpenAIException - Error code: 429 - {'error': {'message': 'Your account is not active, please check your billing details on our website.', 'type': 'billing_not_active', 'param': None, 'code': 'billing_not_active'}}
+2025-01-30 16:06:38 - root - ERROR - Error in chat endpoint: litellm.RateLimitError: RateLimitError: OpenAIException - Error code: 429 - {'error': {'message': 'Your account is not active, please check your billing details on our website.', 'type': 'billing_not_active', 'param': None, 'code': 'billing_not_active'}}
+2025-01-30 16:10:10 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:10:12 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:10:12 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 16:10:48 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:10:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:10:52 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 16:44:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:44:11 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:44:11 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 16:44:40 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:44:42 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:44:42 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 16:49:10 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:49:13 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:49:13 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 16:50:37 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:50:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:50:40 - root - ERROR - Error in chat endpoint: 1 validation error for AzureOpenAIEmbeddings
+model
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-01-30 16:53:30 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:53:32 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:53:36 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-03-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-01-30 16:53:36 - root - ERROR - Error in chat endpoint: Error retrieving documents: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-01-30 16:55:49 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:55:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:55:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-03-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-01-30 16:55:53 - root - ERROR - Error in chat endpoint: Error retrieving documents: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-01-30 16:56:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:56:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:56:43 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-03-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-01-30 16:56:43 - root - ERROR - Error in chat endpoint: Error retrieving documents: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-01-30 16:59:34 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:59:36 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 16:59:38 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-03-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-01-30 16:59:38 - root - ERROR - Error in chat endpoint: Error retrieving documents: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-01-30 17:01:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:01:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:01:44 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-03-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-01-30 17:01:44 - root - ERROR - Error in chat endpoint: Error retrieving documents: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-01-30 17:04:13 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:04:16 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:04:18 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-03-01-preview "HTTP/1.1 404 DeploymentNotFound"
+2025-01-30 17:04:18 - root - ERROR - Error in chat endpoint: Error retrieving documents: Error code: 404 - {'error': {'code': 'DeploymentNotFound', 'message': 'The API deployment for this resource does not exist. If you created the deployment within the last 5 minutes, please wait a moment and try again.'}}
+2025-01-30 17:07:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:07:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:07:59 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:07:59 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/1802.08435/points/search "HTTP/1.1 404 Not Found"
+2025-01-30 17:07:59 - root - ERROR - Error in chat endpoint: Error retrieving documents: Unexpected Response: 404 (Not Found)
+Raw response content:
+b'{"status":{"error":"Not found: Collection `1802.08435` doesn\'t exist!"},"time":0.001575675}'
+2025-01-30 17:16:21 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:16:23 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:16:25 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:16:25 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/1802.08435/points/search "HTTP/1.1 404 Not Found"
+2025-01-30 17:16:25 - root - ERROR - Error in chat endpoint: Error retrieving documents: Unexpected Response: 404 (Not Found)
+Raw response content:
+b'{"status":{"error":"Not found: Collection `1802.08435` doesn\'t exist!"},"time":0.00012945}'
+2025-01-30 17:23:09 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:23:31 - openai._base_client - INFO - Retrying request to /chat/completions in 0.490292 seconds
+2025-01-30 17:23:33 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:23:35 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:23:35 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/1802.08435/points/search "HTTP/1.1 404 Not Found"
+2025-01-30 17:23:35 - root - ERROR - Error in chat endpoint: Error retrieving documents: Unexpected Response: 404 (Not Found)
+Raw response content:
+b'{"status":{"error":"Not found: Collection `1802.08435` doesn\'t exist!"},"time":0.000022853}'
+2025-01-30 17:31:01 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:31:03 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:31:05 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:31:05 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/1802.08435/points/search "HTTP/1.1 404 Not Found"
+2025-01-30 17:31:05 - root - ERROR - Error in chat endpoint: Error retrieving documents: Unexpected Response: 404 (Not Found)
+Raw response content:
+b'{"status":{"error":"Not found: Collection `1802.08435` doesn\'t exist!"},"time":0.000041607}'
+2025-01-30 17:35:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:35:11 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:35:15 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:35:15 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/1802.08435/points/search "HTTP/1.1 404 Not Found"
+2025-01-30 17:35:15 - root - ERROR - Error in chat endpoint: Error retrieving documents: Unexpected Response: 404 (Not Found)
+Raw response content:
+b'{"status":{"error":"Not found: Collection `1802.08435` doesn\'t exist!"},"time":7.187e-6}'
+2025-01-30 17:38:09 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:38:12 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:38:14 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:38:15 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/1802.08435/points/search "HTTP/1.1 404 Not Found"
+2025-01-30 17:38:15 - root - ERROR - Error in chat endpoint: Error retrieving documents: Unexpected Response: 404 (Not Found)
+Raw response content:
+b'{"status":{"error":"Not found: Collection `1802.08435` doesn\'t exist!"},"time":5.288e-6}'
+2025-01-30 17:40:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:40:56 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:40:58 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:40:58 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/1802.08435/points/search "HTTP/1.1 404 Not Found"
+2025-01-30 17:40:58 - root - ERROR - Error in chat endpoint: Error retrieving documents: Unexpected Response: 404 (Not Found)
+Raw response content:
+b'{"status":{"error":"Not found: Collection `1802.08435` doesn\'t exist!"},"time":0.000070064}'
+2025-01-30 17:49:20 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:49:21 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:49:21 - services.Ingestion - INFO - Creating collection 1802.08435
+2025-01-30 17:49:22 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/1802.08435 "HTTP/1.1 200 OK"
+2025-01-30 17:49:23 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/1802.08435 "HTTP/1.1 200 OK"
+2025-01-30 17:49:23 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:49:23 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-01-30 17:49:24 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:49:24 - services.Ingestion - INFO - Collection 1802.08435 already exists
+2025-01-30 17:49:24 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:49:24 - services.Ingestion - INFO - Collection 1802.08435 already exists
+2025-01-30 17:49:25 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:27 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:27 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:27 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:29 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:29 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:29 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:30 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:30 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:30 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:31 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:31 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/1802.08435/points?wait=true "HTTP/1.1 200 OK"
+2025-01-30 17:49:31 - services.Ingestion - INFO - Processed 17/17 chunks
+2025-01-30 17:49:33 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:49:35 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:49:35 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/1802.08435/points/search "HTTP/1.1 200 OK"
+2025-01-30 17:49:35 - root - ERROR - Error in chat endpoint: AsyncCompletions.create() got an unexpected keyword argument 'deployment'
+2025-01-30 17:55:32 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:55:33 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:55:33 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-30 17:55:33 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:55:34 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:55:34 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:55:34 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-01-30 17:55:35 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:55:35 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-30 17:55:35 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:55:36 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:55:36 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:55:36 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-01-30 17:55:36 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:55:36 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-30 17:55:36 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:55:37 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:55:37 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:55:37 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-01-30 17:55:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:40 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:40 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:40 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:42 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:43 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:43 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:43 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:44 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:44 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:44 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:45 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:45 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595/points?wait=true "HTTP/1.1 200 OK"
+2025-01-30 17:55:45 - services.Ingestion - INFO - Processed 17/17 chunks
+2025-01-30 17:55:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:55:49 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:55:49 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/1802.08435/points/search "HTTP/1.1 404 Not Found"
+2025-01-30 17:55:49 - root - ERROR - Error in chat endpoint: Error retrieving documents: Unexpected Response: 404 (Not Found)
+Raw response content:
+b'{"status":{"error":"Not found: Collection `1802.08435` doesn\'t exist!"},"time":0.000482717}'
+2025-01-30 17:58:37 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:58:40 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:58:40 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-30 17:58:40 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:58:41 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:58:41 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:58:41 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-01-30 17:58:42 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:58:42 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-30 17:58:43 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:58:43 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:58:43 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:58:43 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-01-30 17:58:43 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:58:43 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-30 17:58:44 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:58:44 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 17:58:44 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 17:58:44 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-01-30 17:58:46 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:46 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:46 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:48 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:48 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:49 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:49 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:49 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:49 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:50 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:50 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:51 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595/points?wait=true "HTTP/1.1 200 OK"
+2025-01-30 17:58:51 - services.Ingestion - INFO - Processed 17/17 chunks
+2025-01-30 17:58:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 17:58:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 17:58:58 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"
+2025-01-30 17:58:58 - root - ERROR - Error in chat endpoint: AsyncCompletions.create() got an unexpected keyword argument 'deployment'
+2025-01-30 18:02:45 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 18:02:47 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 18:02:47 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-30 18:02:47 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 18:02:48 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 18:02:48 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 18:02:48 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-01-30 18:02:50 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 18:02:50 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-30 18:02:50 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 18:02:51 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 18:02:51 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 18:02:51 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-01-30 18:02:51 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 18:02:51 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-30 18:02:51 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 18:02:52 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-30 18:02:52 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-30 18:02:52 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-01-30 18:02:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:56 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:56 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:56 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:58 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:58 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:58 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:58 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:02:59 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595/points?wait=true "HTTP/1.1 200 OK"
+2025-01-30 18:02:59 - services.Ingestion - INFO - Processed 17/17 chunks
+2025-01-30 18:03:01 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-30 18:03:04 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-30 18:03:04 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"
+2025-01-30 18:03:04 - root - ERROR - Error in chat endpoint: AsyncCompletions.create() got an unexpected keyword argument 'deployment'
+2025-01-31 09:43:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-31 09:43:30 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-31 09:43:30 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-31 09:43:31 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-31 09:43:32 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-31 09:43:32 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-31 09:43:32 - services.Ingestion - INFO - Successfully created collection 1805.07848
+2025-01-31 09:43:34 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-31 09:43:34 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-31 09:43:35 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-31 09:43:36 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-31 09:43:36 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-31 09:43:36 - services.Ingestion - INFO - Successfully created collection 1805.07848
+2025-01-31 09:43:36 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-31 09:43:36 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-01-31 09:43:36 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-31 09:43:37 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-01-31 09:43:37 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-01-31 09:43:37 - services.Ingestion - INFO - Successfully created collection 1805.07848
+2025-01-31 09:43:38 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:38 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:40 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:40 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:40 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:42 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:42 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:43 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:43 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595/points?wait=true "HTTP/1.1 200 OK"
+2025-01-31 09:43:43 - services.Ingestion - INFO - Processed 13/13 chunks
+2025-01-31 09:43:46 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-01-31 09:43:48 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-01-31 09:43:48 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"
+2025-01-31 09:43:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-01 12:06:30 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-01 12:06:31 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:06:31 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-01 12:06:32 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:06:33 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:06:33 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:06:33 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-02-01 12:06:34 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:06:34 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-01 12:06:34 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:06:35 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:06:35 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:06:35 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-02-01 12:06:35 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:06:35 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-01 12:06:35 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:06:36 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:06:36 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:06:36 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-02-01 12:06:38 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:38 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:40 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:40 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:42 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:42 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:43 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:44 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:45 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:46 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:48 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:48 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595/points?wait=true "HTTP/1.1 200 OK"
+2025-02-01 12:06:48 - services.Ingestion - INFO - Processed 17/17 chunks
+2025-02-01 12:06:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-01 12:06:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:06:54 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"
+2025-02-01 12:07:00 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-01 12:09:29 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-01 12:09:31 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-01 12:09:31 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-02-01 12:09:33 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-02-01 12:09:33 - openai._base_client - INFO - Retrying request to /chat/completions in 0.480277 seconds
+2025-02-01 12:09:34 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-02-01 12:09:34 - openai._base_client - INFO - Retrying request to /chat/completions in 0.851720 seconds
+2025-02-01 12:09:35 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-02-01 12:09:35 - root - ERROR - LiteLLM call failed: litellm.RateLimitError: RateLimitError: OpenAIException - Error code: 429 - {'error': {'message': 'Your account is not active, please check your billing details on our website.', 'type': 'billing_not_active', 'param': None, 'code': 'billing_not_active'}}
+2025-02-01 12:09:35 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-02-01 12:09:36 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-02-01 12:09:36 - openai._base_client - INFO - Retrying request to /chat/completions in 0.375594 seconds
+2025-02-01 12:09:37 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-02-01 12:09:37 - openai._base_client - INFO - Retrying request to /chat/completions in 0.788149 seconds
+2025-02-01 12:09:38 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-02-01 12:09:38 - root - ERROR - LiteLLM call failed: litellm.RateLimitError: RateLimitError: OpenAIException - Error code: 429 - {'error': {'message': 'Your account is not active, please check your billing details on our website.', 'type': 'billing_not_active', 'param': None, 'code': 'billing_not_active'}}
+2025-02-01 12:09:38 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt-4o-mini; provider = openai
+2025-02-01 12:09:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-02-01 12:09:39 - openai._base_client - INFO - Retrying request to /chat/completions in 0.401805 seconds
+2025-02-01 12:09:39 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-02-01 12:09:39 - openai._base_client - INFO - Retrying request to /chat/completions in 0.965392 seconds
+2025-02-01 12:09:41 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-02-01 12:09:41 - root - ERROR - LiteLLM call failed: litellm.RateLimitError: RateLimitError: OpenAIException - Error code: 429 - {'error': {'message': 'Your account is not active, please check your billing details on our website.', 'type': 'billing_not_active', 'param': None, 'code': 'billing_not_active'}}
+2025-02-01 12:09:41 - root - ERROR - Error in chat endpoint: litellm.RateLimitError: RateLimitError: OpenAIException - Error code: 429 - {'error': {'message': 'Your account is not active, please check your billing details on our website.', 'type': 'billing_not_active', 'param': None, 'code': 'billing_not_active'}}
+2025-02-01 12:10:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-01 12:10:27 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:10:27 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-01 12:10:28 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:10:29 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:10:29 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:10:29 - services.Ingestion - INFO - Successfully created collection 1412.6980
+2025-02-01 12:15:42 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-01 12:15:44 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:15:44 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-01 12:15:44 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:15:45 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:15:45 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:15:45 - services.Ingestion - INFO - Successfully created collection 1412.6980
+2025-02-01 12:15:47 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:15:47 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-01 12:15:47 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:15:48 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:15:48 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:15:48 - services.Ingestion - INFO - Successfully created collection 1412.6980
+2025-02-01 12:15:48 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:15:48 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-01 12:15:48 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:15:49 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-01 12:15:49 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-01 12:15:49 - services.Ingestion - INFO - Successfully created collection 1412.6980
+2025-02-01 12:15:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:52 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:52 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:56 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:56 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:15:57 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595/points?wait=true "HTTP/1.1 200 OK"
+2025-02-01 12:15:57 - services.Ingestion - INFO - Processed 17/17 chunks
+2025-02-01 12:16:00 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-01 12:16:03 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-01 12:16:03 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"

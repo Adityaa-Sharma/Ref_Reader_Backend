@@ -10,45 +10,76 @@ import PyPDF2
 import io
 from typing import Dict, List, Any, Generator
 import os
+from dotenv import load_dotenv
+import logging
+
+# Configure logger
+logger = logging.getLogger(__name__)
 
 class VectorIngestor:
-    def __init__(self, paper_name: str, arxiv_id: str):
-        """Initialize the Qdrant client and OpenAI embeddings for vector ingestion."""
+    def __init__(self, paper_name: str,main_arxiv_id: str, arxiv_id: str):
+        load_dotenv()
+
         try:
-         
+            # Read configuration from environment variables
+            azure_endpoint = os.getenv('AZURE_OPENAI_ENDPOINT')
+            azure_api_key = os.getenv('AZURE_OPENAI_API_KEY')
+            embedding_deployment = os.getenv('AZURE_EMBEDDING_DEPLOYMENT', 'TG-OAI-Embedding')
+            embedding_model = os.getenv('AZURE_EMBEDDING_MODEL', 'text-embedding-ada-002')
+            qdrant_host = os.getenv('QDRANT_HOST', 'localhost')
+            qdrant_port = int(os.getenv('QDRANT_PORT', 6333))
+
+            # Validate configuration
+            if not all([azure_endpoint, azure_api_key,embedding_deployment, embedding_model, qdrant_host, qdrant_port]):
+                raise ValueError("Missing Azure OpenAI configuration")
+
+            # Initialize clients
             self.client = QdrantClient(host='localhost', port=6333)
             self.embeddings = AzureOpenAIEmbeddings(
-                azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-                api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-                deployment=os.getenv("embedding_deployment"),
-                model=os.getenv("AZURE_EMBEDDING_MODEL"),
+                azure_endpoint=azure_endpoint,
+                api_key=azure_api_key,
+                deployment=embedding_deployment,
+                model=embedding_model
             )
+                
             self.paper_name = paper_name
             self.arxiv_id = arxiv_id
-            # Create collection synchronously in __init__
+            self.main_arxiv_id = main_arxiv_id
             self._create_collection()
+            
         except Exception as e:
-            raise HTTPException(status_code=500, detail=f"Failed to initialize VectorIngestor: {str(e)}")
+            logger.error(f"Failed to initialize VectorIngestor: {str(e)}")
+            raise HTTPException(
+                status_code=500, 
+                detail=f"Failed to initialize VectorIngestor: {str(e)}"
+            )
     
     def _create_collection(self):
         """Synchronous version of create collection."""
         try:
-            try:
-                collection_info = self.client.get_collection(self.arxiv_id)
-                if collection_info:
-                    print(f"Collection '{self.arxiv_id}' already exists.")
-                    return
-            except Exception as e:
-                if "Not found" in str(e):
-                    self.client.recreate_collection(
-                        collection_name=self.arxiv_id,
-                        vectors_config={"size": 1536, "distance": "Cosine"},
-                    )
-                    print(f"Collection '{self.arxiv_id}' created successfully.")
-                else:
-                    raise e
+            collections = self.client.get_collections().collections
+            exists = any(collection.name == self.arxiv_id for collection in collections)
+            
+            if not exists:
+                logger.info(f"Creating collection {self.main_arxiv_id}")
+                self.client.recreate_collection(
+                    collection_name=self.main_arxiv_id,
+                    vectors_config={
+                        "size": 1536,
+                        "distance": "Cosine"
+                    }
+                )
+                
+                # Verify collection was created
+                collections = self.client.get_collections().collections
+                if not any(collection.name == self.main_arxiv_id for collection in collections):
+                    raise Exception(f"Failed to create collection {self.arxiv_id}")
+                logger.info(f"Successfully created collection {self.arxiv_id}")
+            else:
+                logger.info(f"Collection {self.arxiv_id} already exists")
+
         except Exception as e:
-            print(f"Error in create_collection: {str(e)}")
+            logger.error(f"Error in create_collection: {str(e)}")
             raise
 
     async def arxiv_handling(self, arxiv_id: str) -> Dict[str, Any]:
@@ -69,6 +100,9 @@ class VectorIngestor:
             for page in pdf_reader.pages:
                 full_text += page.extract_text() + " "
             
+            # Ensure collection exists before processing
+            self._create_collection()
+            
             result = await self.process_and_ingest_text(full_text)
             return result
             
@@ -85,10 +119,6 @@ class VectorIngestor:
         """Generate points synchronously."""
         points = []
         for chunk in chunks:
-            ## attach the paper name to the chunk with a line break
-            # chunk = f"{{\"paper_name\": self.paper_name}} {chunk}"
-            # chunk = f"{self.paper_name}\n{chunk}"
-            
             embedding = self.generate_embeddings(chunk)
             point_id = str(uuid.uuid4())
 
@@ -113,16 +143,24 @@ class VectorIngestor:
     async def process_and_ingest_text(self, text: str, batch_size: int = 1000) -> Dict[str, str]:
         """Process and ingest text into vector store."""
         try:
+            # Ensure collection exists before processing
+            self._create_collection()
+            
             text = ' '.join(text.split())
             words = nltk.word_tokenize(text)
             chunks = [' '.join(words[i:i + 500]) for i in range(0, len(words), 500)]
             
+            total_chunks = len(chunks)
+            processed_chunks = 0
+            
             for batch in self.generate_points(chunks, batch_size):
-                self.client.upsert(collection_name=self.arxiv_id, points=batch)
+                self.client.upsert(collection_name=self.main_arxiv_id, points=batch)
+                processed_chunks += len(batch)
+                logger.info(f"Processed {processed_chunks}/{total_chunks} chunks")
 
             return {
                 "status": "success",
-                "message": f"Successfully processed and ingested {len(chunks)} chunks for paper '{self.paper_name}' (arXiv ID: {self.arxiv_id})"
+                "message": f"Successfully processed and ingested {total_chunks} chunks for paper '{self.paper_name}' (arXiv ID: {self.arxiv_id}, in the collection {self.main_arxiv_id})"
             }
 
         except Exception as e:
