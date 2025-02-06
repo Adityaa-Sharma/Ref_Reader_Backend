@@ -3,6 +3,7 @@ from langchain_community.tools import DuckDuckGoSearchRun
 from langchain_community.utilities import WikipediaAPIWrapper
 from langchain_community.tools.wikipedia.tool import WikipediaQueryRun
 from langchain_openai import AzureChatOpenAI
+from langchain_core.language_models.llms import LLM
 import json
 import os
 from dotenv import load_dotenv
@@ -10,24 +11,31 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+os.environ["AZURE_API_KEY"] =""
+os.environ["AZURE_API_BASE"] =""
+os.environ["AZURE_API_VERSION"] =""
+
 def get_llm_config():
     try:
+        deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
+        llm = AzureChatOpenAI(
+            temperature=0.7,
+            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+            api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+            api_version=os.getenv("API_VERSION"),
+            deployment_name=f"azure/{deployment_name}"  
+        )
+        
+        print(f"Initialized Azure OpenAI with deployment: azure/{deployment_name}")
+        
         return {
-            "llm": AzureChatOpenAI(
-                azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-                api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-                deployment_name=os.getenv("LLM_MODEL_NAME"),
-                api_version=os.getenv("API_VERSION", "2024-08-01-preview"),
-                temperature=0.7,
-                model_kwargs={
-                    "response_format": { "type": "text" }
-                }
-            ),
+            "llm": llm,
             "verbose": True
         }
     except Exception as e:
-        print(f"Error in LLM configuration: {e}")
+        print(f"Error in LLM configuration: {str(e)}")
         return None
+   
 
 search_tool = DuckDuckGoSearchRun()
 wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
