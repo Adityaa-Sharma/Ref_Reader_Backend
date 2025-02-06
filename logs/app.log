@@ -1622,3 +1622,4 @@ LiteLLM completion() model= gpt-4o-mini; provider = openai
 2025-02-01 12:16:00 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
 2025-02-01 12:16:03 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
 2025-02-01 12:16:03 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"
+2025-02-01 12:16:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
