@@ -78,27 +78,17 @@ researcher = create_agent(
     tools=[search_tool, wikipedia]
 )
 
-summarizer = create_agent(
-    role='Content Summarizer',
-    goal='Create clear and concise summaries of complex research information',
-    backstory="""You are a skilled content summarizer who can break down 
-    complex academic concepts into easily understandable summaries. You excel 
-    at identifying key points and main contributions.""",
-    tools=[search_tool]
-)
-
 critic = create_agent(
     role='Research Critic',
     goal='Evaluate research methodology and findings critically',
     backstory="""You are a critical thinker with extensive experience in 
     peer review. You analyze research papers for potential limitations, 
     biases, and areas of improvement.""",
-    tools=[search_tool]
+    tools=[search_tool,wikipedia]
 )
 
 def analyze_research_paper(paper_query):
     try:
-        # [Previous task definitions remain the same]
         research_task = Task(
             description=f"""Research and gather detailed information about the paper: {paper_query}.
             Focus on:
@@ -111,19 +101,6 @@ def analyze_research_paper(paper_query):
             expected_output="""A detailed analysis of the research paper including main questions,
             methodology, findings, data collection methods, and technical details with specific quotes.""",
             agent=researcher
-        )
-
-        summary_task = Task(
-            description=f"""Create a comprehensive yet concise summary of the research paper.
-            Include:
-            1. Main objectives
-            2. Key contributions
-            3. Important results
-            4. Practical implications
-            Make it accessible for a general technical audience.""",
-            expected_output="""A clear and concise summary of the research paper covering objectives,
-            contributions, results, and practical implications, written for a technical audience.""",
-            agent=summarizer
         )
 
         critique_task = Task(
@@ -141,13 +118,13 @@ def analyze_research_paper(paper_query):
         )
 
         # Check if agents were created successfully
-        if not all([researcher, summarizer, critic]):
+        if not all([researcher, critic]):
             raise Exception("Failed to initialize one or more agents")
 
         # Creating and running the crew
         crew = Crew(
-            agents=[researcher, summarizer, critic],
-            tasks=[research_task, summary_task, critique_task],
+            agents=[researcher, critic],
+            tasks=[research_task, critique_task],
             verbose=True
         )
 
@@ -165,7 +142,7 @@ def analyze_research_paper(paper_query):
         })
 
 # Example usage
-if __name__ == "__main__":
-    paper_query = "Attention Is All You Need - Transformer paper"
-    results = analyze_research_paper(paper_query)
-    print(results)
+# if __name__ == "__main__":
+#     paper_query = "Attention Is All You Need - Transformer paper"
+#     results = analyze_research_paper(paper_query)
+#     print(results)
