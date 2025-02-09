@@ -11,22 +11,30 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-os.environ["AZURE_API_KEY"] =""
-os.environ["AZURE_API_BASE"] =""
-os.environ["AZURE_API_VERSION"] =""
-
 def get_llm_config():
     try:
-        deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
+        required_vars = [
+            "AZURE_API_BASE", 
+            "AZURE_API_KEY", 
+            "AZURE_OPENAI_DEPLOYMENT_NAME",
+            "AZURE_API_VERSION"
+        ]
+        missing_vars = [var for var in required_vars if not os.getenv(var)]
+        
+        if missing_vars:
+            raise ValueError(f"Missing required environment variables: {', '.join(missing_vars)}")
+        
+        print("Initializing Azure OpenAI with following config:")
+        print(f"Base URL: {os.getenv('AZURE_API_BASE')}")
+        print(f"Deployment: {os.getenv('AZURE_OPENAI_DEPLOYMENT_NAME')}")
+            
         llm = AzureChatOpenAI(
             temperature=0.7,
-            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-            api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-            api_version=os.getenv("API_VERSION"),
-            deployment_name=f"azure/{deployment_name}"  
+            azure_endpoint=os.getenv("AZURE_API_BASE"),
+            api_key=os.getenv("AZURE_API_KEY"),
+            api_version=os.getenv("AZURE_API_VERSION"),
+            deployment_name=f"azure/{os.getenv('AZURE_OPENAI_DEPLOYMENT_NAME')}"
         )
-        
-        print(f"Initialized Azure OpenAI with deployment: azure/{deployment_name}")
         
         return {
             "llm": llm,
@@ -34,8 +42,10 @@ def get_llm_config():
         }
     except Exception as e:
         print(f"Error in LLM configuration: {str(e)}")
+        print(f"Environment variables:")
+        print(f"AZURE_API_BASE: {os.getenv('AZURE_API_BASE')}")
+        print(f"AZURE_API_VERSION: {os.getenv('AZURE_API_VERSION')}")
         return None
-   
 
 search_tool = DuckDuckGoSearchRun()
 wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())

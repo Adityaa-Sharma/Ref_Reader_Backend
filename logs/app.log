@@ -1623,3 +1623,413 @@ LiteLLM completion() model= gpt-4o-mini; provider = openai
 2025-02-01 12:16:03 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
 2025-02-01 12:16:03 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"
 2025-02-01 12:16:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:47:10 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:47:12 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-10 00:47:12 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-10 00:47:12 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-10 00:47:14 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-10 00:47:14 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-10 00:47:14 - services.Ingestion - INFO - Successfully created collection 1607.08022
+2025-02-10 00:47:19 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-10 00:47:19 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-10 00:47:19 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 500 Internal Server Error"
+2025-02-10 00:47:19 - services.Ingestion - ERROR - Error in create_collection: Unexpected Response: 500 (Internal Server Error)
+Raw response content:
+b'{"status":{"error":"Service internal error: Permission denied (os error 13)"},"time":0.441084427}'
+2025-02-10 00:47:19 - root - ERROR - Error in chat endpoint: 500: Error processing PDF from arXiv: Unexpected Response: 500 (Internal Server Error)
+Raw response content:
+b'{"status":{"error":"Service internal error: Permission denied (os error 13)"},"time":0.441084427}'
+2025-02-10 00:50:05 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:50:06 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-10 00:50:06 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-10 00:50:07 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-10 00:50:09 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-10 00:50:09 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-10 00:50:09 - services.Ingestion - INFO - Successfully created collection 1607.08022
+2025-02-10 00:50:11 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-10 00:50:11 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-10 00:50:11 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 500 Internal Server Error"
+2025-02-10 00:50:11 - services.Ingestion - ERROR - Error in create_collection: Unexpected Response: 500 (Internal Server Error)
+Raw response content:
+b'{"status":{"error":"Service internal error: Permission denied (os error 13)"},"time":0.724331239}'
+2025-02-10 00:50:11 - root - ERROR - Error in chat endpoint: 500: Error processing PDF from arXiv: Unexpected Response: 500 (Internal Server Error)
+Raw response content:
+b'{"status":{"error":"Service internal error: Permission denied (os error 13)"},"time":0.724331239}'
+2025-02-10 00:51:26,840 - services.reference_extractor - DEBUG - Extracted bibliography: 
+[1] E. Grinstein, N. QK Duong, A. Ozerov, and P. P´erez, “Au-
+dio style transfer,” in Proc. IEEE International Conference on
+Acoustics, Speech and Signal Processing, 2018, pp. 586–590.
+[2] A. Haque, M. Guo, and P. Verma,
+“Conditional end-to-end
+audio transforms,” arXiv preprint arXiv:1804.00047, 2018.
+[3] N. Mor, L. Wolf, A. Polyak, and Y. Taigman, “A universal
+music translation network,” arXiv preprint arXiv:1805.07848,
+2018.
+[4] C.-W. Wu, J.-Y. Liu, Y.-H. Yang, and J.-S. R. Jang, “Singing
+sty...
+2025-02-10 00:51:26,840 - services.reference_extractor - DEBUG - Processing citation 1: E. Grinstein, N. QK Duong, A. Ozerov, and P. P´erez, “Au-
+dio style transfer,” in Proc. IEEE International Conference on
+Acoustics, Speech and Signal Processing, 2018, pp. 586–590.
+2025-02-10 00:51:26,844 - services.reference_extractor - DEBUG - Processing citation 2: A. Haque, M. Guo, and P. Verma,
+“Conditional end-to-end
+audio transforms,” arXiv preprint arXiv:1804.00047, 2018.
+2025-02-10 00:51:26,844 - services.reference_extractor - DEBUG - Processing citation 3: N. Mor, L. Wolf, A. Polyak, and Y. Taigman, “A universal
+music translation network,” arXiv preprint arXiv:1805.07848,
+2018.
+2025-02-10 00:51:26,844 - services.reference_extractor - DEBUG - Processing citation 4: C.-W. Wu, J.-Y. Liu, Y.-H. Yang, and J.-S. R. Jang, “Singing
+style transfer using cycle-consistent boundary equilibrium gen-
+erative adversarial networks,” in Proc. Joint Workshop on Ma-
+chine Learning for Music, 2018.
+2025-02-10 00:51:26,845 - services.reference_extractor - DEBUG - Processing citation 5: J.-Y. Zhu, T. Park, P. Isola, and A. A. Efros,
+“Unpaired
+image-to-image translation using cycle-consistent adversarial
+networks,” arXiv preprint, 2017.
+2025-02-10 00:51:26,845 - services.reference_extractor - DEBUG - Processing citation 6: K. Vijayan, H. Li, and T. Toda,
+“Speech-to-singing voice
+conversion: The challenges and strategies for improving vo-
+cal conversion processes,” IEEE Signal Processing Magazine,
+vol. 36, no. 1, pp. 95–102, 2018.
+2025-02-10 00:51:26,845 - services.reference_extractor - DEBUG - Processing citation 7: T. Saitou, M. Goto, M. Unoki, and M. Akagi,
+“Speech-
+to-singing synthesis: Converting speaking voices to singing
+voices by controlling acoustic features unique to singing
+voices,” in Proc. IEEE Workshop on Applications of Signal
+Processing to Audio and Acoustics, 2007.
+2025-02-10 00:51:26,845 - services.reference_extractor - DEBUG - Processing citation 8: L. Cen, M. Dong, and P. Chan, “Template-based personalized
+singing voice synthesis,” in Proc. IEEE International Confer-
+ence on Acoustics, Speech and Signal Processing, 2012, pp.
+4509–4512.
+2025-02-10 00:51:26,851 - services.reference_extractor - DEBUG - Processing citation 10: B. Sharma and H. Li,
+“A combination of model-based and
+feature-based strategy for speech-to-singing alignment,” Proc.
+Interspeech, pp. 624–628, 2019.
+2025-02-10 00:51:26,861 - services.reference_extractor - DEBUG - Processing citation 13: L. Su, “Vocal melody extraction using patch-based CNN,” in
+Proc. IEEE International Conference on Acoustics, Speech and
+Signal Processing, 2018, pp. 371–375.
+2025-02-10 00:51:26,861 - services.reference_extractor - DEBUG - Processing citation 14: B. McFee, C. Raffel, D. Liang, D. PW. Ellis, M. McVicar,
+E. Battenberg, and O. Nieto, “librosa: Audio and music signal
+analysis in python,” in Proc. Python in Science Conference,
+2015, pp. 18–25.
+2025-02-10 00:51:26,861 - services.reference_extractor - DEBUG - Processing citation 15: J. L. Goldstein, “Auditory nonlinearity,” The Journal of the
+Acoustical Society of America, vol. 41, no. 3, pp. 676–699,
+1967.
+2025-02-10 00:51:26,861 - services.reference_extractor - DEBUG - Processing citation 16: O. Ronneberger, P. Fischer, and T. Brox, “U-net: Convolu-
+tional networks for biomedical image segmentation,” in Proc.
+International Conference on Medical image computing and
+computer-assisted intervention. Springer, 2015, pp. 234–241.
+2025-02-10 00:51:26,861 - services.reference_extractor - DEBUG - Processing citation 17: J.-Y. Liu and Y.-H. Yang, “Event localization in music auto-
+tagging,” in Proc. ACM Multimedia, 2016, pp. 1048–1057.
+2025-02-10 00:51:26,871 - services.reference_extractor - DEBUG - Processing citation 20: J. Chung, C. Gulcehre, K. Cho, and Y. Bengio,
+“Empiri-
+cal evaluation of gated recurrent neural networks on sequence
+modeling,” in Proc. NIPS Workshop on Deep Learning, 2014.
+2025-02-10 00:51:26,871 - services.reference_extractor - DEBUG - Processing citation 21: D. Ulyanov, A. Vedaldi, and V. Lempitsky, “Instance normal-
+ization: The missing ingredient for fast stylization,”
+arXiv
+preprint arXiv:1607.08022, 2016.
+2025-02-10 00:51:26,876 - services.reference_extractor - DEBUG - Processing citation 23: Y. Wang, RJ Skerry-Ryan, D. Stanton, Y. Wu, RJ Weiss,
+N. Jaitly, Z. Yang, Y. Xiao, Z. Chen, S. Bengio, et al.,
+“Tacotron:
+Towards end-to-end speech synthesis,”
+arXiv
+preprint arXiv:1703.10135, 2017.
+2025-02-10 00:51:26,878 - services.reference_extractor - DEBUG - Processing citation 24: D. P. Kingma and J. Ba, “Adam: A method for stochastic opti-
+mization,” arXiv preprint arXiv:1412.6980, 2014.
+2025-02-10 00:51:26,878 - services.reference_extractor - DEBUG - Processing citation 25: A. Paszke, S. Gross, S. Chintala, G. Chanan, E. Yang, Z. De-
+Vito, Z. Lin, A. Desmaison, L. Antiga, and A. Lerer, “Auto-
+matic differentiation in pytorch,” 2017.
+2025-02-10 00:51:26,878 - services.reference_extractor - DEBUG - Processing citation 26: C. Raffel, B. McFee, E.J. Humphrey, J. Salamon, O. Nieto,
+D. Liang, D PW Ellis, and C.C Raffel, “mir eval: A transpar-
+ent implementation of common mir metrics,” in Proc. Inter-
+national Society for Music Information Retrieval Conference,
+2014.
+2025-02-10 00:51:26,878 - services.reference_extractor - DEBUG - Processing citation 27: M. Mauch and S. Dixon, “pYIN: A fundamental frequency
+estimator using probabilistic threshold distributions,” in Proc.
+IEEE International Conference on Acoustics, Speech and Sig-
+nal Processing, 2014, pp. 659–663.
+2025-02-10 00:51:26,878 - services.reference_extractor - DEBUG - Processing citation 28: J. Engel, K. K. Agrawal, S. Chen, I. Gulrajani, C. Donahue,
+and A. Roberts, “GANSynth: Adversarial neural audio syn-
+thesis,” in Proc. International Conference on Learning Repre-
+sentations, 2019.
+2025-02-10 00:51:26,880 - services.reference_extractor - DEBUG - Processing citation 29: J.-Y. Liu, Y.-H. Chen, Y.-C. Yeh, and Y.-H. Yang,
+“Score
+and lyrics-free singing voice generation,”
+arXiv preprint
+arXiv:1912.11747, 2019.
+2025-02-10 00:53:42 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:53:44 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-10 00:53:44 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-10 00:53:44 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-10 00:53:46 - httpx - INFO - HTTP Request: PUT http://localhost:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-10 00:53:46 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-10 00:53:46 - services.Ingestion - INFO - Successfully created collection 1607.08022
+2025-02-10 00:53:49 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-10 00:53:49 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-10 00:53:50 - httpx - INFO - HTTP Request: DELETE http://localhost:6333/collections/2002.06595 "HTTP/1.1 500 Internal Server Error"
+2025-02-10 00:53:50 - services.Ingestion - ERROR - Error in create_collection: Unexpected Response: 500 (Internal Server Error)
+Raw response content:
+b'{"status":{"error":"Service internal error: Permission denied (os error 13)"},"time":0.273598711}'
+2025-02-10 00:53:50 - root - ERROR - Error in chat endpoint: 500: Error processing PDF from arXiv: Unexpected Response: 500 (Internal Server Error)
+Raw response content:
+b'{"status":{"error":"Service internal error: Permission denied (os error 13)"},"time":0.273598711}'
+2025-02-10 00:58:32 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:58:35 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:58:35 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 00:58:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:58:39 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 00:58:39 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper 200 21538
+2025-02-10 00:58:40 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-251061385480112697735351351764849185666&bing_market=wt-WT&ex=-1 200 9251
+2025-02-10 00:58:41 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper 200 21538
+2025-02-10 00:58:41 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-251061385480112697735351351764849185666&bing_market=wt-WT&ex=-1 202 626
+2025-02-10 00:58:42 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper 200 21538
+2025-02-10 00:58:42 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-251061385480112697735351351764849185666&bing_market=wt-WT&ex=-1 202 629
+2025-02-10 00:58:42 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper 200 21539
+2025-02-10 00:58:43 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-251061385480112697735351351764849185666&bing_market=wt-WT&ex=-1 202 625
+2025-02-10 00:58:43 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper 200 21538
+2025-02-10 00:58:44 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-251061385480112697735351351764849185666&bing_market=wt-WT&ex=-1 200 9929
+2025-02-10 00:58:45 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper 200 21560
+2025-02-10 00:58:45 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-251061385480112697735351351764849185666&bing_market=wt-WT&ex=-1 202 626
+2025-02-10 00:58:45 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 00:58:48 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:58:48 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 00:58:54 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 00:58:58 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:58:58 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 00:58:58 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 00:59:01 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:59:01 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 00:59:01 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+PDF 200 21533
+2025-02-10 00:59:02 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-92018113371528117828279045883938337877&bing_market=wt-WT&ex=-1 202 571
+2025-02-10 00:59:02 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+PDF 200 21526
+2025-02-10 00:59:03 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-92018113371528117828279045883938337877&bing_market=wt-WT&ex=-1 202 570
+2025-02-10 00:59:03 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+PDF 200 21548
+2025-02-10 00:59:03 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-92018113371528117828279045883938337877&bing_market=wt-WT&ex=-1 202 572
+2025-02-10 00:59:04 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+PDF 202 16959
+2025-02-10 00:59:04 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+PDF 200 21510
+2025-02-10 00:59:05 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-92018113371528117828279045883938337877&bing_market=wt-WT&ex=-1 202 570
+2025-02-10 00:59:05 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+PDF 200 21526
+2025-02-10 00:59:05 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+PDF&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-92018113371528117828279045883938337877&bing_market=wt-WT&ex=-1 202 579
+2025-02-10 00:59:05 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 00:59:09 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:59:09 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 00:59:09 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 00:59:12 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:59:12 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 00:59:13 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+summary 202 16992
+2025-02-10 00:59:13 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+summary 202 16998
+2025-02-10 00:59:14 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+summary 202 16996
+2025-02-10 00:59:14 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+summary 202 16994
+2025-02-10 00:59:15 - primp - INFO - response: https://duckduckgo.com/?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+summary 200 21562
+2025-02-10 00:59:16 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Instance+Normalization%3A+The+Missing+Ingredient+for+Fast+Stylization+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-167032733784494331374354242861044813054&bing_market=wt-WT&ex=-1 200 22367
+2025-02-10 00:59:16 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 00:59:20 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:59:20 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 00:59:20 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 00:59:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:59:26 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 00:59:27 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 00:59:35 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 00:59:35 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:00:58 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:01:01 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:01:01 - opentelemetry.trace - WARNING - Overriding of current TracerProvider is not allowed
+2025-02-10 01:01:01 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:01:04 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:01:04 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:01:05 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21661
+2025-02-10 01:01:07 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 200 11958
+2025-02-10 01:01:07 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21662
+2025-02-10 01:01:09 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 200 11944
+2025-02-10 01:01:10 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21661
+2025-02-10 01:01:12 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 200 11932
+2025-02-10 01:01:12 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21661
+2025-02-10 01:01:14 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 202 626
+2025-02-10 01:01:14 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21713
+2025-02-10 01:01:15 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 202 632
+2025-02-10 01:01:16 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21661
+2025-02-10 01:01:18 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 200 12684
+2025-02-10 01:01:18 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:01:20 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:01:20 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:01:21 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper 200 22070
+2025-02-10 01:01:22 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-285284246824241876635128070226401357165&bing_market=wt-WT&ex=-1 202 602
+2025-02-10 01:01:22 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper 200 22071
+2025-02-10 01:01:24 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-285284246824241876635128070226401357165&bing_market=wt-WT&ex=-1 202 653
+2025-02-10 01:01:24 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper 200 22049
+2025-02-10 01:01:25 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-285284246824241876635128070226401357165&bing_market=wt-WT&ex=-1 202 651
+2025-02-10 01:01:26 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper 200 22048
+2025-02-10 01:01:27 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-285284246824241876635128070226401357165&bing_market=wt-WT&ex=-1 202 655
+2025-02-10 01:01:28 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper 200 22101
+2025-02-10 01:01:29 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-285284246824241876635128070226401357165&bing_market=wt-WT&ex=-1 202 655
+2025-02-10 01:01:29 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper 200 22071
+2025-02-10 01:01:31 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+academic+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-285284246824241876635128070226401357165&bing_market=wt-WT&ex=-1 202 604
+2025-02-10 01:01:31 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:01:34 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:01:34 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:01:42 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:01:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:01:47 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:01:47 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:01:50 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:01:50 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:01:50 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary 200 21857
+2025-02-10 01:01:52 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-242807850164649068574064842454740459902&bing_market=wt-WT&ex=-1 202 644
+2025-02-10 01:01:52 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary 200 21855
+2025-02-10 01:01:54 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-242807850164649068574064842454740459902&bing_market=wt-WT&ex=-1 202 598
+2025-02-10 01:01:54 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary 200 21857
+2025-02-10 01:01:55 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-242807850164649068574064842454740459902&bing_market=wt-WT&ex=-1 202 650
+2025-02-10 01:01:56 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary 200 21857
+2025-02-10 01:01:57 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-242807850164649068574064842454740459902&bing_market=wt-WT&ex=-1 202 646
+2025-02-10 01:01:58 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary 200 21857
+2025-02-10 01:01:59 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-242807850164649068574064842454740459902&bing_market=wt-WT&ex=-1 202 648
+2025-02-10 01:01:59 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary 200 21857
+2025-02-10 01:02:01 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper+summary&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-242807850164649068574064842454740459902&bing_market=wt-WT&ex=-1 202 644
+2025-02-10 01:02:01 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:02:05 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:02:05 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:02:05 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:02:09 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:02:09 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:02:09 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:02:12 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:02:12 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:02:12 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper 200 21887
+2025-02-10 01:02:13 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-33629678902450041722400361357146030629&bing_market=wt-WT&ex=-1 202 649
+2025-02-10 01:02:13 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper 200 21887
+2025-02-10 01:02:13 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-33629678902450041722400361357146030629&bing_market=wt-WT&ex=-1 202 648
+2025-02-10 01:02:14 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper 200 21865
+2025-02-10 01:02:14 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-33629678902450041722400361357146030629&bing_market=wt-WT&ex=-1 202 647
+2025-02-10 01:02:15 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper 200 21866
+2025-02-10 01:02:16 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-33629678902450041722400361357146030629&bing_market=wt-WT&ex=-1 200 10847
+2025-02-10 01:02:16 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper 200 21865
+2025-02-10 01:02:17 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-33629678902450041722400361357146030629&bing_market=wt-WT&ex=-1 200 10752
+2025-02-10 01:02:18 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper 200 21865
+2025-02-10 01:02:18 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+research+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-33629678902450041722400361357146030629&bing_market=wt-WT&ex=-1 202 649
+2025-02-10 01:02:18 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:02:22 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:02:22 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:02:23 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details 200 22150
+2025-02-10 01:02:24 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-168501876964826310270711115425286117356&bing_market=wt-WT&ex=-1 202 616
+2025-02-10 01:02:24 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details 200 22127
+2025-02-10 01:02:24 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-168501876964826310270711115425286117356&bing_market=wt-WT&ex=-1 202 665
+2025-02-10 01:02:25 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details 200 22127
+2025-02-10 01:02:26 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-168501876964826310270711115425286117356&bing_market=wt-WT&ex=-1 200 10861
+2025-02-10 01:02:26 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details 200 22148
+2025-02-10 01:02:27 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-168501876964826310270711115425286117356&bing_market=wt-WT&ex=-1 200 10828
+2025-02-10 01:02:28 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details 200 22157
+2025-02-10 01:02:28 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-168501876964826310270711115425286117356&bing_market=wt-WT&ex=-1 202 666
+2025-02-10 01:02:28 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details 200 22149
+2025-02-10 01:02:29 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+full+paper+PDF+or+details&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-168501876964826310270711115425286117356&bing_market=wt-WT&ex=-1 202 615
+2025-02-10 01:02:29 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:02:35 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:02:35 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:03:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:03:45 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:03:45 - opentelemetry.trace - WARNING - Overriding of current TracerProvider is not allowed
+2025-02-10 01:03:45 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:03:48 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:03:48 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:03:48 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21677
+2025-02-10 01:03:49 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 200 12045
+2025-02-10 01:03:50 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21660
+2025-02-10 01:03:51 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 200 12002
+2025-02-10 01:03:52 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21662
+2025-02-10 01:03:52 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 202 577
+2025-02-10 01:03:52 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21663
+2025-02-10 01:03:53 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 202 629
+2025-02-10 01:03:54 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21661
+2025-02-10 01:03:54 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 202 633
+2025-02-10 01:03:55 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21683
+2025-02-10 01:03:55 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 202 630
+2025-02-10 01:03:55 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:03:59 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:03:59 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:04:06 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:04:12 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:04:12 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:04:13 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+paper 200 21843
+2025-02-10 01:04:13 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-160661459107304933111832513248743809169&bing_market=wt-WT&ex=-1 202 643
+2025-02-10 01:04:14 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+paper 202 17221
+2025-02-10 01:04:14 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+paper 200 21843
+2025-02-10 01:04:15 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-160661459107304933111832513248743809169&bing_market=wt-WT&ex=-1 202 592
+2025-02-10 01:04:16 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+paper 202 17226
+2025-02-10 01:04:16 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+paper 200 21859
+2025-02-10 01:04:27 - primp - INFO - response: https://duckduckgo.com/?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+paper 200 21843
+2025-02-10 01:04:29 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=%22Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling%22+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-160661459107304933111832513248743809169&bing_market=wt-WT&ex=-1 200 5995
+2025-02-10 01:04:29 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:04:33 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:04:33 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:04:33 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:04:38 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:04:38 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:04:38 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:04:42 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:04:42 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:04:42 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper 200 21748
+2025-02-10 01:04:44 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-273279647043200099984227830459576101190&bing_market=wt-WT&ex=-1 200 10843
+2025-02-10 01:04:44 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper 200 21747
+2025-02-10 01:04:46 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-273279647043200099984227830459576101190&bing_market=wt-WT&ex=-1 200 10664
+2025-02-10 01:04:46 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper 200 21747
+2025-02-10 01:04:47 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-273279647043200099984227830459576101190&bing_market=wt-WT&ex=-1 202 640
+2025-02-10 01:04:47 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper 200 21747
+2025-02-10 01:04:48 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-273279647043200099984227830459576101190&bing_market=wt-WT&ex=-1 202 638
+2025-02-10 01:04:48 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper 200 21747
+2025-02-10 01:04:49 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-273279647043200099984227830459576101190&bing_market=wt-WT&ex=-1 202 586
+2025-02-10 01:04:49 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper 200 21747
+2025-02-10 01:04:49 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling+paper&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-273279647043200099984227830459576101190&bing_market=wt-WT&ex=-1 202 636
+2025-02-10 01:04:49 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:04:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:04:53 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:04:53 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:04:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:04:57 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:04:57 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:05:03 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:05:03 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:05:04 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21661
+2025-02-10 01:05:05 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 200 12044
+2025-02-10 01:05:05 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21661
+2025-02-10 01:05:07 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 200 12065
+2025-02-10 01:05:07 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21661
+2025-02-10 01:05:08 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 202 632
+2025-02-10 01:05:08 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21661
+2025-02-10 01:05:08 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 202 628
+2025-02-10 01:05:09 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 200 21691
+2025-02-10 01:05:09 - primp - INFO - response: https://links.duckduckgo.com/d.js?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling&kl=wt-wt&l=wt-wt&p=&s=0&df=y&vqd=4-315051667711319132330400778926181921416&bing_market=wt-WT&ex=-1 202 630
+2025-02-10 01:05:10 - primp - INFO - response: https://duckduckgo.com/?q=Empirical+Evaluation+of+Gated+Recurrent+Neural+Networks+on+Sequence+Modeling 202 17001
+2025-02-10 01:05:10 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:05:18 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:05:18 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-10 01:05:18 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-10 01:05:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-10 01:05:26 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
