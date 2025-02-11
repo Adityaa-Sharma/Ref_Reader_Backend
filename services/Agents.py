@@ -1,9 +1,10 @@
 from crewai import Agent, Task, Crew
-from langchain_community.tools import DuckDuckGoSearchRun
+from langchain.tools import BaseTool
+from pydantic import BaseModel, Field
 from langchain_community.utilities import WikipediaAPIWrapper
 from langchain_community.tools.wikipedia.tool import WikipediaQueryRun
 from langchain_openai import AzureChatOpenAI
-from langchain_core.language_models.llms import LLM
+from crewai_tools import SerperDevTool
 import json
 import os
 from dotenv import load_dotenv
@@ -37,8 +38,7 @@ def get_llm_config():
         )
         
         return {
-            "llm": llm,
-            "verbose": True
+            "llm": llm
         }
     except Exception as e:
         print(f"Error in LLM configuration: {str(e)}")
@@ -47,8 +47,66 @@ def get_llm_config():
         print(f"AZURE_API_VERSION: {os.getenv('AZURE_API_VERSION')}")
         return None
 
-search_tool = DuckDuckGoSearchRun()
-wikipedia = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
+# Define tool input schemas
+class ScholarSearchInput(BaseModel):
+    """Input schema for Google Scholar search tool."""
+    query: str = Field(..., description="The academic paper or research topic to search for.")
+
+class WebSearchInput(BaseModel):
+    """Input schema for general web search tool."""
+    query: str = Field(..., description="The general topic to search for.")
+
+class WikipediaToolInput(BaseModel):
+    """Input schema for Wikipedia tool."""
+    query: str = Field(..., description="The topic to look up on Wikipedia.")
+
+# Define CrewAI compatible tools
+class ScholarSearchTool(BaseTool):
+    name: str = "Google Scholar Search"
+    description: str = "Useful for finding academic papers and scholarly articles."
+    args_schema: type[BaseModel] = ScholarSearchInput
+    
+    def _run(self, query: str) -> str:
+        try:
+            scholar = SerperDevTool(
+                search_url="https://google.serper.dev/scholar",
+                n_results=2
+            )
+            result = scholar.run(query)
+            return result if result else "No scholarly results found"
+        except Exception as e:
+            return f"Scholar search failed: {str(e)}"
+
+class WebSearchTool(BaseTool):
+    name: str = "Web Search"
+    description: str = "Useful for finding general information and recent updates."
+    args_schema: type[BaseModel] = WebSearchInput
+    
+    def _run(self, query: str) -> str:
+        try:
+            web = SerperDevTool(n_results=2)
+            result = web.run(query)
+            return result if result else "No results found"
+        except Exception as e:
+            return f"Web search failed: {str(e)}"
+
+class WikipediaTool(BaseTool):
+    name: str = "Wikipedia Search"
+    description: str = "Useful for finding background information and definitions."
+    args_schema: type[BaseModel] = WikipediaToolInput
+    
+    def _run(self, query: str) -> str:
+        try:
+            wiki = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
+            result = wiki.run(query)
+            return result if result else "No Wikipedia entry found"
+        except Exception as e:
+            return f"Wikipedia search failed: {str(e)}"
+
+# Initialize tools
+scholar_search = ScholarSearchTool()
+web_search = WebSearchTool()
+wikipedia = WikipediaTool()
 
 # Modified agent creation with error handling
 def create_agent(role, goal, backstory, tools):
@@ -68,14 +126,15 @@ def create_agent(role, goal, backstory, tools):
         print(f"Error creating agent {role}: {e}")
         return None
 
-# Initialize agents with error handling
+# Initialize agents with updated tools
 researcher = create_agent(
     role='Research Analyst',
     goal='Thoroughly analyze research papers and extract key information',
     backstory="""You are an experienced research analyst with expertise in 
-    reading and analyzing academic papers. Your strength lies in quickly 
-    understanding complex research methodologies and findings.""",
-    tools=[search_tool, wikipedia]
+    reading and analyzing academic papers. You prioritize scholarly sources 
+    and academic papers in your research. You excel at finding and analyzing 
+    peer-reviewed content.""",
+    tools=[scholar_search, web_search, wikipedia]
 )
 
 critic = create_agent(
@@ -84,20 +143,21 @@ critic = create_agent(
     backstory="""You are a critical thinker with extensive experience in 
     peer review. You analyze research papers for potential limitations, 
     biases, and areas of improvement.""",
-    tools=[search_tool,wikipedia]
+    tools=[web_search, wikipedia]
 )
 
+# Update the research task to emphasize scholarly sources
 def analyze_research_paper(paper_query):
     try:
         research_task = Task(
             description=f"""Research and gather detailed information about the paper: {paper_query}.
             Focus on:
-            1. Main research questions
-            2. Methodology used
-            3. Key findings
-            4. Data collection methods
-            5. Technical implementation details
-            Provide specific quotes and references from the paper.""",
+            1. Find the original research paper using Google Scholar search
+            2. Analyze main research questions and methodology
+            3. Extract key findings and contributions
+            4. Identify data collection and technical details
+            5. Find related academic works and citations
+            Prioritize information from scholarly sources and academic databases.""",
             expected_output="""A detailed analysis of the research paper including main questions,
             methodology, findings, data collection methods, and technical details with specific quotes.""",
             agent=researcher
@@ -142,7 +202,7 @@ def analyze_research_paper(paper_query):
         })
 
 # Example usage
-# if __name__ == "__main__":
-#     paper_query = "Attention Is All You Need - Transformer paper"
-#     results = analyze_research_paper(paper_query)
-#     print(results)
+if __name__ == "__main__":
+    paper_query = "Attention Is All You Need - Transformer paper"
+    results = analyze_research_paper(paper_query)
+    print(results)
