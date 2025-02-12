@@ -19,9 +19,10 @@ class Retrieval:
         # Ensure query is a string
         self.query = str(query) if query is not None else ""
         
-        # Qdrant client configuration
+        # Update Qdrant client configuration
         try:
-            qdrant_host = os.getenv('QDRANT_HOST', 'localhost')
+            # Use container name from docker-compose.yml instead of localhost
+            qdrant_host = os.getenv('QDRANT_HOST', 'qdrant')  # Changed from 'localhost' to 'qdrant'
             qdrant_port = int(os.getenv('QDRANT_PORT', 6333))
             
             logger.info(f"Connecting to Qdrant at {qdrant_host}:{qdrant_port}")

@@ -34,7 +34,7 @@ class VectorIngestor:
                 raise ValueError("Missing Azure OpenAI configuration")
 
             # Initialize clients
-            self.client = QdrantClient(host='localhost', port=6333)
+            self.client = QdrantClient(host='qdrant', port=6333)
             self.embeddings = AzureOpenAIEmbeddings(
                 azure_endpoint=azure_endpoint,
                 api_key=azure_api_key,

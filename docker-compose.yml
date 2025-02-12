@@ -1,4 +1,3 @@
-version: '3.8'
 name: ref-reader-backend
 
 services:
@@ -11,6 +10,9 @@ services:
     ports:
       - "8000:8000"
     command: uvicorn main:app --host 0.0.0.0 --port 8000
+    environment:
+      - QDRANT_HOST=qdrant  # Explicitly set the host to container name
+      - QDRANT_PORT=6333
     networks:
       - app-network
     depends_on:
