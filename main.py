@@ -21,7 +21,7 @@ from mangum import Mangum
 import requests
 from fastapi import Form, Body, Request
 from typing import Optional
-from log import setup_logging
+from logs.log import setup_logging
 
 
 # Logging configuration function

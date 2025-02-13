@@ -1,154 +1,89 @@
-# Ref_Reader_Backend
+# RefReader - Intelligent Research Paper Analysis System
 
-An AI-powered research paper analysis system using CrewAI agents and vector search capabilities.
+RefReader is an advanced system designed to analyze research papers and their references, providing detailed responses to user queries by leveraging both ArXiv papers and web-based resources.
 
-## Features
+## 🚀 Overview
 
-### Advanced Search Capabilities
-- Google Scholar search via SerperDev API
-- Vector-based semantic search with Qdrant
-- Wikipedia integration for background information
-- Web search for supplementary information
+RefReader serves as a comprehensive research assistant that can:
+- Process and store references from ArXiv papers
+- Analyze research papers based on user queries
+- Provide intelligent responses using vector-based retrieval and web search
+- Maintain an efficient database of processed papers for quick access
 
-### Multi-Agent Research System
-- Research Analyst agent for scholarly content analysis
-- Research Critic agent for methodology evaluation
-- Combined analysis from multiple sources
+### 🌍 **Main Idea**
+RefReader aims to create a **universal vector database** of ArXiv papers, enabling researchers to quickly retrieve relevant insights, minimize redundant searches, and significantly reduce research time.
 
-### Document Processing
-- Vector embeddings via Azure OpenAI
-- Async document retrieval
-- Context-aware response generation
+## 🏗️ Architecture
 
-## Setup
+![RefReader Architecture](Architecture/Ref-Reader-Architecture.png)
 
-### Prerequisites
-- Python 3.8+
-- Docker (for Qdrant)
-- Azure OpenAI API access
-- SerperDev API key
+The system follows a multi-path architecture for processing queries. Here's an interactive version of the architecture:
 
-### Environment Variables
-Create a `.env` file with:
-```bash
-# Azure OpenAI Configuration
-AZURE_API_BASE=your_azure_endpoint
-AZURE_API_KEY=your_azure_key
-AZURE_API_VERSION=your_api_version
-AZURE_OPENAI_DEPLOYMENT_NAME=your_deployment_name
-AZURE_OPENAI_ENDPOINT=your_endpoint
-AZURE_OPENAI_API_KEY=your_api_key
-LLM_MODEL_NAME=your_model_name
+### ArXiv Paper Processing Path
+1. Extracts references from input ArXiv IDs
+2. Stores references in PostgreSQL database (using **Supabase** for cloud-based management)
+3. For papers available on ArXiv:
+   - Checks if paper is already processed
+   - If not processed, chunks the paper and stores in **Qdrant Vector Database**
+   - Retrieves relevant information from vector database
 
-# Qdrant Configuration
-QDRANT_HOST=localhost
-QDRANT_PORT=6333
+### Web Search Path
+For papers not available on ArXiv:
+- Utilizes **SERP API** for web search
+- Integrates **Wikipedia API** for additional context
+- Processes information through **CrewAI Agent**
 
-# SerperDev API
-SERPAPI_API_KEY=your_serper_api_key
-```
+## 💾 Data Storage
 
-### Installation
+The system employs two primary storage solutions:
+- **PostgreSQL Database (Supabase)**: Stores paper references and metadata
+- **Qdrant Vector Database**: Maintains chunked paper content for efficient retrieval and semantic search
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd Ref_Reader_backend
-```
+## 🔍 Key Features
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+- **Intelligent Query Processing**: Analyzes user queries and extracts relevant ArXiv IDs
+- **Retrieval-Augmented Generation (RAG)**: Combines vector-based retrieval with LLM-powered answer synthesis
+- **Adaptive Search**: Automatically switches between ArXiv and web-based sources
+- **Efficient Retrieval**: Uses vector database for quick access to processed papers
+- **Comprehensive Response Generation**: Combines multiple data sources for detailed answers
 
-3. Start Qdrant:
-```bash
-docker run -p 6333:6333 qdrant/qdrant
-```
+## 🛠️ Components
 
-## Usage
+1. **Reference Extractor**: Processes ArXiv papers to extract references
+2. **Query Analyzer**: Interprets user queries and determines search strategy
+3. **Paper Chunker**: Breaks down papers into manageable segments
+4. **Vector Store (Qdrant)**: Maintains processed paper segments for quick retrieval
+5. **CrewAI Agent**: Integrates web search results with paper content
+6. **Response Generator (RAG-based)**: Creates detailed, contextual responses by combining retrieved data and LLM-generated insights
 
-### Vector Search
-```python
-from services.Retrieval import Retrieval
+## ⚡ Performance Optimization
 
-# Initialize retriever
-retriever = Retrieval(
-    query="your research query",
-    arxiv_id="paper_id",
-    arxiv_id_main="collection_name"
-)
+- Papers are processed and chunked only once
+- **Qdrant Vector Database** enables fast similarity search
+- **Supabase PostgreSQL** efficiently manages metadata and references
+- Cached results reduce processing time for frequent queries
 
-# Get search results
-results = await retriever.retrieve()
-```
+## 🔄 Process Flow
 
-### Research Analysis
-```python
-from services.Agents import analyze_research_paper
+1. User provides ArXiv ID or query
+2. System checks paper availability on ArXiv
+3. If available:
+   - Checks if already processed
+   - Retrieves from **Qdrant Vector Database** or processes new paper
+4. If not available:
+   - Performs web search using **SERP and Wikipedia APIs**
+5. Generates comprehensive response using **RAG techniques**
+6. Returns formatted answer to user
 
-# Analyze a research paper
-results = analyze_research_paper("Attention Is All You Need - Transformer paper")
-```
+## 🎯 Use Cases
 
-### Web Search
-```python
-from services.websearch import run_research
+- Research paper analysis
+- Literature review assistance
+- Reference exploration
+- Quick paper summaries
+- Cross-reference checking
 
-# Perform web research
-results = run_research("Latest developments in quantum computing")
-```
+## 📝 Note
 
-## API Reference
+This system is designed to maintain a growing database of processed papers, improving response time and accuracy as more papers are analyzed. It leverages **Retrieval-Augmented Generation (RAG)** to provide high-quality answers by combining structured vector search with large language models.
 
-### Retrieval Class
-- `retrieve()`: Performs vector search in Qdrant
-- `chat_response()`: Generates context-aware responses
-
-### Agents
-- `analyze_research_paper()`: Comprehensive paper analysis
-- `run_research()`: General web research
-
-### Tools
-- `ScholarSearchTool`: Google Scholar search
-- `WebSearchTool`: General web search
-- `WikipediaTool`: Wikipedia lookups
-
-## Error Handling
-
-The system includes comprehensive error handling:
-- Connection verification for Qdrant
-- API credential validation
-- Fallback options for searches
-- Detailed error logging
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## Testing
-
-Run the test suite:
-```bash
-python -m pytest tests/
-```
-
-## Dependencies
-
-Main dependencies:
-- `crewai`: Multi-agent orchestration
-- `langchain`: LLM framework
-- `qdrant-client`: Vector database client
-- `azure-openai`: Azure OpenAI integration
-
-## License
-
-MIT License
-
-## Contact
-
-For support or queries, please open an issue in the repository.
