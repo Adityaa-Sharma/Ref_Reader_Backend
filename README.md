@@ -14,10 +14,21 @@ RefReader serves as a comprehensive research assistant that can:
 
 Check out RefReader in action:
 
+<!-- Option 1: Multiple video formats for better browser support -->
 <video width="1000" controls>
   <source src="demo-video/Ref-reader-demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
+  <source src="demo-video/Ref-reader-demo.webm" type="video/webm">
+  <source src="demo-video/Ref-reader-demo.ogg" type="video/ogg">
+  <!-- Fallback text or link -->
+  Your browser does not support the video tag. 
+  <a href="demo-video/Ref-reader-demo.mp4">Download the video</a>
 </video>
+
+<!-- Option 2: Alternatively, use an animated GIF -->
+<!-- <img src="demo-video/Ref-reader-demo.gif" alt="RefReader Demo" width="1000"/> -->
+
+<!-- Option 3: Link to YouTube/external hosting -->
+<!-- You can also watch the demo on [YouTube](your-youtube-link-here) -->
 
 ## 🏗️ Architecture
 
