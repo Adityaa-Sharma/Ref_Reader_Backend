@@ -75,6 +75,28 @@ The system employs two primary storage solutions:
 5. Generates comprehensive response using **RAG techniques**
 6. Returns formatted answer to user
 
+## 🎯 Retrieval Techniques
+
+The system employs a sophisticated two-stage retrieval process for optimal results:
+
+### 1. Metadata Filtering
+- First applies a metadata filter using the ArXiv ID
+- Reduces the search space to only relevant document chunks
+- Ensures context specificity and improves response accuracy
+- Utilizes Qdrant's filtering capabilities for efficient document selection
+
+### 2. Semantic Search
+- Performs semantic similarity search on filtered documents
+- Uses Azure OpenAI embeddings for query and document vectors
+- Implements cosine similarity scoring for ranking
+- Selects top 4 most relevant chunks for response generation
+
+### Optimization Features
+- Pre-filtering by metadata reduces computation overhead
+- Cosine similarity calculations only performed on relevant subset
+- Maintains context coherence by focusing on specific paper sections
+- Balances between search speed and result quality
+
 ## 🎯 Use Cases
 
 - Research paper analysis
