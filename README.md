@@ -14,7 +14,7 @@ RefReader serves as a comprehensive research assistant that can:
 
 Check out RefReader in action:
 
-<video width="600" controls>
+<video width="1000" controls>
   <source src="demo-video/Ref-reader-demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
