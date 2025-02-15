@@ -10,12 +10,18 @@ RefReader serves as a comprehensive research assistant that can:
 - Provide intelligent responses using vector-based retrieval and web search
 - Maintain an efficient database of processed papers for quick access
 
-### 🌍 **Main Idea**
-RefReader aims to create a **universal vector database** of ArXiv papers, enabling researchers to quickly retrieve relevant insights, minimize redundant searches, and significantly reduce research time.
+## 🎥 Demo
+
+Check out RefReader in action:
+
+<video width="600" controls>
+  <source src="demo-video/Ref-reader-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## 🏗️ Architecture
 
-![RefReader Architecture](Architecture/Ref-Reader-Architecture.png)
+<img src="Architecture/Ref-Reader-Architecture.png" alt="RefReader Architecture" width="600"/>
 
 The system follows a multi-path architecture for processing queries. Here's an interactive version of the architecture:
 
