@@ -7,6 +7,7 @@ from qdrant_client.http.exceptions import ResponseHandlingException
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI,AzureOpenAIEmbeddings,AzureChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from typing import List, Union, Any
+from qdrant_client.models import Filter, FieldCondition, MatchValue
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -28,9 +29,9 @@ class Retrieval:
             logger.info(f"Connecting to Qdrant at {qdrant_host}:{qdrant_port}")
             
             self.client = QdrantClient(
-                host=qdrant_host,
+                host="localhost",
                 port=qdrant_port,
-                timeout=10  # Add timeout
+                timeout=10  
             )
             
             # Verify connection
@@ -72,43 +73,48 @@ class Retrieval:
         self.chat_history = chat_history
 
     async def retrieve(self) -> List[str]:
-        """
-        Asynchronously retrieve relevant documents from Qdrant collection.
-        
-        :return: List of retrieved document texts
-        """
         try:
-            # Verify collection exists
-            collections = self.client.get_collections()
-            if not any(col.name == self.arxiv_id_main for col in collections.collections):
-                raise ValueError(f"Collection {self.arxiv_id_main} does not exist")
+            # First, get all chunks with matching arxiv_id
+            filtered_points = self.client.query_points(
+                collection_name=self.arxiv_id_main,
+                query_filter=Filter(
+                    must=[FieldCondition(key="arxiv_id", match=MatchValue(value=self.arxiv_id))],
+                ),
+                with_payload=True,
+                with_vectors=True
+            ).points
 
-            # Use run_in_executor to run synchronous embedding in a thread
+            logger.info(f"Found {len(filtered_points)} points matching arxiv_id: {self.arxiv_id}")
+
+            if not filtered_points:
+                logger.warning("No documents found with the specified arxiv_id")
+                return []
+
+            # Get embeddings for the query
             loop = asyncio.get_event_loop()
             query_vector = await loop.run_in_executor(
                 None, 
                 self.embeddings.embed_query, 
                 self.query
             )
-            
-            logger.info(f"Searching in collection: {self.arxiv_id_main}")
-            response = self.client.search(
-                collection_name=self.arxiv_id_main,
-                query_vector=query_vector,
-                limit=3  # Top 3 most relevant chunks
-            )
-            
-            if not response:
-                logger.warning("No results found in search")
-                return ["No relevant information found for the query."]
-                
-            # Extract texts from response
-            return [doc.payload.get("text", "") for doc in response]
 
-        except ResponseHandlingException as e:
-            logger.error(f"Qdrant connection error: {str(e)}")
-            raise RuntimeError("Failed to connect to the database. Please check if Qdrant server is running.")
-            
+            # Calculate cosine similarity scores for filtered points
+            scored_points = []
+            for point in filtered_points:
+                # Calculate cosine similarity between query vector and document vector
+                similarity = sum(a * b for a, b in zip(query_vector, point.vector)) / (
+                    (sum(a * a for a in query_vector) ** 0.5) * 
+                    (sum(b * b for b in point.vector) ** 0.5)
+                )
+                scored_points.append((point, similarity))
+
+            # Sort by similarity score and take top 4
+            scored_points.sort(key=lambda x: x[1], reverse=True)
+            top_points = scored_points[:4]
+
+            # Extract texts from top results
+            return [point[0].payload.get("text", "") for point in top_points]
+
         except Exception as e:
             logger.error(f"Error in retrieve: {str(e)}")
             raise RuntimeError(f"Error retrieving documents: {str(e)}")

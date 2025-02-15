@@ -12,6 +12,7 @@ from typing import Dict, List, Any, Generator
 import os
 from dotenv import load_dotenv
 import logging
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 # Configure logger
 logger = logging.getLogger(__name__)
@@ -21,27 +22,72 @@ class VectorIngestor:
         load_dotenv()
 
         try:
-            # Read configuration from environment variables
+            # Azure OpenAI setup
             azure_endpoint = os.getenv('AZURE_OPENAI_ENDPOINT')
             azure_api_key = os.getenv('AZURE_OPENAI_API_KEY')
             embedding_deployment = os.getenv('AZURE_EMBEDDING_DEPLOYMENT', 'TG-OAI-Embedding')
             embedding_model = os.getenv('AZURE_EMBEDDING_MODEL', 'text-embedding-ada-002')
-            qdrant_host = os.getenv('QDRANT_HOST', 'localhost')
-            qdrant_port = int(os.getenv('QDRANT_PORT', 6333))
+            
+            # Simplified Qdrant connection logic
+            logger.info("Initializing Qdrant connection...")
+            
+            try:
+                # Try direct HTTP connection first
+                self.client = QdrantClient(
+                    url="http://127.0.0.1:6333",
+                    timeout=10
+                )
+                # Test connection
+                collections = self.client.get_collections()
+                logger.info(f"Successfully connected to Qdrant via HTTP. Collections: {collections}")
+            except Exception as http_error:
+                logger.error(f"HTTP connection failed: {str(http_error)}")
+                # Fallback to TCP connection
+                self.client = QdrantClient(
+                    host="127.0.0.1",
+                    port=6333,
+                    prefer_grpc=False
+                )
+                collections = self.client.get_collections()
+                logger.info("Successfully connected to Qdrant via TCP")
 
-            # Validate configuration
-            if not all([azure_endpoint, azure_api_key,embedding_deployment, embedding_model, qdrant_host, qdrant_port]):
-                raise ValueError("Missing Azure OpenAI configuration")
-
-            # Initialize clients
-            self.client = QdrantClient(host='qdrant', port=6333)
+            # Initialize embeddings and text splitter
             self.embeddings = AzureOpenAIEmbeddings(
                 azure_endpoint=azure_endpoint,
                 api_key=azure_api_key,
                 deployment=embedding_deployment,
                 model=embedding_model
             )
-                
+            
+            self.text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=1500,
+            chunk_overlap=100,
+            length_function=len,
+            separators=[
+                "\nAbstract",
+                "\nIntroduction",
+                "\nBackground",
+                "\nMethodology",
+                "\nResults",
+                "\nDiscussion",
+                "\nConclusion",
+                "\nReferences",
+                "\n\d+\.",      
+                "\n\d+\.\d+", 
+                "\nFigure \d+",
+                "\nTable \d+",
+                "\n\n",        
+                "\n",          # Line breaks
+                ". ",          # Sentences
+                "; ",          # Semi-colons
+                ": ",          # Colons
+                ", ",          # Commas
+                " ",           # Words
+                ""            # Characters
+            ],
+            keep_separator=True
+        )
+            
             self.paper_name = paper_name
             self.arxiv_id = arxiv_id
             self.main_arxiv_id = main_arxiv_id
@@ -110,25 +156,31 @@ class VectorIngestor:
             error_message = f"Error processing PDF from arXiv: {str(e)}"
             raise HTTPException(status_code=500, detail=error_message)
 
-    def generate_embeddings(self, text: str) -> List[float]:
-        """Generate embeddings synchronously."""
-        text=f"{self.paper_name}\n{text}"
-        return self.embeddings.embed_query(text)
+    def generate_embeddings(self, text: str, metadata: dict) -> List[float]:
+        """Generate embeddings with metadata context."""
+        context = f"Title: {metadata['paper_name']}\nArXiv ID: {metadata['arxiv_id']}\nContent: {text}"
+        return self.embeddings.embed_query(context)
 
-    def generate_points(self, chunks: List[str], batch_size: int = 100) -> Generator[List[PointStruct], None, None]:
-        """Generate points synchronously."""
+    def generate_points(self, chunks: List[dict], batch_size: int = 100) -> Generator[List[PointStruct], None, None]:
+        """Generate points from chunks with metadata."""
         points = []
         for chunk in chunks:
-            embedding = self.generate_embeddings(chunk)
+            metadata = {
+                "paper_name": self.paper_name,
+                "arxiv_id": self.arxiv_id,
+                "chunk_index": chunk["chunk_index"],
+                "total_chunks": chunk["total_chunks"]
+            }
+            
+            embedding = self.generate_embeddings(chunk["text"], metadata)
             point_id = str(uuid.uuid4())
 
             point = PointStruct(
                 id=point_id,
                 vector=embedding,
                 payload={
-                    "text": chunk,
-                    "paper_name": self.paper_name,
-                    "arxiv_id": self.arxiv_id
+                    "text": chunk["text"],
+                    **metadata
                 }
             )
             points.append(point)
@@ -140,29 +192,46 @@ class VectorIngestor:
         if points:
             yield points
 
-    async def process_and_ingest_text(self, text: str, batch_size: int = 1000) -> Dict[str, str]:
-        """Process and ingest text into vector store."""
+    async def process_and_ingest_text(self, text: str, batch_size: int = 100) -> Dict[str, str]:
+        """Process and ingest text into vector store using smart chunking."""
         try:
-            # Ensure collection exists before processing
             self._create_collection()
             
+            # Clean and prepare text
             text = ' '.join(text.split())
-            words = nltk.word_tokenize(text)
-            chunks = [' '.join(words[i:i + 500]) for i in range(0, len(words), 500)]
             
+            # Generate chunks using the text splitter
+            chunks = self.text_splitter.split_text(text)
             total_chunks = len(chunks)
-            processed_chunks = 0
             
-            for batch in self.generate_points(chunks, batch_size):
+            # Prepare chunks with metadata
+            processed_chunks = [
+                {
+                    "text": chunk,
+                    "chunk_index": idx,
+                    "total_chunks": total_chunks
+                }
+                for idx, chunk in enumerate(chunks)
+            ]
+            
+            processed_count = 0
+            for batch in self.generate_points(processed_chunks, batch_size):
                 self.client.upsert(collection_name=self.main_arxiv_id, points=batch)
-                processed_chunks += len(batch)
-                logger.info(f"Processed {processed_chunks}/{total_chunks} chunks")
+                processed_count += len(batch)
+                logger.info(f"Processed {processed_count}/{total_chunks} chunks")
 
             return {
                 "status": "success",
-                "message": f"Successfully processed and ingested {total_chunks} chunks for paper '{self.paper_name}' (arXiv ID: {self.arxiv_id}, in the collection {self.main_arxiv_id})"
+                "message": f"Successfully processed and ingested {total_chunks} chunks for paper '{self.paper_name}' (arXiv ID: {self.arxiv_id})",
+                "details": {
+                    "total_chunks": total_chunks,
+                    "collection_name": self.main_arxiv_id,
+                    "paper_name": self.paper_name,
+                    "arxiv_id": self.arxiv_id
+                }
             }
 
         except Exception as e:
             error_message = f"Error during text processing or ingestion: {str(e)}"
+            logger.error(error_message)
             raise HTTPException(status_code=500, detail=error_message)

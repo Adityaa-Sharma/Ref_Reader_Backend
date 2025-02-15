@@ -177,3 +177,619 @@ LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
 LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
 2025-02-12 01:57:36 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
 2025-02-12 01:57:36 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 01:49:20,035 - services.reference_extractor - DEBUG - Extracted bibliography: 
+[1] E. Grinstein, N. QK Duong, A. Ozerov, and P. P´erez, “Au-
+dio style transfer,” in Proc. IEEE International Conference on
+Acoustics, Speech and Signal Processing, 2018, pp. 586–590.
+[2] A. Haque, M. Guo, and P. Verma,
+“Conditional end-to-end
+audio transforms,” arXiv preprint arXiv:1804.00047, 2018.
+[3] N. Mor, L. Wolf, A. Polyak, and Y. Taigman, “A universal
+music translation network,” arXiv preprint arXiv:1805.07848,
+2018.
+[4] C.-W. Wu, J.-Y. Liu, Y.-H. Yang, and J.-S. R. Jang, “Singing
+sty...
+2025-02-15 01:49:20,039 - services.reference_extractor - DEBUG - Processing citation 1: E. Grinstein, N. QK Duong, A. Ozerov, and P. P´erez, “Au-
+dio style transfer,” in Proc. IEEE International Conference on
+Acoustics, Speech and Signal Processing, 2018, pp. 586–590.
+2025-02-15 01:49:20,040 - services.reference_extractor - DEBUG - Processing citation 2: A. Haque, M. Guo, and P. Verma,
+“Conditional end-to-end
+audio transforms,” arXiv preprint arXiv:1804.00047, 2018.
+2025-02-15 01:49:20,041 - services.reference_extractor - DEBUG - Processing citation 3: N. Mor, L. Wolf, A. Polyak, and Y. Taigman, “A universal
+music translation network,” arXiv preprint arXiv:1805.07848,
+2018.
+2025-02-15 01:49:20,042 - services.reference_extractor - DEBUG - Processing citation 4: C.-W. Wu, J.-Y. Liu, Y.-H. Yang, and J.-S. R. Jang, “Singing
+style transfer using cycle-consistent boundary equilibrium gen-
+erative adversarial networks,” in Proc. Joint Workshop on Ma-
+chine Learning for Music, 2018.
+2025-02-15 01:49:20,042 - services.reference_extractor - DEBUG - Processing citation 5: J.-Y. Zhu, T. Park, P. Isola, and A. A. Efros,
+“Unpaired
+image-to-image translation using cycle-consistent adversarial
+networks,” arXiv preprint, 2017.
+2025-02-15 01:49:20,044 - services.reference_extractor - DEBUG - Processing citation 6: K. Vijayan, H. Li, and T. Toda,
+“Speech-to-singing voice
+conversion: The challenges and strategies for improving vo-
+cal conversion processes,” IEEE Signal Processing Magazine,
+vol. 36, no. 1, pp. 95–102, 2018.
+2025-02-15 01:49:20,045 - services.reference_extractor - DEBUG - Processing citation 7: T. Saitou, M. Goto, M. Unoki, and M. Akagi,
+“Speech-
+to-singing synthesis: Converting speaking voices to singing
+voices by controlling acoustic features unique to singing
+voices,” in Proc. IEEE Workshop on Applications of Signal
+Processing to Audio and Acoustics, 2007.
+2025-02-15 01:49:20,047 - services.reference_extractor - DEBUG - Processing citation 8: L. Cen, M. Dong, and P. Chan, “Template-based personalized
+singing voice synthesis,” in Proc. IEEE International Confer-
+ence on Acoustics, Speech and Signal Processing, 2012, pp.
+4509–4512.
+2025-02-15 01:49:20,053 - services.reference_extractor - DEBUG - Processing citation 10: B. Sharma and H. Li,
+“A combination of model-based and
+feature-based strategy for speech-to-singing alignment,” Proc.
+Interspeech, pp. 624–628, 2019.
+2025-02-15 01:49:20,062 - services.reference_extractor - DEBUG - Processing citation 13: L. Su, “Vocal melody extraction using patch-based CNN,” in
+Proc. IEEE International Conference on Acoustics, Speech and
+Signal Processing, 2018, pp. 371–375.
+2025-02-15 01:49:20,065 - services.reference_extractor - DEBUG - Processing citation 14: B. McFee, C. Raffel, D. Liang, D. PW. Ellis, M. McVicar,
+E. Battenberg, and O. Nieto, “librosa: Audio and music signal
+analysis in python,” in Proc. Python in Science Conference,
+2015, pp. 18–25.
+2025-02-15 01:49:20,066 - services.reference_extractor - DEBUG - Processing citation 15: J. L. Goldstein, “Auditory nonlinearity,” The Journal of the
+Acoustical Society of America, vol. 41, no. 3, pp. 676–699,
+1967.
+2025-02-15 01:49:20,066 - services.reference_extractor - DEBUG - Processing citation 16: O. Ronneberger, P. Fischer, and T. Brox, “U-net: Convolu-
+tional networks for biomedical image segmentation,” in Proc.
+International Conference on Medical image computing and
+computer-assisted intervention. Springer, 2015, pp. 234–241.
+2025-02-15 01:49:20,067 - services.reference_extractor - DEBUG - Processing citation 17: J.-Y. Liu and Y.-H. Yang, “Event localization in music auto-
+tagging,” in Proc. ACM Multimedia, 2016, pp. 1048–1057.
+2025-02-15 01:49:20,076 - services.reference_extractor - DEBUG - Processing citation 20: J. Chung, C. Gulcehre, K. Cho, and Y. Bengio,
+“Empiri-
+cal evaluation of gated recurrent neural networks on sequence
+modeling,” in Proc. NIPS Workshop on Deep Learning, 2014.
+2025-02-15 01:49:20,076 - services.reference_extractor - DEBUG - Processing citation 21: D. Ulyanov, A. Vedaldi, and V. Lempitsky, “Instance normal-
+ization: The missing ingredient for fast stylization,”
+arXiv
+preprint arXiv:1607.08022, 2016.
+2025-02-15 01:49:20,081 - services.reference_extractor - DEBUG - Processing citation 23: Y. Wang, RJ Skerry-Ryan, D. Stanton, Y. Wu, RJ Weiss,
+N. Jaitly, Z. Yang, Y. Xiao, Z. Chen, S. Bengio, et al.,
+“Tacotron:
+Towards end-to-end speech synthesis,”
+arXiv
+preprint arXiv:1703.10135, 2017.
+2025-02-15 01:49:20,082 - services.reference_extractor - DEBUG - Processing citation 24: D. P. Kingma and J. Ba, “Adam: A method for stochastic opti-
+mization,” arXiv preprint arXiv:1412.6980, 2014.
+2025-02-15 01:49:20,083 - services.reference_extractor - DEBUG - Processing citation 25: A. Paszke, S. Gross, S. Chintala, G. Chanan, E. Yang, Z. De-
+Vito, Z. Lin, A. Desmaison, L. Antiga, and A. Lerer, “Auto-
+matic differentiation in pytorch,” 2017.
+2025-02-15 01:49:20,083 - services.reference_extractor - DEBUG - Processing citation 26: C. Raffel, B. McFee, E.J. Humphrey, J. Salamon, O. Nieto,
+D. Liang, D PW Ellis, and C.C Raffel, “mir eval: A transpar-
+ent implementation of common mir metrics,” in Proc. Inter-
+national Society for Music Information Retrieval Conference,
+2014.
+2025-02-15 01:49:20,084 - services.reference_extractor - DEBUG - Processing citation 27: M. Mauch and S. Dixon, “pYIN: A fundamental frequency
+estimator using probabilistic threshold distributions,” in Proc.
+IEEE International Conference on Acoustics, Speech and Sig-
+nal Processing, 2014, pp. 659–663.
+2025-02-15 01:49:20,084 - services.reference_extractor - DEBUG - Processing citation 28: J. Engel, K. K. Agrawal, S. Chen, I. Gulrajani, C. Donahue,
+and A. Roberts, “GANSynth: Adversarial neural audio syn-
+thesis,” in Proc. International Conference on Learning Repre-
+sentations, 2019.
+2025-02-15 01:49:20,085 - services.reference_extractor - DEBUG - Processing citation 29: J.-Y. Liu, Y.-H. Chen, Y.-C. Yeh, and Y.-H. Yang,
+“Score
+and lyrics-free singing voice generation,”
+arXiv preprint
+arXiv:1912.11747, 2019.
+2025-02-15 01:51:37 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:51:40 - services.Ingestion - ERROR - Error in create_collection: [Errno 11001] getaddrinfo failed
+2025-02-15 01:51:40 - services.Ingestion - ERROR - Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 01:51:40 - root - ERROR - Error in chat endpoint: 500: Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 01:54:49 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:54:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:54:52 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-15 01:54:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:54:55 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 01:54:55 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-15 01:54:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:54:57 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 01:55:03 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-15 01:55:06 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:55:06 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 01:55:06 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-15 01:55:09 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:55:09 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 01:55:09 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-15 01:55:12 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:55:12 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 01:55:12 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-15 01:55:17 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:55:17 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 01:56:24 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:56:27 - services.Ingestion - ERROR - Error in create_collection: [Errno 11001] getaddrinfo failed
+2025-02-15 01:56:27 - services.Ingestion - ERROR - Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 01:56:27 - root - ERROR - Error in chat endpoint: 500: Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 01:59:06 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:59:10 - services.Ingestion - ERROR - Error in create_collection: [Errno 11001] getaddrinfo failed
+2025-02-15 01:59:10 - services.Ingestion - ERROR - Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 01:59:10 - root - ERROR - Error in chat endpoint: 500: Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 01:59:46 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:59:48 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:59:48 - opentelemetry.trace - WARNING - Overriding of current TracerProvider is not allowed
+2025-02-15 01:59:48 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-15 01:59:52 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:59:52 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 01:59:52 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-15 01:59:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-02-15 01:59:55 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 01:59:59 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-15 02:00:02 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-02-15 02:00:02 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 02:00:02 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-15 02:00:06 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-02-15 02:00:06 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 02:00:06 - LiteLLM - INFO - 
+LiteLLM completion() model= gpt4ostructuredoutput; provider = azure
+2025-02-15 02:00:09 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-03-01-preview "HTTP/1.1 200 OK"
+2025-02-15 02:00:09 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2025-02-15 02:02:06 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 02:02:09 - services.Ingestion - ERROR - Error in create_collection: [Errno 11001] getaddrinfo failed
+2025-02-15 02:02:09 - services.Ingestion - ERROR - Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:02:09 - root - ERROR - Error in chat endpoint: 500: Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:08:12 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 02:08:16 - services.Ingestion - ERROR - Error in create_collection: [Errno 11001] getaddrinfo failed
+2025-02-15 02:08:16 - services.Ingestion - ERROR - Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:08:16 - root - ERROR - Error in chat endpoint: 500: Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:10:50 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 02:10:54 - services.Ingestion - ERROR - Error in create_collection: [Errno 11001] getaddrinfo failed
+2025-02-15 02:10:54 - services.Ingestion - ERROR - Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:10:54 - root - ERROR - Error in chat endpoint: 500: Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:11:01 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 02:11:05 - services.Ingestion - ERROR - Error in create_collection: [Errno 11001] getaddrinfo failed
+2025-02-15 02:11:05 - services.Ingestion - ERROR - Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:11:05 - root - ERROR - Error in chat endpoint: 500: Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:14:37 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 02:14:42 - services.Ingestion - ERROR - Error in create_collection: [Errno 11001] getaddrinfo failed
+2025-02-15 02:14:42 - services.Ingestion - ERROR - Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:14:42 - root - ERROR - Error in chat endpoint: 500: Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:14:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 02:14:59 - services.Ingestion - ERROR - Error in create_collection: [Errno 11001] getaddrinfo failed
+2025-02-15 02:14:59 - services.Ingestion - ERROR - Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:14:59 - root - ERROR - Error in chat endpoint: 500: Failed to initialize VectorIngestor: [Errno 11001] getaddrinfo failed
+2025-02-15 02:19:14 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 02:19:14 - services.Ingestion - INFO - Initializing Qdrant connection...
+2025-02-15 02:19:15 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 02:19:15 - services.Ingestion - INFO - Successfully connected to Qdrant via HTTP. Collections: collections=[CollectionDescription(name='test123')]
+2025-02-15 02:19:16 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 02:19:16 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 02:19:16 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 02:19:17 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 02:19:17 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 02:19:17 - services.Ingestion - INFO - Successfully created collection 1805.07848
+2025-02-15 02:19:17 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 02:19:17 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 02:19:18 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 02:19:19 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 02:19:19 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 02:19:19 - services.Ingestion - INFO - Successfully created collection 1805.07848
+2025-02-15 02:19:19 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 02:19:19 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 02:19:19 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 02:19:20 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 02:19:20 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 02:19:20 - services.Ingestion - INFO - Successfully created collection 1805.07848
+2025-02-15 02:19:21 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:22 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:22 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:22 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:23 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:23 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:23 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:23 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:24 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:24 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:24 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:25 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:25 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:25 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:27 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:27 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:27 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:29 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:29 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:29 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:30 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:30 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:30 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:31 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:31 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:31 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:31 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:32 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:32 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:32 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:33 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:33 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:33 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:34 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595/points?wait=true "HTTP/1.1 200 OK"
+2025-02-15 02:19:34 - services.Ingestion - INFO - Processed 41/41 chunks
+2025-02-15 02:19:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 02:19:39 - services.Retrieval - INFO - Connecting to Qdrant at 127.0.0.1:6333
+2025-02-15 02:19:39 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 02:19:39 - services.Retrieval - INFO - Successfully connected to Qdrant
+2025-02-15 02:19:40 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 02:19:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 02:19:41 - services.Retrieval - INFO - Searching in collection: 2002.06595
+2025-02-15 02:19:41 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"
+2025-02-15 02:19:44 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 12:40:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 12:40:28 - services.Ingestion - INFO - Initializing Qdrant connection...
+2025-02-15 12:40:29 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:40:29 - services.Ingestion - INFO - Successfully connected to Qdrant via HTTP. Collections: collections=[CollectionDescription(name='2002.06595'), CollectionDescription(name='test123')]
+2025-02-15 12:40:30 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:40:30 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 12:40:31 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 12:40:32 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 12:40:32 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:40:32 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-02-15 12:40:33 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:40:33 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 12:40:34 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 12:40:35 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 12:40:35 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:40:35 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-02-15 12:40:35 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:40:35 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 12:40:35 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 500 Internal Server Error"
+2025-02-15 12:40:35 - services.Ingestion - ERROR - Error in create_collection: Unexpected Response: 500 (Internal Server Error)
+Raw response content:
+b'{"status":{"error":"Service internal error: Permission denied (os error 13)"},"time":0.234254308}'
+2025-02-15 12:40:35 - services.Ingestion - ERROR - Error during text processing or ingestion: Unexpected Response: 500 (Internal Server Error)
+Raw response content:
+b'{"status":{"error":"Service internal error: Permission denied (os error 13)"},"time":0.234254308}'
+2025-02-15 12:40:35 - root - ERROR - Error in chat endpoint: 500: Error processing PDF from arXiv: 500: Error during text processing or ingestion: Unexpected Response: 500 (Internal Server Error)
+Raw response content:
+b'{"status":{"error":"Service internal error: Permission denied (os error 13)"},"time":0.234254308}'
+2025-02-15 12:41:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 12:41:07 - services.Ingestion - INFO - Initializing Qdrant connection...
+2025-02-15 12:41:08 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:41:08 - services.Ingestion - INFO - Successfully connected to Qdrant via HTTP. Collections: collections=[CollectionDescription(name='test123')]
+2025-02-15 12:41:08 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:41:08 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 12:41:09 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 12:41:09 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 12:41:09 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:41:09 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-02-15 12:41:10 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:41:10 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 12:41:10 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 12:41:11 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 12:41:11 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:41:11 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-02-15 12:41:11 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:41:11 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 12:41:12 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 12:41:13 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 12:41:13 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:41:13 - services.Ingestion - INFO - Successfully created collection 1802.08435
+2025-02-15 12:41:14 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:14 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:14 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:15 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:15 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:15 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:16 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:16 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:16 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:17 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:17 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:17 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:18 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:18 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:18 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:19 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:19 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:19 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:20 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:20 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:20 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:20 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:21 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:21 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:21 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:22 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:22 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:22 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:23 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:23 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:23 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:23 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:24 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:24 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:24 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:25 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:25 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:25 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:25 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:26 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:27 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:27 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:27 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:28 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:29 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:29 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595/points?wait=true "HTTP/1.1 200 OK"
+2025-02-15 12:41:29 - services.Ingestion - INFO - Processed 49/49 chunks
+2025-02-15 12:41:42 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 12:41:42 - services.Retrieval - INFO - Connecting to Qdrant at 127.0.0.1:6333
+2025-02-15 12:41:42 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:41:42 - services.Retrieval - INFO - Successfully connected to Qdrant
+2025-02-15 12:41:43 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:41:44 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:41:44 - services.Retrieval - INFO - Searching in collection: 2002.06595
+2025-02-15 12:41:44 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"
+2025-02-15 12:41:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 12:41:52,999 - services.reference_extractor - DEBUG - Extracted bibliography: 
+[1] E. Grinstein, N. QK Duong, A. Ozerov, and P. P´erez, “Au-
+dio style transfer,” in Proc. IEEE International Conference on
+Acoustics, Speech and Signal Processing, 2018, pp. 586–590.
+[2] A. Haque, M. Guo, and P. Verma,
+“Conditional end-to-end
+audio transforms,” arXiv preprint arXiv:1804.00047, 2018.
+[3] N. Mor, L. Wolf, A. Polyak, and Y. Taigman, “A universal
+music translation network,” arXiv preprint arXiv:1805.07848,
+2018.
+[4] C.-W. Wu, J.-Y. Liu, Y.-H. Yang, and J.-S. R. Jang, “Singing
+sty...
+2025-02-15 12:41:52,999 - services.reference_extractor - DEBUG - Processing citation 1: E. Grinstein, N. QK Duong, A. Ozerov, and P. P´erez, “Au-
+dio style transfer,” in Proc. IEEE International Conference on
+Acoustics, Speech and Signal Processing, 2018, pp. 586–590.
+2025-02-15 12:41:53,002 - services.reference_extractor - DEBUG - Processing citation 2: A. Haque, M. Guo, and P. Verma,
+“Conditional end-to-end
+audio transforms,” arXiv preprint arXiv:1804.00047, 2018.
+2025-02-15 12:41:53,002 - services.reference_extractor - DEBUG - Processing citation 3: N. Mor, L. Wolf, A. Polyak, and Y. Taigman, “A universal
+music translation network,” arXiv preprint arXiv:1805.07848,
+2018.
+2025-02-15 12:41:53,002 - services.reference_extractor - DEBUG - Processing citation 4: C.-W. Wu, J.-Y. Liu, Y.-H. Yang, and J.-S. R. Jang, “Singing
+style transfer using cycle-consistent boundary equilibrium gen-
+erative adversarial networks,” in Proc. Joint Workshop on Ma-
+chine Learning for Music, 2018.
+2025-02-15 12:41:53,002 - services.reference_extractor - DEBUG - Processing citation 5: J.-Y. Zhu, T. Park, P. Isola, and A. A. Efros,
+“Unpaired
+image-to-image translation using cycle-consistent adversarial
+networks,” arXiv preprint, 2017.
+2025-02-15 12:41:53,002 - services.reference_extractor - DEBUG - Processing citation 6: K. Vijayan, H. Li, and T. Toda,
+“Speech-to-singing voice
+conversion: The challenges and strategies for improving vo-
+cal conversion processes,” IEEE Signal Processing Magazine,
+vol. 36, no. 1, pp. 95–102, 2018.
+2025-02-15 12:41:53,002 - services.reference_extractor - DEBUG - Processing citation 7: T. Saitou, M. Goto, M. Unoki, and M. Akagi,
+“Speech-
+to-singing synthesis: Converting speaking voices to singing
+voices by controlling acoustic features unique to singing
+voices,” in Proc. IEEE Workshop on Applications of Signal
+Processing to Audio and Acoustics, 2007.
+2025-02-15 12:41:53,003 - services.reference_extractor - DEBUG - Processing citation 8: L. Cen, M. Dong, and P. Chan, “Template-based personalized
+singing voice synthesis,” in Proc. IEEE International Confer-
+ence on Acoustics, Speech and Signal Processing, 2012, pp.
+4509–4512.
+2025-02-15 12:41:53,005 - services.reference_extractor - DEBUG - Processing citation 10: B. Sharma and H. Li,
+“A combination of model-based and
+feature-based strategy for speech-to-singing alignment,” Proc.
+Interspeech, pp. 624–628, 2019.
+2025-02-15 12:41:53,012 - services.reference_extractor - DEBUG - Processing citation 13: L. Su, “Vocal melody extraction using patch-based CNN,” in
+Proc. IEEE International Conference on Acoustics, Speech and
+Signal Processing, 2018, pp. 371–375.
+2025-02-15 12:41:53,012 - services.reference_extractor - DEBUG - Processing citation 14: B. McFee, C. Raffel, D. Liang, D. PW. Ellis, M. McVicar,
+E. Battenberg, and O. Nieto, “librosa: Audio and music signal
+analysis in python,” in Proc. Python in Science Conference,
+2015, pp. 18–25.
+2025-02-15 12:41:53,012 - services.reference_extractor - DEBUG - Processing citation 15: J. L. Goldstein, “Auditory nonlinearity,” The Journal of the
+Acoustical Society of America, vol. 41, no. 3, pp. 676–699,
+1967.
+2025-02-15 12:41:53,014 - services.reference_extractor - DEBUG - Processing citation 16: O. Ronneberger, P. Fischer, and T. Brox, “U-net: Convolu-
+tional networks for biomedical image segmentation,” in Proc.
+International Conference on Medical image computing and
+computer-assisted intervention. Springer, 2015, pp. 234–241.
+2025-02-15 12:41:53,014 - services.reference_extractor - DEBUG - Processing citation 17: J.-Y. Liu and Y.-H. Yang, “Event localization in music auto-
+tagging,” in Proc. ACM Multimedia, 2016, pp. 1048–1057.
+2025-02-15 12:41:53,021 - services.reference_extractor - DEBUG - Processing citation 20: J. Chung, C. Gulcehre, K. Cho, and Y. Bengio,
+“Empiri-
+cal evaluation of gated recurrent neural networks on sequence
+modeling,” in Proc. NIPS Workshop on Deep Learning, 2014.
+2025-02-15 12:41:53,022 - services.reference_extractor - DEBUG - Processing citation 21: D. Ulyanov, A. Vedaldi, and V. Lempitsky, “Instance normal-
+ization: The missing ingredient for fast stylization,”
+arXiv
+preprint arXiv:1607.08022, 2016.
+2025-02-15 12:41:53,025 - services.reference_extractor - DEBUG - Processing citation 23: Y. Wang, RJ Skerry-Ryan, D. Stanton, Y. Wu, RJ Weiss,
+N. Jaitly, Z. Yang, Y. Xiao, Z. Chen, S. Bengio, et al.,
+“Tacotron:
+Towards end-to-end speech synthesis,”
+arXiv
+preprint arXiv:1703.10135, 2017.
+2025-02-15 12:41:53,025 - services.reference_extractor - DEBUG - Processing citation 24: D. P. Kingma and J. Ba, “Adam: A method for stochastic opti-
+mization,” arXiv preprint arXiv:1412.6980, 2014.
+2025-02-15 12:41:53,025 - services.reference_extractor - DEBUG - Processing citation 25: A. Paszke, S. Gross, S. Chintala, G. Chanan, E. Yang, Z. De-
+Vito, Z. Lin, A. Desmaison, L. Antiga, and A. Lerer, “Auto-
+matic differentiation in pytorch,” 2017.
+2025-02-15 12:41:53,026 - services.reference_extractor - DEBUG - Processing citation 26: C. Raffel, B. McFee, E.J. Humphrey, J. Salamon, O. Nieto,
+D. Liang, D PW Ellis, and C.C Raffel, “mir eval: A transpar-
+ent implementation of common mir metrics,” in Proc. Inter-
+national Society for Music Information Retrieval Conference,
+2014.
+2025-02-15 12:41:53,027 - services.reference_extractor - DEBUG - Processing citation 27: M. Mauch and S. Dixon, “pYIN: A fundamental frequency
+estimator using probabilistic threshold distributions,” in Proc.
+IEEE International Conference on Acoustics, Speech and Sig-
+nal Processing, 2014, pp. 659–663.
+2025-02-15 12:41:53,028 - services.reference_extractor - DEBUG - Processing citation 28: J. Engel, K. K. Agrawal, S. Chen, I. Gulrajani, C. Donahue,
+and A. Roberts, “GANSynth: Adversarial neural audio syn-
+thesis,” in Proc. International Conference on Learning Repre-
+sentations, 2019.
+2025-02-15 12:41:53,028 - services.reference_extractor - DEBUG - Processing citation 29: J.-Y. Liu, Y.-H. Chen, Y.-C. Yeh, and Y.-H. Yang,
+“Score
+and lyrics-free singing voice generation,”
+arXiv preprint
+arXiv:1912.11747, 2019.
+2025-02-15 12:42:06 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 12:42:08 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 12:42:08 - services.Retrieval - INFO - Connecting to Qdrant at 127.0.0.1:6333
+2025-02-15 12:42:08 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:42:08 - services.Retrieval - INFO - Successfully connected to Qdrant
+2025-02-15 12:42:09 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 12:42:10 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 12:42:10 - services.Retrieval - INFO - Searching in collection: 2002.06595
+2025-02-15 12:42:10 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"
+2025-02-15 12:42:13 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 14:41:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 14:41:09 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 14:41:09 - services.Retrieval - INFO - Connecting to Qdrant at 127.0.0.1:6333
+2025-02-15 14:41:10 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 14:41:10 - services.Retrieval - INFO - Successfully connected to Qdrant
+2025-02-15 14:41:11 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 14:41:12 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:12 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/query "HTTP/1.1 200 OK"
+2025-02-15 14:41:12 - services.Retrieval - INFO - Searching in collection: 2002.06595
+2025-02-15 14:41:12 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"
+2025-02-15 14:41:15 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 14:41:39 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 14:41:39 - services.Ingestion - INFO - Initializing Qdrant connection...
+2025-02-15 14:41:39 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 14:41:39 - services.Ingestion - INFO - Successfully connected to Qdrant via HTTP. Collections: collections=[CollectionDescription(name='2002.06595'), CollectionDescription(name='test123')]
+2025-02-15 14:41:40 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 14:41:40 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 14:41:40 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 14:41:41 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 14:41:41 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 14:41:41 - services.Ingestion - INFO - Successfully created collection 1912.11747
+2025-02-15 14:41:42 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 14:41:42 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 14:41:42 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 14:41:43 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 14:41:43 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 14:41:43 - services.Ingestion - INFO - Successfully created collection 1912.11747
+2025-02-15 14:41:43 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 14:41:43 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 14:41:44 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 14:41:44 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 14:41:44 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 14:41:44 - services.Ingestion - INFO - Successfully created collection 1912.11747
+2025-02-15 14:41:46 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:46 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:46 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:47 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:48 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:48 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:48 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:49 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:49 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:49 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:50 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:50 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:50 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:50 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:51 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:52 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:52 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:52 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:55 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:56 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:56 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:56 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:57 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:58 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:58 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:58 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:59 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:41:59 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:42:00 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:42:00 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:42:00 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:42:01 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:42:01 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:42:01 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:42:02 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595/points?wait=true "HTTP/1.1 200 OK"
+2025-02-15 14:42:02 - services.Ingestion - INFO - Processed 50/50 chunks
+2025-02-15 14:42:04 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 14:42:04 - services.Retrieval - INFO - Connecting to Qdrant at 127.0.0.1:6333
+2025-02-15 14:42:04 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 14:42:04 - services.Retrieval - INFO - Successfully connected to Qdrant
+2025-02-15 14:42:05 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 14:42:07 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 14:42:07 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/query "HTTP/1.1 200 OK"
+2025-02-15 14:42:07 - services.Retrieval - INFO - Searching in collection: 2002.06595
+2025-02-15 14:42:07 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/search "HTTP/1.1 200 OK"
+2025-02-15 14:42:13 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 15:36:41 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 15:36:41 - services.Ingestion - INFO - Initializing Qdrant connection...
+2025-02-15 15:36:42 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 15:36:42 - services.Ingestion - INFO - Successfully connected to Qdrant via HTTP. Collections: collections=[CollectionDescription(name='2002.06595'), CollectionDescription(name='test123')]
+2025-02-15 15:36:42 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 15:36:42 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 15:36:42 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 15:36:43 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 15:36:43 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 15:36:43 - services.Ingestion - INFO - Successfully created collection 1607.08022
+2025-02-15 15:36:49 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 15:36:49 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 15:36:49 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 15:36:50 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 15:36:50 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 15:36:50 - services.Ingestion - INFO - Successfully created collection 1607.08022
+2025-02-15 15:36:50 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 15:36:50 - services.Ingestion - INFO - Creating collection 2002.06595
+2025-02-15 15:36:50 - httpx - INFO - HTTP Request: DELETE http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 15:36:51 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595 "HTTP/1.1 200 OK"
+2025-02-15 15:36:51 - httpx - INFO - HTTP Request: GET http://127.0.0.1:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 15:36:51 - services.Ingestion - INFO - Successfully created collection 1607.08022
+2025-02-15 15:36:52 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 15:36:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 15:36:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 15:36:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 15:36:53 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 15:36:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 15:36:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 15:36:54 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 15:36:54 - httpx - INFO - HTTP Request: PUT http://127.0.0.1:6333/collections/2002.06595/points?wait=true "HTTP/1.1 200 OK"
+2025-02-15 15:36:54 - services.Ingestion - INFO - Processed 8/8 chunks
+2025-02-15 15:36:56 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-02-15 15:36:56 - services.Retrieval - INFO - Connecting to Qdrant at 127.0.0.1:6333
+2025-02-15 15:36:57 - httpx - INFO - HTTP Request: GET http://localhost:6333/collections "HTTP/1.1 200 OK"
+2025-02-15 15:36:57 - services.Retrieval - INFO - Successfully connected to Qdrant
+2025-02-15 15:36:58 - httpx - INFO - HTTP Request: POST http://localhost:6333/collections/2002.06595/points/query "HTTP/1.1 200 OK"
+2025-02-15 15:36:58 - services.Retrieval - INFO - Found 8 points matching arxiv_id: 1607.08022
+2025-02-15 15:36:59 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/TG-OAI-Embedding/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2025-02-15 15:37:02 - httpx - INFO - HTTP Request: POST https://catg-openai.openai.azure.com//openai/deployments/gpt4ostructuredoutput/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
