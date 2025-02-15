@@ -22,16 +22,11 @@ class Retrieval:
         
         # Update Qdrant client configuration
         try:
-            # Use container name from docker-compose.yml instead of localhost
-            qdrant_host = os.getenv('QDRANT_HOST', 'qdrant')  # Changed from 'localhost' to 'qdrant'
-            qdrant_port = int(os.getenv('QDRANT_PORT', 6333))
-            
-            logger.info(f"Connecting to Qdrant at {qdrant_host}:{qdrant_port}")
-            
+        
             self.client = QdrantClient(
-                host="localhost",
-                port=qdrant_port,
-                timeout=10  
+                host="qdrant",  
+                port=6333,
+                timeout=10
             )
             
             # Verify connection

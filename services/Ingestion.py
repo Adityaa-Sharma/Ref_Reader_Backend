@@ -28,28 +28,22 @@ class VectorIngestor:
             embedding_deployment = os.getenv('AZURE_EMBEDDING_DEPLOYMENT', 'TG-OAI-Embedding')
             embedding_model = os.getenv('AZURE_EMBEDDING_MODEL', 'text-embedding-ada-002')
             
-            # Simplified Qdrant connection logic
+            # Updated Qdrant connection logic for Docker
             logger.info("Initializing Qdrant connection...")
             
             try:
-                # Try direct HTTP connection first
+                # Use the service name from docker-compose
                 self.client = QdrantClient(
-                    url="http://127.0.0.1:6333",
+                    host="qdrant",  # Changed from 127.0.0.1 to service name
+                    port=6333,
                     timeout=10
                 )
                 # Test connection
                 collections = self.client.get_collections()
-                logger.info(f"Successfully connected to Qdrant via HTTP. Collections: {collections}")
-            except Exception as http_error:
-                logger.error(f"HTTP connection failed: {str(http_error)}")
-                # Fallback to TCP connection
-                self.client = QdrantClient(
-                    host="127.0.0.1",
-                    port=6333,
-                    prefer_grpc=False
-                )
-                collections = self.client.get_collections()
-                logger.info("Successfully connected to Qdrant via TCP")
+                logger.info(f"Successfully connected to Qdrant. Collections: {collections}")
+            except Exception as e:
+                logger.error(f"Failed to connect to Qdrant: {str(e)}")
+                raise
 
             # Initialize embeddings and text splitter
             self.embeddings = AzureOpenAIEmbeddings(

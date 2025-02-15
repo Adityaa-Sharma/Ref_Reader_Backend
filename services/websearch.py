@@ -11,8 +11,9 @@ import json
 # Load environment variables
 load_dotenv()
 
+
 # Set SERPAPI_API_KEY
-os.environ["SERPAPI_API_KEY"] = "your_serpapi_api_key"
+os.environ["SERPAPI_API_KEY"] = ""
 
 # Define tool input schemas
 class SearchToolInput(BaseModel):
